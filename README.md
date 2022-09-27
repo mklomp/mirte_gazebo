@@ -17,6 +17,5 @@ make diffdrive work
 make camera work
 make disatcne sensor work
 create 1 launchfile
-fix package usage in xacro (use packeg instead of file link)
 use stl instead of box	
 
