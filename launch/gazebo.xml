@@ -1,0 +1,30 @@
+<launch>
+
+  <let name="paused" value="false"/>
+  <let name="use_sim_time" value="true"/>
+  <let name="gui" value="true"/>
+  <let name="headless" value="false"/>
+  <let name="debug" value="false"/>
+  <let name="model" value="$(find-pkg-share mirte_gazebo)/urdf/mirte.xacro"/>  
+  <let name="x" value="0"/>
+  <let name="y" value="0"/>
+  <let name="z" value="0.1"/>
+
+  <include file="$(find-pkg-share gazebo_ros)/launch/gazebo.launch.py">
+<!--      <param name="world_name" value="worlds/sonar_demo.world"/>
+      <param name="paused" value="$(var paused)"/>
+      <param name="use_sim_time" value="$(var use_sim_time)"/>
+      <param name="gui" value="$(var gui)"/>
+      <param name="headless" value="$(var headless)"/>
+      <param name="debug" value="$(var debug)"/>
+      <param name="verbose" value="true" />   -->
+  </include>
+
+  <!-- Load model description and set starting location-->
+<!--  <let name="robot_description" value="$(find-pkg-share xacro)/xacro $(var model)" />
+-->
+  <!-- spawn robot in world-->
+<!--  <node name="mybot_spawn" pkg="gazebo_ros" exec="spawn_entity.py" output="screen"
+        args="-urdf -param robot_description -model mirte -x $(var x) -y $(var y) -z $(var z)" />
+-->
+</launch>
