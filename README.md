@@ -1,21 +1,10 @@
-temr1$ gzserver -slibgazebo_ros_init.so -slibgazebo_ros_factory.so -slibgazebo_ros_force_system.so --verbose
-term2$ gzclient --verbose
+term1$ ros2 launch mirte_gazebo gazebo_mirte_diff_drive.launch
 
-
-to get urf:
-term3$ ros2 run xacro xacro  -o mirte.urdf ./src/mirte_gazebo/urdf/mirte.xacro
-
-launch robot:
-term3$ ros2 run gazebo_ros spawn_entity.py -file mirte.urdf -entity robot
-
-
-
+term2$ os2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r cmd_vel:=/diff_drive_base_controller/cmd_vel_unstamped
 
 
 TODO:
-make diffdrive work
 make camera work
 make disatcne sensor work
-create 1 launchfile
 use stl instead of box	
-
+cleanup setup.py with cuplicates
