@@ -30,25 +30,16 @@ import xacro
 
 def generate_launch_description():
 
-    pkg_gazebo_ros = FindPackageShare(package='gazebo_ros').find('gazebo_ros')   
+    pkg_gazebo_ros = FindPackageShare(package='gazebo_ros').find('gazebo_ros')
     world_file_name = 'sonar_demo.world'
     world_path = os.path.join(pkg_gazebo_ros, 'worlds', world_file_name)
-   
-           # Declare the launc parameter
-    declare_world_cmd = DeclareLaunchArgument(
-            'world_name',
-            default_value = world_path,
-            description = 'Gazebo World file'
-    )
-   
+
     gazebo = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource([os.path.join(get_package_share_directory('gazebo_ros'), 'launch'), '/gazebo.launch.py'])
+            PythonLaunchDescriptionSource([os.path.join(get_package_share_directory('gazebo_ros'), 'launch'), '/gazebo.launch.py']),
+              launch_arguments={
+                'extra_gazebo_args': '-s libgazebo_ros_ray_sensor.so'
+              }.items()
         )
-    
-    ld = LaunchDescription()
-    
-    ld.add_action(declare_world_cmd)
-    ld.add_action(gazebo)
 
     gazebo_ros2_control_demos_path = os.path.join(
         get_package_share_directory('mirte_gazebo'))
@@ -74,13 +65,13 @@ def generate_launch_description():
                         output='screen')
 
     load_joint_state_controller = ExecuteProcess(
-        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'start',
              'joint_state_broadcaster'],
         output='screen'
     )
 
     load_diff_drive_base_controller = ExecuteProcess(
-        cmd=['ros2', 'control', 'load_controller', '--set-state', 'active',
+        cmd=['ros2', 'control', 'load_controller', '--set-state', 'start',
              'diff_drive_base_controller'],
         output='screen'
     )
@@ -98,7 +89,7 @@ def generate_launch_description():
                 on_exit=[load_diff_drive_base_controller],
             )
         ),
-        ld,
+        gazebo,
         node_robot_state_publisher,
         spawn_entity,
     ])

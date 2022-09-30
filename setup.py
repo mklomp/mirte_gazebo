@@ -14,6 +14,7 @@ setup(
         ('share/' + package_name + '/urdf', ['urdf/macros.xacro']),
         ('share/' + package_name + '/urdf', ['urdf/ros2_control.xacro']),
         ('share/' + package_name + '/urdf', ['urdf/mirte.xacro']),
+        ('share/' + package_name + '/urdf', ['urdf/lidar.xacro']),
         ('share/' + package_name + '/config', ['config/mirte_dimensions.yaml']),
         ('share/' + package_name + '/config', ['config/mirte_diff_drive.yaml']),
         ('share/' + package_name + '/meshes', ['meshes/mirte_base.stl']),
