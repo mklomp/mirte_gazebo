@@ -37,7 +37,8 @@ def generate_launch_description():
     gazebo = IncludeLaunchDescription(
             PythonLaunchDescriptionSource([os.path.join(get_package_share_directory('gazebo_ros'), 'launch'), '/gazebo.launch.py']),
               launch_arguments={
-                'extra_gazebo_args': '-s libgazebo_ros_ray_sensor.so'
+                'world': os.path.join(os.path.join(get_package_share_directory('mirte_gazebo')), 'test_world.world'),
+                'extra_gazebo_args': '-s libgazebo_ros_camera.so -s libgazebo_ros_ray_sensor.so --verbose'
               }.items()
         )
 
@@ -61,7 +62,7 @@ def generate_launch_description():
 
     spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
                         arguments=['-topic', 'robot_description',
-                                   '-entity', 'diffbot'],
+                                   '-entity', 'mirte'],
                         output='screen')
 
     load_joint_state_controller = ExecuteProcess(
