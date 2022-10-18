@@ -8,6 +8,7 @@ setup(
     version='0.0.0',
     data_files=[
         ('share/' + package_name, ['package.xml']),
+        ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
         ('share/' + package_name, glob('launch/*launch.[pxy][yma]*')),
         ('share/' + package_name, ['launch/gazebo.xml']),
         ('share/' + package_name + '/urdf', ['urdf/materials.xacro']),

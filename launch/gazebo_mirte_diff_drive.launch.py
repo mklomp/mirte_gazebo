@@ -38,7 +38,7 @@ def generate_launch_description():
             PythonLaunchDescriptionSource([os.path.join(get_package_share_directory('gazebo_ros'), 'launch'), '/gazebo.launch.py']),
               launch_arguments={
                 'world': os.path.join(os.path.join(get_package_share_directory('mirte_gazebo')), 'test_world.world'),
-                'extra_gazebo_args': '-s libgazebo_ros_camera.so -s libgazebo_ros_ray_sensor.so --verbose'
+                'extra_gazebo_args': '-s libgazebo_ros_camera.so -s libgazebo_ros_ray_sensor.so -s libgazebo_ros2_control.so --verbose'
               }.items()
         )
 
