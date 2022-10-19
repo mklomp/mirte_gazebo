@@ -17,6 +17,5 @@ term3$ ros2 run rviz2 rviz2 -d mirte_gazebo.rviz
 
 
 #TODO:
-cleanup setup.py with duplicates
 fix issue with teleop randomly not working
 use stl instead of box
