@@ -18,4 +18,6 @@ term3$ ros2 run rviz2 rviz2 -d mirte_gazebo.rviz
 
 ## TODO:
 fix issue with teleop randomly not working
-use stl instead of box
+add ultrasonic sensors
+make stl more realistic
+make environement more realistic
