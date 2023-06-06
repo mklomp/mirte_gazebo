@@ -1,8 +1,12 @@
 <launch>
 
 
-<arg name="duckietown_description" default="$(find mirte_gazebo)/urdf/duckietiles.urdf"/>
+<arg name="duckietown_description" default="$(find mirte_gazebo)/urdf/duckietown.xacro"/>
 
-<node name="duckietown_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" args="-file $(arg duckietown_description) -urdf -model duckietown" respawn="false" />
+<!-- TODO: can we do without this one? -->
+<param name="/duckietown_description" command="$(find xacro)/xacro $(arg duckietown_description)"/>
+
+
+<node name="duckietown_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param duckietown_description -model duckietown" respawn="false" />
 
 </launch>

@@ -2,7 +2,7 @@
 
 <arg name="x" default="0"/>
 <arg name="y" default="0"/>
-<arg name="z" default="0"/>
+<arg name="z" default="0.1"/>
 <arg name="roll" default="0"/>
 <arg name="pitch" default="0"/>
 <arg name="yaw" default="0"/>
@@ -21,8 +21,8 @@
     <rosparam file="$(find mirte_gazebo)/config/gazebo_ros_control_params.yaml" command="load"/>
 
 
-    <node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
-    args="-urdf -param /robot_description -model mybot_$(arg ns_1)
+    <node name="spawn_mirte" pkg="gazebo_ros" type="spawn_model" output="screen"
+    args="-urdf -param /robot_description -model $(arg ns_1)
                 -x $(arg x) -y $(arg y) -z $(arg z)
                 -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)" respawn="false" />
 

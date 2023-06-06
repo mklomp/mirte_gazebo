@@ -1,0 +1,62 @@
+material DT/Straight
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture straight.png
+                scale 1 1
+            }
+        }   
+    }
+}
+
+material DT/Curve
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture curve.png
+                scale 1 1
+            }
+        }
+    }
+}
+
+material DT/3Way
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture 3way.png
+                scale 1 1
+            }
+        }
+    }
+}
+
+material DT/4Way
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture 4way.png
+                scale 1 1
+            }
+        }
+    }
+}
+
+
+
