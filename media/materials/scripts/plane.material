@@ -1,0 +1,14 @@
+material MyTexture
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture road_p.png
+                scale 1 1
+            }
+        }   
+    }
+}

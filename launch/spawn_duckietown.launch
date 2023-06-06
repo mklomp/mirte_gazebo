@@ -1,0 +1,8 @@
+<launch>
+
+
+<arg name="duckietown_description" default="$(find mirte_gazebo)/urdf/duckietiles.urdf"/>
+
+<node name="duckietown_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" args="-file $(arg duckietown_description) -urdf -model duckietown" respawn="false" />
+
+</launch>
