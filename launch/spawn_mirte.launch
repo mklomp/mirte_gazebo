@@ -6,7 +6,7 @@
 <arg name="roll" default="0"/>
 <arg name="pitch" default="0"/>
 <arg name="yaw" default="0"/>
-<arg name="ns_1" default="mirte"/>
+<arg name="ns_1" default="mirte_control"/>
 
 <arg name="robot_description" default="$(find mirte_gazebo)/urdf/mirte.xacro"/>
 <param name="/robot_description" command="$(find xacro)/xacro --inorder $(arg robot_description) namespace_deploy:=$(arg ns_1)"/> 
