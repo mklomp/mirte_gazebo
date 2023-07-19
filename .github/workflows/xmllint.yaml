@@ -14,8 +14,7 @@ jobs:
     - name: check xml changes
       run: |
         sudo apt update && sudo apt install tidy -y
-        tidy -m -xml -i **/*.launch
-        tidy -m -xml -i **/*.xacro
+        ./scripts/xmllint.sh
     - name: Verify Changed files
       uses: tj-actions/verify-changed-files@v16
       id: verify-changed-files
