@@ -1,13 +1,13 @@
+<?xml version="1.0"?>
 <!-- term1$ roslaunch mirte_gazebo gazebo_empty.launch
 term2$ roslaunch mirte_gazebo spawn_duckietown.launch
 term3$ roslaunch mirte_gazebo spawn_mirte.launch
 term4$ rosrun rviz rviz -d mirte_gazebo.rviz -->
-
 <launch>
-  <include file="$(find mirte_gazebo)/launch/gazebo_empty_world.launch"/>
-  <include file="$(find mirte_gazebo)/launch/spawn_duckietown.launch"/>
-  <include file="$(find mirte_gazebo)/launch/spawn_mirte.launch"/>
-    <node name="rviz" pkg="rviz" type="rviz" output="screen"
-    args="-d $(find mirte_gazebo)/mirte_gazebo.rviz" respawn="false" />
-
+  <include file="$(find mirte_gazebo)/launch/gazebo_empty_world.launch" />
+  <include file="$(find mirte_gazebo)/launch/spawn_duckietown.launch" />
+  <include file="$(find mirte_gazebo)/launch/spawn_mirte.launch" />
+  <node name="rviz" pkg="rviz" type="rviz" output="screen"
+  args="-d $(find mirte_gazebo)/mirte_gazebo.rviz"
+  respawn="false" />
 </launch>
