@@ -7,21 +7,32 @@
   <arg name="pitch" default="0" />
   <arg name="yaw" default="0" />
   <arg name="ns_1" default="mirte_control" />
-  <arg name="robot_description"
+ 
+   <arg name="ns_2" default="mirte_controlA" />
+ <arg
+   name="robot_description"
   default="$(find mirte_gazebo)/urdf/mirte.xacro" />
   <param name="/robot_description"
-  command="$(find xacro)/xacro --inorder $(arg robot_description) namespace_deploy:=$(arg ns_1)" />
+  command="$(find xacro)/xacro $(arg robot_description) namespace_deploy:=$(arg ns_1)" />
   <group ns="$(arg ns_1)">
     <param name="/robot_description"
-    command="$(find xacro)/xacro --inorder $(arg robot_description) namespace_deploy:=$(arg ns_1)" />
-    <rosparam command="load"
-    file="$(find mirte_control)/config/my_robot_common.yaml" />
+    command="$(find xacro)/xacro $(arg robot_description) namespace_deploy:=$(arg ns_1)" />
+    <!-- <rosparam command="load"
+    file="$(find mirte_control)/config/my_robot_common.yaml" /> -->
     <rosparam file="$(find mirte_gazebo)/config/gazebo_ros_control_params.yaml"
     command="load" />
-    <node name="spawn_mirte" pkg="gazebo_ros" type="spawn_model"
+
+<param name="robot_description" command="$(find xacro)/xacro $(find mirte_gazebo)/urdf/mirte.xacro" />
+
+ <!-- Spawn a robot into Gazebo -->
+<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model mirte" />
+
+
+
+    <!-- <node name="spawn_mirte" pkg="gazebo_ros" type="spawn_model"
     output="screen"
-    args="-urdf -param /robot_description -model $(arg ns_1) -x $(arg x) -y $(arg y) -z $(arg z) -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)"
-    respawn="false" />
+    args="-urdf -param /robot_description -model $(arg ns_2)"
+    respawn="false" /> -->
     <!-- convert joint states to TF transforms for rviz, etc -->
     <!-- Notice the leading '/' in '/robot_description' -->
     <node name="robot_state_publisher" pkg="robot_state_publisher"
