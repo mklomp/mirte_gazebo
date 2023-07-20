@@ -10,4 +10,8 @@ term4$ rosrun rviz rviz -d mirte_gazebo.rviz -->
   <node name="rviz" pkg="rviz" type="rviz" output="screen"
   args="-d $(find mirte_gazebo)/mirte_gazebo.rviz"
   respawn="false" />
+      <node name="start_controllers" pkg="rostopic" type="rostopic" output="screen"
+        args="list" />
+ <node name="start_controllers2" pkg="rostopic" type="rostopic" output="screen"
+        args="echo /mirte/scan2" />
 </launch>
