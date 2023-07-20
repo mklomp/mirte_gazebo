@@ -6,7 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /LaserScan3
+        - /Range1
       Splitter Ratio: 0.5
     Tree Height: 357
   - Class: rviz/Selection
@@ -24,7 +24,7 @@ Panels:
   - Class: rviz/Time
     Name: Time
     SyncMode: 0
-    SyncSource: LaserScan
+    SyncSource: ""
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -91,6 +91,7 @@ Visualization Manager:
       Visibility:
         Grid: true
         LaserScan: true
+        Range: true
         Value: true
       Zoom Factor: 1
     - Alpha: 1
@@ -149,6 +150,16 @@ Visualization Manager:
       Use Fixed Frame: true
       Use rainbow: false
       Value: true
+    - Alpha: 0.5
+      Buffer Length: 1
+      Class: rviz/Range
+      Color: 255; 255; 255
+      Enabled: true
+      Name: Range
+      Queue Size: 10
+      Topic: /mirte/left/ultra
+      Unreliable: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -177,7 +188,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.860469102859497
+      Distance: 1.329113483428955
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -193,9 +204,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.39479705691337585
+      Pitch: 0.8047972321510315
       Target Frame: <Fixed Frame>
-      Yaw: 3.680403709411621
+      Yaw: 3.0053982734680176
     Saved: ~
 Window Geometry:
   Camera:

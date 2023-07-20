@@ -1,46 +1,49 @@
 #!/usr/bin/env python
 import rospy
 from sensor_msgs.msg import Range, LaserScan
+from mirte_msgs.msg import *
+from mirte_msgs.srv import *
+
 import functools
 import math
-# def talker():
-#     pub = rospy.Publisher('/mirte/left/ultra', Range, queue_size=10)
-#     rate = rospy.Rate(10) # 10hz
-#     while not rospy.is_shutdown():
-#         hello_str = "hello world %s" % rospy.get_time()
-#         rospy.loginfo(hello_str)
-#         pub.publish(hello_str)
-#         rate.sleep()
+import sys
+
+last_publish_value = {}
+
+
+def get_data(req):
+    return GetDistanceResponse(last_publish_value.range)
+
+
 def callback(data):
-    rospy.loginfo(rospy.get_caller_id() + "I heard %s", data)
+    global last_publish_value
     mess = Range()
     mess.radiation_type = mess.ULTRASOUND
-    mess.min_range = 0.01
-    mess.max_range = 5
+    mess.min_range = data.range_min
+    mess.max_range = data.range_max
+    mess.field_of_view = data.angle_max - data.angle_min
+    mess.header = data.header
     data.ranges = list(filter(lambda dist: dist < data.range_max, data.ranges))
-    print(data.ranges)
-    if(len(data.ranges) == 0) :
+    if len(data.ranges) == 0:
         mess.range = math.inf
     else:
         mess.range = functools.reduce(lambda x, y: x if x < y else y, data.ranges)
     pub.publish(mess)
+    last_publish_value = mess
 
-def listener():
+
+def listener(direction):
     global pub
-    # In ROS, nodes are uniquely named. If two nodes with the same
-    # name are launched, the previous one is kicked off. The
-    # anonymous=True flag means that rospy will choose a unique
-    # name for our 'listener' node so that multiple listeners can
-    # run simultaneously.
-    rospy.init_node('ultrasonicConverter', anonymous=True)
+    rospy.init_node(f"ultrasonicConverter{direction}", anonymous=True)
 
-    rospy.Subscriber("/mirte/scan2", LaserScan, callback)
-    pub = rospy.Publisher('/mirte/left/ultra', Range, queue_size=10)
-
-    # spin() simply keeps python from exiting until this node is stopped
+    rospy.Subscriber(f"/mirte/scanSonar{direction}", LaserScan, callback)
+    pub = rospy.Publisher(f"/mirte/distance/{direction}", Range, queue_size=10)
+    s = rospy.Service(f"/mirte/get_distance_{direction}", GetDistance, get_data)
     rospy.spin()
 
-if __name__ == '__main__':
-    listener()
 
-
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Missing direction")
+        quit(-1)
+    listener(sys.argv[1])

@@ -1,3 +1,3 @@
 #!/bin/bash
-tidy -m -xml -i **/*.launch
-tidy -m -xml -i **/*.xacro
+find . -wholename "**/*.launch" -type f -exec xmllint --output '{}' --format '{}' \;
+find . -wholename "**/*.xacro" -type f -exec xmllint --output '{}' --format '{}' \;
