@@ -6,7 +6,7 @@
   <arg name="roll" default="0"/>
   <arg name="pitch" default="0"/>
   <arg name="yaw" default="0"/>
-  <arg name="ns_1" default="mirte_control"/>
+  <arg name="ns_1" default="mirte"/>
   <arg name="robot_description" default="$(find mirte_gazebo)/urdf/mirte.xacro"/>
   <param name="/robot_description" command="$(find xacro)/xacro $(arg robot_description) namespace_deploy:=$(arg ns_1)"/>
   <group ns="$(arg ns_1)">
@@ -23,6 +23,6 @@
       <remap from="/joint_states" to="/$(arg ns_1)/joint_states"/>
     </node>
     <!-- ROS control stuff -->
-    <node name="controller_spawner" pkg="controller_manager" type="spawner" output="screen" args="joint_state_controller mobile_base_controller"/>
+    <!-- <node name="controller_spawner" pkg="controller_manager" type="spawner" output="screen" args="joint_state_controller mobile_base_controller"/> -->
   </group>
 </launch>

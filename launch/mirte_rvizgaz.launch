@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<!-- <?xml version="1.0"?>
 <launch>
   <env name="GAZEBO_RESOURCE_PATH" value="$GAZEBO_RESOURCE_PATH:$(find mirte_gazebo)"/>
   <param name="robot_description" command="$(find xacro)/xacro $(find mirte_gazebo)/urdf/mirte.xacro"/>
@@ -20,4 +20,4 @@
   <include file="$(find mirte_gazebo)/launch/spawn_duckietown.launch"/>
   <!-- <include file="$(find mirte_gazebo)/launch/spawn_mirte.launch" /> -->
   <include file="$(find mirte_gazebo)/launch/murte_view.launch"/>
-</launch>
+</launch> -->
