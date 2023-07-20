@@ -22,11 +22,11 @@ def get_data_right(req):
     return GetEncoderResponse(last_data_right)
 
 
-last_value_left = last_value_right = 0
-
-
 def map_rad_to_ticks(rad):
     return int(rad / (2 * math.pi) * ticks)
+
+
+last_value_left = last_value_right = 0
 
 
 def calculate_difference(data):
@@ -55,19 +55,43 @@ def callback(data):
         return
     differences = calculate_difference(data)
     [left, right] = calculateEncoder(data, differences)
-
-    print(calculateEncoder(data, differences))
     left_message = Encoder()
     right_message = Encoder()
     left_message.header = right_message.header = data.header
-
     left_message.value = left
     right_message.value = right
-    print(left_message, type(left_message.value))
     pub_left.publish(left_message)
     pub_right.publish(right_message)
     last_data_left = left
     last_data_right = right
+
+
+last_speed_left_count = 0
+
+
+def publish_speed_data_left(self, event=None):
+    global last_speed_left_count
+    encoder = Encoder()
+    # encoder.header = self.get_header()
+    encoder.value = last_value_left - last_speed_left_count
+    if not bidirectional:
+        encoder.value = abs(encoder.value)
+    last_speed_left_count = last_value_left
+    speed_pub_left.publish(encoder)
+
+
+last_speed_right_count = 0
+
+
+def publish_speed_data_right(self, event=None):
+    global last_speed_right_count
+    encoder = Encoder()
+    # encoder.header = self.get_header()
+    encoder.value = last_value_right - last_speed_right_count
+    if not bidirectional:
+        encoder.value = abs(encoder.value)
+    last_speed_right_count = last_value_right
+    speed_pub_right.publish(encoder)
 
 
 def listener():
@@ -85,6 +109,9 @@ def listener():
     speed_pub_right = rospy.Publisher(
         "/mirte/encoder_speed/right", Encoder, queue_size=1, latch=True
     )
+    rospy.Timer(rospy.Duration(1.0 / 10.0), publish_speed_data_left)
+    rospy.Timer(rospy.Duration(1.0 / 10.0), publish_speed_data_right)
+
     rospy.Subscriber(f"/mirte/joint_states", JointState, callback)
     rospy.spin()
 
