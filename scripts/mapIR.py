@@ -9,6 +9,7 @@ import numpy as np
 from mirte_msgs.msg import Intensity, IntensityDigital
 from std_msgs.msg import Header, Int32
 from mirte_msgs.srv import *
+
 """
 Node to transform an input Image topic into
 an output grayscale Image topic.

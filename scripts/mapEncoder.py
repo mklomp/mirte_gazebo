@@ -126,5 +126,4 @@ if __name__ == "__main__":
     listener()
 
 
-
 # TODO: lijnvolg sensoren, camera, left en right motor aansturing, wielen meer naar binnen
