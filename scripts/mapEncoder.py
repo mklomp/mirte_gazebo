@@ -124,3 +124,7 @@ if __name__ == "__main__":
         ticks = eval(sys.argv[1])
         bidirectional = eval(sys.argv[2])
     listener()
+
+
+
+# TODO: lijnvolg sensoren, camera, left en right motor aansturing, wielen meer naar binnen

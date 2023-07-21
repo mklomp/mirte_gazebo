@@ -12,4 +12,7 @@ term4$ rosrun rviz rviz -d mirte_gazebo.rviz -->
   <node name="mapUltrasonicLeft" pkg="mirte_gazebo" type="mapUltrasonic.py" output="screen" args="left"/>
   <node name="mapUltrasonicRight" pkg="mirte_gazebo" type="mapUltrasonic.py" output="screen" args="right"/>
   <node name="mapEncoder" pkg="mirte_gazebo" type="mapEncoder.py" output="screen" args="540 True"/>
+  <node name="video_server" pkg="web_video_server" type="web_video_server"/>
+  <node name="mapIRLeft" pkg="mirte_gazebo" type="mapIR.py" output="screen" args="left"/>
+  <node name="mapIRRight" pkg="mirte_gazebo" type="mapIR.py" output="screen" args="right"/>
 </launch>
