@@ -120,10 +120,10 @@ ticks = 540
 bidirectional = True
 
 if __name__ == "__main__":
-    if len(sys.argv) == 3:
+    if len(sys.argv) >= 3:
         ticks = eval(sys.argv[1])
         bidirectional = eval(sys.argv[2])
     listener()
 
 
-# TODO: lijnvolg sensoren, camera, left en right motor aansturing, wielen meer naar binnen
+# TODO: opties, camera, left en right motor aansturing, wielen meer naar binnen

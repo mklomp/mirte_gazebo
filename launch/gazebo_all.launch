@@ -4,6 +4,8 @@
   <arg name="intensity_enable" default="False"/>
   <arg name="sonar_enable" default="False"/>
   <arg name="lidar_enable" default="False"/>
+  <arg name="encoder_bidirectional" default="False"/>
+  <arg name="encoder_ticks" default="540"/>
   <include file="$(find mirte_gazebo)/launch/gazebo_empty_world.launch"/>
   <include file="$(find mirte_gazebo)/launch/spawn_duckietown.launch"/>
   <include file="$(find mirte_gazebo)/launch/spawn_mirte.launch">
@@ -17,7 +19,7 @@
     <node name="mapUltrasonicLeft" pkg="mirte_gazebo" type="mapUltrasonic.py" output="screen" args="left"/>
     <node name="mapUltrasonicRight" pkg="mirte_gazebo" type="mapUltrasonic.py" output="screen" args="right"/>
   </group>
-  <node name="mapEncoder" pkg="mirte_gazebo" type="mapEncoder.py" output="screen" args="540 True"/>
+  <node name="mapEncoder" pkg="mirte_gazebo" type="mapEncoder.py" output="screen" args="$(arg encoder_ticks) $(arg encoder_bidirectional)"/>
   <group if="$(eval intensity_enable or camera_enable)">
     <node name="video_server" pkg="web_video_server" type="web_video_server"/>
   </group>
