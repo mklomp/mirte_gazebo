@@ -117,35 +117,36 @@ def loadMap(map_name):
     #     coords = map_data['start_tile']
     #     self.start_tile = self._get_tile(*coords)
 
+
 def _load_objects(map_data):
-        # Create the objects array
-        objects = []
+    # Create the objects array
+    objects = []
 
-       
-        # For each object
-        for obj_idx, desc in enumerate(map_data.get('objects', [])):
-            kind = desc['kind']
+    # For each object
+    for obj_idx, desc in enumerate(map_data.get("objects", [])):
+        kind = desc["kind"]
 
-            pos = desc['pos']
-            x, z = pos[0:2]
-            y = pos[2] if len(pos) == 3 else 0.0
+        pos = desc["pos"]
+        x, z = pos[0:2]
+        y = pos[2] if len(pos) == 3 else 0.0
 
-            rotate = desc['rotate']
-            optional = desc.get('optional', False)
+        rotate = desc["rotate"]
+        optional = desc.get("optional", False)
 
-            # pos = road_tile_size * np.array((x, y, z))
+        # pos = road_tile_size * np.array((x, y, z))
 
-            # Load the mesh
-            # mesh = ObjMesh.get(kind)
-            if 'static' in desc:
-                static = desc['static']
-            else:
-                static = True
-            if 'height' in desc:
-                scale = desc['height']
-            else:
-                scale = desc['scale']
-            set_object(x, z, kind, -rotate, static, scale)
+        # Load the mesh
+        # mesh = ObjMesh.get(kind)
+        if "static" in desc:
+            static = desc["static"]
+        else:
+            static = True
+        if "height" in desc:
+            scale = desc["height"]
+        else:
+            scale = desc["scale"]
+        set_object(x, z, kind, -rotate, static, scale)
+
 
 # <xacro:tile name="straight_1" material="DT/Straight" size="0.6" x="0" y="0"/>
 #   <xacro:tile name="curve_1" material="DT/Curve" size="0.6" x="1" y="0" yaw="90"/>
@@ -158,25 +159,31 @@ def _load_objects(map_data):
 #                     'drivable': drivable
 #                 }
 
-tiles_world = [] # <xacro:tileWorld name="tile_8_8" material="DT/asphalt" size="0.6" x="8" y="8" yaw="0"/>
-tiles_state = [] # <xacro:tileState name="tile_1_0" material="DT/asphalt" size="0.6" x="1" y="0" yaw="0"/>
+tiles_world = (
+    []
+)  # <xacro:tileWorld name="tile_8_8" material="DT/asphalt" size="0.6" x="8" y="8" yaw="0"/>
+tiles_state = (
+    []
+)  # <xacro:tileState name="tile_1_0" material="DT/asphalt" size="0.6" x="1" y="0" yaw="0"/>
 
-    # <xacro:duckieModel name="name_sign_blank" type="sign_blank" size="0.6" x="0" y="0" yaw="0"/>
-#       <xacro:duckieState name="name_sign_blank" type="sign_blank" size="0.6" x="2" y="2"  yaw="0"/>        
+# <xacro:duckieModel name="name_sign_blank" type="sign_blank" size="0.6" x="0" y="0" yaw="0"/>
+#       <xacro:duckieState name="name_sign_blank" type="sign_blank" size="0.6" x="2" y="2"  yaw="0"/>
+
 
 def set_object(i, j, type, angle, static, scale):
     # print(i, j, type, angle, static, scale)
     # scale = 1
-    i=i-0.5
-    j=j-0.5
-    i_ = str(i).replace('.', '_')
-    j_ = str(j).replace('.', '_')
+    i = i - 0.5
+    j = j - 0.5
+    i_ = str(i).replace(".", "_")
+    j_ = str(j).replace(".", "_")
     tiles_world.append(
-        f"<xacro:duckieModel name=\"obj_{i_}_{j_}\" type=\"{type}\" size=\"0.6\" x=\"{i}\" y=\"{j}\" yaw=\"{angle}\" static=\"${{{static}}}\" scale=\"${{{scale}}}\"/>"
+        f'<xacro:duckieModel name="obj_{i_}_{j_}" type="{type}" size="0.6" x="{i}" y="{j}" yaw="{angle}" static="${{{static}}}" scale="${{{scale}}}"/>'
     )
     tiles_state.append(
-        f"<xacro:duckieState name=\"obj_{i_}_{j_}\" type=\"{type}\" size=\"0.6\" x=\"{i}\" y=\"{j}\" yaw=\"{angle}\" static=\"${{{static}}}\" scale=\"${{{scale}}}\"/>"
+        f'<xacro:duckieState name="obj_{i_}_{j_}" type="{type}" size="0.6" x="{i}" y="{j}" yaw="{angle}" static="${{{static}}}" scale="${{{scale}}}"/>'
     )
+
 
 def set_tile(i, j, tile):
     tiles_world.append(
@@ -186,16 +193,21 @@ def set_tile(i, j, tile):
         f"<xacro:tileState name=\"tile_{i}_{j}\" material=\"DT/{tile['kind']}\" size=\"0.6\" x=\"{i}\" y=\"{j}\" yaw=\"{tile['angle']*90}\"/>"
     )
 
+
 mapN = sys.argv[1]
 dest = sys.argv[2]
 loadMap(mapN)
 
 # grid = "\n".join(tiles)
 
-empty_world_file = os.path.join(os.path.dirname(__file__), '../urdf/empty_duckietown.world')
+empty_world_file = os.path.join(
+    os.path.dirname(__file__), "../urdf/empty_duckietown.world"
+)
 
-with open(empty_world_file, 'r') as file:
+with open(empty_world_file, "r") as file:
     data = file.read()
-    data = data.replace("<!-- TILEWORLD -->", "\n".join(tiles_world)).replace("<!-- TILESTATE -->", "\n".join(tiles_state))
-    with open(dest, 'w') as f:
+    data = data.replace("<!-- TILEWORLD -->", "\n".join(tiles_world)).replace(
+        "<!-- TILESTATE -->", "\n".join(tiles_state)
+    )
+    with open(dest, "w") as f:
         f.write(data)
