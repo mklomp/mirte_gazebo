@@ -1,11 +1,7 @@
 <?xml version="1.0"?>
-<launch>
-  <env name="GAZEBO_RESOURCE_PATH" value="$(find mirte_gazebo)"/>
-  <arg name="duckietown" default="/home/arendjan/gym-duckietown/gym_duckietown/maps/4way.yaml"/>
-  <!-- <param name="/duckietown_generator2" command="echo 'duckietown_generator2b'"/> -->
-  TODO: hier nog mee bezig om python code de world automatisch te laten maken
-  <param name="/duckietown_generator" command="$(find mirte_gazebo)/scripts/buildMap.py $(arg duckietown) &amp;&amp; $(find xacro)/xacro $(find mirte_gazebo)/urdf/doos2.world -o $(find mirte_gazebo)/worlds/doos2T.world"/>
+<launch><env name="GAZEBO_RESOURCE_PATH" value="$(find mirte_gazebo)"/><arg name="duckietown" default="$(find mirte_gazebo)/maps/zigzag_dists.yaml"/>
+  <param name="/duckietown_generator" command="$(find mirte_gazebo)/scripts/buildMap.sh $(arg duckietown) $(find mirte_gazebo)/urdf/generated.world $(find mirte_gazebo)/worlds/generated.world"/>
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find mirte_gazebo)/worlds/doos2T.world"/>
+    <arg name="world_name" value="$(find mirte_gazebo)/worlds/generated.world"/>
   </include>
 </launch>

@@ -1,3 +1,5 @@
 build/
 install/
 log/
+worlds/generated.world
+urdf/generated.world

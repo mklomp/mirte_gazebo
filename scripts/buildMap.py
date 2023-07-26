@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 
-import os
+import os, sys
 import yaml
 
 
@@ -41,7 +41,7 @@ def loadMap(map_name):
     # Get the full map file path
     map_file_path = get_file_path("maps", map_name, "yaml")
 
-    print('loading map file "%s"' % map_file_path)
+    # print('loading map file "%s"' % map_file_path)
 
     with open(map_file_path, "r") as f:
         map_data = yaml.load(f, Loader=yaml.Loader)
@@ -129,15 +129,28 @@ def loadMap(map_name):
 #                     'drivable': drivable
 #                 }
 
-tiles = []
+tiles_world = [] # <xacro:tileWorld name="tile_8_8" material="DT/asphalt" size="0.6" x="8" y="8" yaw="0"/>
+tiles_state = [] # <xacro:tileState name="tile_1_0" material="DT/asphalt" size="0.6" x="1" y="0" yaw="0"/>
 
 
 def set_tile(i, j, tile):
-    tiles.append(
-        f"<xacro:tile name=\"tile_{i}_{j}\" material=\"DT/{tile['kind']}\" size=\"0.6\" x=\"{i}\" y=\"{j}\" yaw=\"{tile['angle']*90}\"/>"
+    tiles_world.append(
+        f"<xacro:tileWorld name=\"tile_{i}_{j}\" material=\"DT/{tile['kind']}\" size=\"0.6\" x=\"{i}\" y=\"{j}\" yaw=\"{tile['angle']*90}\"/>"
+    )
+    tiles_state.append(
+        f"<xacro:tileState name=\"tile_{i}_{j}\" material=\"DT/{tile['kind']}\" size=\"0.6\" x=\"{i}\" y=\"{j}\" yaw=\"{tile['angle']*90}\"/>"
     )
 
+mapN = sys.argv[1]
+dest = sys.argv[2]
+loadMap(mapN)
 
-loadMap("/home/arendjan/gym-duckietown/gym_duckietown/maps/zigzag_dists.yaml")
+# grid = "\n".join(tiles)
 
-print("\n".join(tiles))
+empty_world_file = os.path.join(os.path.dirname(__file__), '../urdf/empty_duckietown.world')
+
+with open(empty_world_file, 'r') as file:
+    data = file.read()
+    data = data.replace("<!-- TILEWORLD -->", "\n".join(tiles_world)).replace("<!-- TILESTATE -->", "\n".join(tiles_state))
+    with open(dest, 'w') as f:
+        f.write(data)
