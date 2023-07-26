@@ -109,7 +109,7 @@ def loadMap(map_name):
                 # self.drivable_tiles.append(tile)
 
     # self.mesh = ObjMesh.get('duckiebot')
-    # self._load_objects(map_data)
+    _load_objects(map_data)
 
     # Get the starting tile from the map, if specified
     # self.start_tile = None
@@ -117,6 +117,35 @@ def loadMap(map_name):
     #     coords = map_data['start_tile']
     #     self.start_tile = self._get_tile(*coords)
 
+def _load_objects(map_data):
+        # Create the objects array
+        objects = []
+
+       
+        # For each object
+        for obj_idx, desc in enumerate(map_data.get('objects', [])):
+            kind = desc['kind']
+
+            pos = desc['pos']
+            x, z = pos[0:2]
+            y = pos[2] if len(pos) == 3 else 0.0
+
+            rotate = desc['rotate']
+            optional = desc.get('optional', False)
+
+            # pos = road_tile_size * np.array((x, y, z))
+
+            # Load the mesh
+            # mesh = ObjMesh.get(kind)
+            if 'static' in desc:
+                static = desc['static']
+            else:
+                static = True
+            if 'height' in desc:
+                scale = desc['height']
+            else:
+                scale = desc['scale']
+            set_object(x, z, kind, -rotate, static, scale)
 
 # <xacro:tile name="straight_1" material="DT/Straight" size="0.6" x="0" y="0"/>
 #   <xacro:tile name="curve_1" material="DT/Curve" size="0.6" x="1" y="0" yaw="90"/>
@@ -132,6 +161,22 @@ def loadMap(map_name):
 tiles_world = [] # <xacro:tileWorld name="tile_8_8" material="DT/asphalt" size="0.6" x="8" y="8" yaw="0"/>
 tiles_state = [] # <xacro:tileState name="tile_1_0" material="DT/asphalt" size="0.6" x="1" y="0" yaw="0"/>
 
+    # <xacro:duckieModel name="name_sign_blank" type="sign_blank" size="0.6" x="0" y="0" yaw="0"/>
+#       <xacro:duckieState name="name_sign_blank" type="sign_blank" size="0.6" x="2" y="2"  yaw="0"/>        
+
+def set_object(i, j, type, angle, static, scale):
+    # print(i, j, type, angle, static, scale)
+    # scale = 1
+    i=i-0.5
+    j=j-0.5
+    i_ = str(i).replace('.', '_')
+    j_ = str(j).replace('.', '_')
+    tiles_world.append(
+        f"<xacro:duckieModel name=\"obj_{i_}_{j_}\" type=\"{type}\" size=\"0.6\" x=\"{i}\" y=\"{j}\" yaw=\"{angle}\" static=\"${{{static}}}\" scale=\"${{{scale}}}\"/>"
+    )
+    tiles_state.append(
+        f"<xacro:duckieState name=\"obj_{i_}_{j_}\" type=\"{type}\" size=\"0.6\" x=\"{i}\" y=\"{j}\" yaw=\"{angle}\" static=\"${{{static}}}\" scale=\"${{{scale}}}\"/>"
+    )
 
 def set_tile(i, j, tile):
     tiles_world.append(
