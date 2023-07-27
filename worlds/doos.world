@@ -1,6 +1,7 @@
-<sdf version='1.7'>
-  <world name='default'>
-    <light name='sun' type='directional'>
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <world name="default">
+    <light name="sun" type="directional">
       <cast_shadows>1</cast_shadows>
       <pose>0 0 10 0 -0 0</pose>
       <diffuse>0.8 0.8 0.8 1</diffuse>
@@ -18,10 +19,10 @@
         <falloff>0</falloff>
       </spot>
     </light>
-    <model name='ground_plane'>
+    <model name="ground_plane">
       <static>1</static>
-      <link name='link'>
-        <collision name='collision'>
+      <link name="link">
+        <collision name="collision">
           <geometry>
             <plane>
               <normal>0 0 1</normal>
@@ -46,7 +47,7 @@
           </surface>
           <max_contacts>10</max_contacts>
         </collision>
-        <visual name='visual'>
+        <visual name="visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <plane>
@@ -68,8 +69,8 @@
     </model>
     <gravity>0 0 -9.8</gravity>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
-    <atmosphere type='adiabatic'/>
-    <physics type='ode'>
+    <atmosphere type="adiabatic"/>
+    <physics type="ode">
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1</real_time_factor>
       <real_time_update_rate>1000</real_time_update_rate>
@@ -87,7 +88,7 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-    <model name='unit_box'>
+    <model name="unit_box">
       <!-- <pose>0.574397 0.539145 0.5 0 -0 0</pose>
       <link name='link'>
         <inertial>
@@ -2171,37 +2172,37 @@
         <material>DT/asphalt</material>
       </gazebo>
     </model>
-    <state world_name='default'>
+    <state world_name="default">
       <sim_time>56 902000000</sim_time>
       <real_time>67 148953359</real_time>
       <wall_time>1689942270 561330025</wall_time>
       <iterations>56902</iterations>
-      <model name='ground_plane'>
+      <model name="ground_plane">
         <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
-        <link name='link'>
+        <link name="link">
           <pose>0 0 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='unit_box'>
+      <model name="unit_box">
         <pose>0.574397 0.539145 0.5 0 -0 0</pose>
         <scale>1 1 1</scale>
-        <link name='link'>
+        <link name="link">
           <pose>0.574397 0.539145 0.5 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>-0.004709 -9.78112 9.78158 0.712677 -0.009414 -4.3e-05</acceleration>
           <wrench>-0.004709 -9.78112 9.78158 0 -0 0</wrench>
         </link>
       </model>
-      <light name='sun'>
+      <light name="sun">
         <pose>0 0 10 0 -0 0</pose>
       </light>
     </state>
-    <gui fullscreen='0'>
-      <camera name='user_camera'>
+    <gui fullscreen="0">
+      <camera name="user_camera">
         <pose>2.02397 -1.27516 1.93913 -0 0.554783 2.24491</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>

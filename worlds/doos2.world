@@ -1,6 +1,7 @@
-<sdf version='1.7'>
-  <world name='default'>
-    <light name='sun' type='directional'>
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <world name="default">
+    <light name="sun" type="directional">
       <cast_shadows>1</cast_shadows>
       <pose>0 0 10 0 -0 0</pose>
       <diffuse>0.8 0.8 0.8 1</diffuse>
@@ -18,10 +19,10 @@
         <falloff>0</falloff>
       </spot>
     </light>
-    <model name='ground_plane'>
+    <model name="ground_plane">
       <static>1</static>
-      <link name='link'>
-        <collision name='collision'>
+      <link name="link">
+        <collision name="collision">
           <geometry>
             <plane>
               <normal>0 0 1</normal>
@@ -46,7 +47,7 @@
           </surface>
           <max_contacts>10</max_contacts>
         </collision>
-        <visual name='visual'>
+        <visual name="visual">
           <cast_shadows>0</cast_shadows>
           <geometry>
             <plane>
@@ -68,8 +69,8 @@
     </model>
     <gravity>0 0 -9.8</gravity>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
-    <atmosphere type='adiabatic'/>
-    <physics type='ode'>
+    <atmosphere type="adiabatic"/>
+    <physics type="ode">
       <max_step_size>0.001</max_step_size>
       <real_time_factor>1</real_time_factor>
       <real_time_update_rate>1000</real_time_update_rate>
@@ -87,9 +88,9 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-    <model name='unit_box'>
+    <model name="unit_box">
       <pose>0.759134 0.414249 0.5 0 -0 0</pose>
-      <link name='link'>
+      <link name="link">
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -102,7 +103,7 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <collision name='collision'>
+        <collision name="collision">
           <geometry>
             <box>
               <size>1 1 1</size>
@@ -122,7 +123,7 @@
             </friction>
           </surface>
         </collision>
-        <visual name='visual'>
+        <visual name="visual">
           <geometry>
             <box>
               <size>1 1 1</size>
@@ -140,9 +141,9 @@
         <kinematic>0</kinematic>
       </link>
     </model>
-    <model name='unit_box_0'>
+    <model name="unit_box_0">
       <pose>1.77738 0.415236 0.5 0 -0 0</pose>
-      <link name='link'>
+      <link name="link">
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -155,7 +156,7 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <collision name='collision'>
+        <collision name="collision">
           <geometry>
             <box>
               <size>1 1 1</size>
@@ -175,7 +176,7 @@
             </friction>
           </surface>
         </collision>
-        <visual name='visual'>
+        <visual name="visual">
           <geometry>
             <box>
               <size>1 1 1</size>
@@ -193,58 +194,58 @@
         <kinematic>0</kinematic>
       </link>
     </model>
-    <state world_name='default'>
+    <state world_name="default">
       <sim_time>61 903000000</sim_time>
       <real_time>72 695968912</real_time>
       <wall_time>1689943562 810051807</wall_time>
       <iterations>61903</iterations>
-      <model name='ground_plane'>
+      <model name="ground_plane">
         <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
-        <link name='link'>
+        <link name="link">
           <pose>0 0 0 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='unit_box'>
+      <model name="unit_box">
         <pose>0.759134 0.414254 0.499995 -1e-05 -0 -0</pose>
         <scale>1 1 1</scale>
-        <link name='link'>
+        <link name="link">
           <pose>0.759134 0.414254 0.499995 -1e-05 -0 -0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0.004709 0.011055 -9.78158 -0.022108 0.009414 1e-06</acceleration>
           <wrench>0.004709 0.011055 -9.78158 0 -0 0</wrench>
         </link>
       </model>
-      <model name='unit_box_0'>
+      <model name="unit_box_0">
         <pose>1.77738 0.415241 0.499995 -1e-05 -0 0</pose>
         <scale>1 1 1</scale>
-        <link name='link'>
+        <link name="link">
           <pose>1.77738 0.415241 0.499995 -1e-05 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0.004709 0.011055 -9.78158 -0.022108 0.009414 1e-06</acceleration>
           <wrench>0.004709 0.011055 -9.78158 0 -0 0</wrench>
         </link>
       </model>
-      <model name='unit_box_1'>
+      <model name="unit_box_1">
         <pose>3 0.429414 0.5 0 -0 0</pose>
         <scale>1 1 1</scale>
-        <link name='link'>
+        <link name="link">
           <pose>3 0.429414 0.5 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>-0.004709 -9.78112 9.78158 0.712677 -0.009414 -4.3e-05</acceleration>
           <wrench>-0.004709 -9.78112 9.78158 0 -0 0</wrench>
         </link>
       </model>
-      <light name='sun'>
+      <light name="sun">
         <pose>0 0 10 0 -0 0</pose>
       </light>
     </state>
-    <model name='unit_box_1'>
+    <model name="unit_box_1">
       <pose>3 0.429414 0.5 0 -0 0</pose>
-      <link name='link'>
+      <link name="link">
         <inertial>
           <mass>1</mass>
           <inertia>
@@ -257,7 +258,7 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <collision name='collision'>
+        <collision name="collision">
           <geometry>
             <box>
               <size>1 1 1</size>
@@ -277,7 +278,7 @@
             </friction>
           </surface>
         </collision>
-        <visual name='visual'>
+        <visual name="visual">
           <geometry>
             <box>
               <size>1 1 1</size>
@@ -295,8 +296,8 @@
         <kinematic>0</kinematic>
       </link>
     </model>
-    <gui fullscreen='0'>
-      <camera name='user_camera'>
+    <gui fullscreen="0">
+      <camera name="user_camera">
         <pose>6.19973 -3.5522 2.66438 0 0.439643 2.80819</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
