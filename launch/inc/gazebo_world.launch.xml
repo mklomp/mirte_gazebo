@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- <arg name="model" default="$(find prius_description)/urdf/prius.urdf"/> -->
+  <arg name="world_name" default="lines.world"/>
+  <arg name="gazebo_gui" default="true"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="verbose" value="true"/>
+    <arg name="world_name" value="$(find mirte_gazebo)/worlds/$(arg world_name)"/>
+    <arg name="gui" value="$(arg gazebo_gui)" />
+    <!--
+    <arg name="world_name" value="$(find car_simulation)/worlds/mcity.world"/>
+    -->
+  </include>
+</launch>

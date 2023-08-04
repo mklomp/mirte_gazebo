@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<launch>
+	<arg name="gazebo_gui" default="true"/>
+	<arg name="rviz" default="true"/>
+	<arg name="world_name" default="barrels.world"/>
+	<arg name="rvizconfig" default="$(find mirte_gazebo)/rviz/barrel_world.rviz"/>
+
+
+  <include file="$(find mirte_gazebo)/launch/inc/gazebo_world.launch.xml">
+    <arg name="gazebo_gui" value="$(arg gazebo_gui)" />
+    <arg name="world_name" value="$(arg world_name)" />
+  </include>
+  <include file="$(find mirte_gazebo)/launch/spawn_mirte_barrels.launch">
+
+  </include>
+
+  <node pkg="cloud_conversions"       type="cloud_conversions_node"       name="cloud_conversions_node"       output="screen">
+    <remap from="pointcloud1_in" to="/prius/center_laser/scan"/>
+    <remap from="pointcloud2_out" to="/point_cloud"/>
+  </node>
+
+  <node pkg="detection_3d_to_markers" type="detection_3d_to_markers_node" name="detection_3d_to_markers_node" output="screen">
+    <remap from="detections" to="/pcl_obstacle_detector_node/detections"/>
+    <remap from="markers" to="~markers"/>
+  </node>
+</launch>
