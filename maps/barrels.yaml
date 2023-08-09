@@ -11,7 +11,7 @@ tiles:
 tile_size: 0.585
 objects:
 - kind: barrier
-  pos: [6, 2.8]
+  pos: [5.8, 2.8]
   rotate: 100
   height: 0.5
 
@@ -23,7 +23,7 @@ objects:
 
 
 - kind: includedperson
-  pos: [6.5, 2.5]
+  pos: [6.5, 2.8]
   rotate: 90
   height: 0.3
 
@@ -139,7 +139,7 @@ objects:
 - kind: cone
   pos:
     - 4.699999999999998
-    - -0.1332291000000001
+    - 0
   rotate: 0
   height: 0.1
 - kind: cone
@@ -151,7 +151,7 @@ objects:
 - kind: cone
   pos:
     - 4.999999999999998
-    - -0.20400000000000484
+    - 0
   rotate: 0
   height: 0.1
 - kind: cone
@@ -163,7 +163,7 @@ objects:
 - kind: cone
   pos:
     - 5.299999999999998
-    - -0.19386090000000133
+    - 0
   rotate: 0
   height: 0.1
 - kind: cone
@@ -175,7 +175,7 @@ objects:
 - kind: cone
   pos:
     - 5.599999999999998
-    - -0.08526720000000121
+    - 0
   rotate: 0
   height: 0.1
 - kind: cone
@@ -192,95 +192,102 @@ objects:
   height: 0.1
 - kind: cone
   pos:
-    - 5.899999999999998
+    - 5.7
     - 1.6393256999999928
   rotate: 0
   height: 0.1
 - kind: cone
   pos:
     - 6.1999999999999975
-    - 0.49746239999999564
+    - 0.45
   rotate: 0
   height: 0.1
 
 - kind: cone
   pos:
     - 6.5
+    - 0.7
+  rotate: 0
+  height: 0.1
+# - kind: cone
+#   pos:
+#     - 6.5
+#     - 1
+#   rotate: 0
+#   height: 0.1
+
+# - kind: cone
+#   pos:
+#     - 7.5
+#     - 5
+#   rotate: 0
+#   height: 0.1
+
+
+# start gen
+- kind: cone
+  pos:
+    - 6.8
     - 1
   rotate: 0
   height: 0.1
-
 - kind: cone
   pos:
-    - 7.5
-    - 5
-  rotate: 0
-  height: 0.1
-
-  # begin rechte lijn:
-- kind: cone
-  pos:
-    - 6.5
-    - 1
-  rotate: 0
-  height: 0.1
-- kind: cone
-  pos:
-    - 6.6
+    - 6.8999999999999995
     - 1.3999999999999986
   rotate: 0
   height: 0.1
 - kind: cone
   pos:
-    - 6.699999999999999
+    - 6.999999999999999
     - 1.7999999999999972
   rotate: 0
   height: 0.1
 - kind: cone
   pos:
-    - 6.799999999999999
+    - 7.099999999999999
     - 2.1999999999999957
   rotate: 0
   height: 0.1
 - kind: cone
   pos:
-    - 6.899999999999999
+    - 7.199999999999998
     - 2.5999999999999943
   rotate: 0
   height: 0.1
 - kind: cone
   pos:
-    - 6.999999999999998
+    - 7.299999999999998
     - 2.999999999999993
   rotate: 0
   height: 0.1
 - kind: cone
   pos:
-    - 7.099999999999998
+    - 7.399999999999998
     - 3.3999999999999915
   rotate: 0
   height: 0.1
 - kind: cone
   pos:
-    - 7.1999999999999975
+    - 7.499999999999997
     - 3.79999999999999
   rotate: 0
   height: 0.1
 - kind: cone
   pos:
-    - 7.299999999999997
+    - 7.599999999999997
     - 4.199999999999989
   rotate: 0
   height: 0.1
 - kind: cone
   pos:
-    - 7.399999999999997
+    - 7.699999999999997
     - 4.599999999999987
   rotate: 0
   height: 0.1
 - kind: cone
   pos:
-    - 7.4999999999999964
+    - 7.799999999999996
     - 4.999999999999986
   rotate: 0
   height: 0.1

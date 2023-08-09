@@ -4,6 +4,8 @@
   <arg name="duckietown" default="$(find mirte_gazebo)/maps/udem1.yaml"/>
   <param name="/duckietown_generator" command="$(find mirte_gazebo)/scripts/buildMap.sh $(arg duckietown) $(find mirte_gazebo)/urdf/generated.world $(find mirte_gazebo)/worlds/generated.world"/>
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="gui" value="1"/>
     <arg name="world_name" value="$(find mirte_gazebo)/worlds/generated.world"/>
+    <arg name="extra_gazebo_args" value="--lockstep"/>
   </include>
 </launch>

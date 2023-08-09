@@ -128,8 +128,10 @@ def _load_objects(map_data):
 
         pos = desc["pos"]
         x, z = pos[0:2]
+        x = eval(str(x))
+        z = eval(str(z))
         y = pos[2] if len(pos) == 3 else 0.0
-
+        y = eval(str(y))
         rotate = desc["rotate"]
         optional = desc.get("optional", False)
 

@@ -10,7 +10,7 @@ function places(x) {
     // return 0.2083 *x*x*x - 2.125*x*x + 6.4167*x - 4
     // return 0.0333*x*x*x - 0.5*x*x + 1.8667*x + 1
     // return 0.1083*x*x*x - 1.175*x*x + 3.5167*x - 1.2
-    return (x-6.5)*4+1
+    return (x-6.8)*4+1
 
 }
 
@@ -18,8 +18,8 @@ function streetWidth(x) {
     return 0
 }
 
-maxX = 7.5
-minX = 6.5
+maxX = 7.8
+minX = 6.8
 
 
 currX = minX
