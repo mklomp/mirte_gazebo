@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="camera_enable" default="True"/>
+  <arg name="intensity_enable" default="False"/>
+  <arg name="sonar_enable" default="False"/>
+  <arg name="lidar_enable" default="False"/>
+  <arg name="encoder_bidirectional" default="True"/>
+  <arg name="encoder_ticks" default="540"/>
+  <arg name="realsense_enable" default="True"/>
+  <include file="$(find mirte_gazebo)/launch/gazebo_duckietown_world.launch">
+    <arg name="duckietown" value="$(find mirte_gazebo)/maps/barrels.yaml"/>
+    </include>
+    <!-- <include file="$(find gazebo_ros)/launch/empty_world.launch">
+      <arg name="verbose" value="true"/>
+      <arg name="world_name" value="/home/arendjan/eersteEdit2.world"/>
+      <arg name="gui" value="true" />
+      <!-
+      <arg name="world_name" value="$(find car_simulation)/worlds/mcity.world"/>
+      -
+    </include> -->
+  <include file="$(find mirte_gazebo)/launch/spawn_mirte.launch">
+    <arg name="camera_enable" value="$(arg camera_enable)"/>
+    <arg name="intensity_enable" value="$(arg intensity_enable)"/>
+    <arg name="sonar_enable" value="$(arg sonar_enable)"/>
+    <arg name="lidar_enable" value="$(arg lidar_enable)"/>
+    <arg name="realsense_enable" value="$(arg realsense_enable)"/>
+    <arg name="x" value="0.6"/>
+    <arg name="y" value="0.9"/>
+  </include>
+  <include file="$(find mirte_gazebo)/launch/depth_proc.launch">
+    <arg name="camera_name" value="mirte_r200"/>
+</include>
+  <node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(find mirte_gazebo)/mirte_gazebo.rviz" respawn="false"/>
+  <group if="$(arg sonar_enable)">
+    <node name="mapUltrasonicLeft" pkg="mirte_gazebo" type="mapUltrasonic.py" output="screen" args="left"/>
+    <node name="mapUltrasonicRight" pkg="mirte_gazebo" type="mapUltrasonic.py" output="screen" args="right"/>
+  </group>
+  <!-- <node name="mapEncoder" pkg="mirte_gazebo" type="mapEncoder.py" output="screen" args="$(arg encoder_ticks) $(arg encoder_bidirectional)"/> -->
+  <group if="$(eval intensity_enable or camera_enable or realsense_enable)">
+    <node name="video_server" pkg="web_video_server" type="web_video_server"/>
+  </group>
+  <group if="$(arg intensity_enable)">
+    <node name="mapIRLeft" pkg="mirte_gazebo" type="mapIR.py" output="screen" args="left"/>
+    <node name="mapIRRight" pkg="mirte_gazebo" type="mapIR.py" output="screen" args="right"/>
+  </group>
+</launch>

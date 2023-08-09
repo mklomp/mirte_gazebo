@@ -145,7 +145,10 @@ def _load_objects(map_data):
             scale = desc["height"]
         else:
             scale = desc["scale"]
-        set_object(x, z, kind, -rotate, static, scale)
+        if "included" in kind:
+            set_object_included(x, z, kind.replace("included", ""), -rotate, static, scale)
+        else:
+            set_object(x, z, kind, -rotate, static, scale)
 
 
 # <xacro:tile name="straight_1" material="DT/Straight" size="0.6" x="0" y="0"/>
@@ -182,6 +185,20 @@ def set_object(i, j, type, angle, static, scale):
     )
     tiles_state.append(
         f'<xacro:duckieState name="obj_{i_}_{j_}" type="{type}" size="0.6" x="{i}" y="{j}" yaw="{angle}" static="${{{static}}}" scale="${{{scale}}}"/>'
+    )
+
+def set_object_included(i, j, type, angle, static, scale):
+    # print(i, j, type, angle, static, scale)
+    # scale = 1
+    i = i - 0.5
+    j = j - 0.5
+    i_ = str(i).replace(".", "_")
+    j_ = str(j).replace(".", "_")
+    tiles_world.append(
+        f'<xacro:includedModel name="obj_{i_}_{j_}" type="{type}" size="0.6" x="{i}" y="{j}" yaw="{angle}" static="${{{static}}}" scale="${{{scale}}}"/>'
+    )
+    tiles_state.append(
+        f'<xacro:includedState name="obj_{i_}_{j_}" type="{type}" size="0.6" x="{i}" y="{j}" yaw="{angle}" static="${{{static}}}" scale="${{{scale}}}"/>'
     )
 
 
