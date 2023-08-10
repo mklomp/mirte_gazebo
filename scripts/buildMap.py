@@ -78,7 +78,10 @@ def loadMap(map_name):
                 continue
 
             if "/" in tile:
-                kind, orient = tile.split("/")
+                it = tile.split("/")
+                kind = it[0]
+                orient = it[1]
+
                 kind = kind.strip(" ")
                 orient = orient.strip(" ")
                 # if(orient == ):
@@ -173,15 +176,20 @@ tiles_state = (
 
 # <xacro:duckieModel name="name_sign_blank" type="sign_blank" size="0.6" x="0" y="0" yaw="0"/>
 #       <xacro:duckieState name="name_sign_blank" type="sign_blank" size="0.6" x="2" y="2"  yaw="0"/>
-
+existing_objects = []
 
 def set_object(i, j, type, angle, static, scale):
+    # return
     # print(i, j, type, angle, static, scale)
     # scale = 1
     i = i - 0.5
     j = j - 0.5
     i_ = str(i).replace(".", "_")
     j_ = str(j).replace(".", "_")
+    name = f'obj_{i_}_{j_}'
+    if(name in existing_objects):
+        return
+    existing_objects.append(name)
     tiles_world.append(
         f'<xacro:duckieModel name="obj_{i_}_{j_}" type="{type}" size="0.6" x="{i}" y="{j}" yaw="{angle}" static="${{{static}}}" scale="${{{scale}}}"/>'
     )

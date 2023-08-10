@@ -19,11 +19,11 @@
     </node>
   
     <!-- Construct point cloud of the rgb and depth topics -->
-    <node pkg="nodelet" type="nodelet" name="points_xyzrgb" args="load depth_image_proc/point_cloud_xyzrgb standalone_nodelet --no-bond">
-      <remap from="rgb/camera_info" to="$(arg rgb_camera_info)" />
-      <remap from="rgb/image_rect_color" to="$(arg rgb_img_rect)"/>
-      <remap from="depth_registered/image_rect" to="$(arg depReg_imgrect)"/>
-      <remap from="depth_registered/points" to="$(arg out_cloud)"/>
+    <node pkg="nodelet" type="nodelet" name="points_xyz" args="load depth_image_proc/point_cloud_xyz standalone_nodelet - -no-bond">
+      <remap from="camera_info" to="$(arg rgb_camera_info)" />
+      <!-- <remap from="rgb/image_rect_color" to="$(arg rgb_img_rect)"/> -->
+      <remap from="image_rect" to="$(arg depReg_imgrect)"/>
+      <remap from="points" to="$(arg out_cloud)"/>
     </node>
   </launch>
   

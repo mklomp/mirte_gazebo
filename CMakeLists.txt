@@ -119,6 +119,17 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
+
+
+find_package(catkin REQUIRED COMPONENTS roscpp prius_msgs sensor_msgs pcl_ros pcl_conversions)
+
+
+include_directories(${catkin_INCLUDE_DIRS})
+
+
+add_executable(rotate src/rotate.cpp)
+add_dependencies(rotate ${catkin_EXPORTED_TARGETS})
+target_link_libraries(rotate ${catkin_LIBRARIES} )
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/mirte_gazebo.cpp
