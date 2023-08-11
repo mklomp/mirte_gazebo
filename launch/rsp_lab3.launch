@@ -2,7 +2,7 @@
 <launch>
   <arg name="camera_enable" default="False"/>
   <arg name="intensity_enable" default="True"/>
-  <arg name="sonar_enable" default="True"/>
+  <arg name="sonar_enable" default="False"/>
   <arg name="lidar_enable" default="False"/>
   <arg name="encoder_bidirectional" default="True"/>
   <arg name="encoder_ticks" default="540"/>
@@ -10,7 +10,7 @@
   <include file="$(find mirte_gazebo)/launch/gazebo_duckietown_world.launch">
     <arg name="duckietown" value="$(find mirte_gazebo)/maps/rcj.yaml"/>
     <arg name="gui" value="True"/>
-    <arg name="lockstep" value="True"/>
+    <arg name="lockstep" value="False"/>
     </include>
   <!-- <include file="$(find mirte_gazebo)/launch/spawn_duckietown.launch"/> -->
   <include file="$(find mirte_gazebo)/launch/spawn_mirte.launch">
@@ -33,8 +33,8 @@
     <node name="mapIRRight" pkg="mirte_gazebo" type="convert_ir" output="screen" args="right"/>
   </group>
   <group if="$(arg sonar_enable)">
-    <node name="mapUltrasonicLeft" pkg="mirte_gazebo" type="mapUltrasonic.py" output="screen" args="left"/>
-    <node name="mapUltrasonicRight" pkg="mirte_gazebo" type="mapUltrasonic.py" output="screen" args="right"/>
+    <node name="mapUltrasonicLeft" pkg="mirte_gazebo" type="convert_sonar" output="screen" args="left"/>
+    <node name="mapUltrasonicRight" pkg="mirte_gazebo" type="convert_sonar" output="screen" args="right"/>
   </group>
   <node name="lab3f" pkg="lab3_test" type="lab3" output="screen" />
 </launch>
