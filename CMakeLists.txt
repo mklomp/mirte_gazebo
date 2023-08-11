@@ -9,7 +9,7 @@ project(mirte_gazebo)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   rospy
-  std_msgs
+  std_msgs mirte_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -130,6 +130,14 @@ include_directories(${catkin_INCLUDE_DIRS})
 add_executable(rotate src/rotate.cpp)
 add_dependencies(rotate ${catkin_EXPORTED_TARGETS})
 target_link_libraries(rotate ${catkin_LIBRARIES} )
+
+add_executable(convert_sonar src/convert_ultrasonic.cpp)
+add_dependencies(convert_sonar ${catkin_EXPORTED_TARGETS})
+target_link_libraries(convert_sonar ${catkin_LIBRARIES} )
+add_executable(convert_ir src/convert_ir.cpp)
+add_dependencies(convert_ir ${catkin_EXPORTED_TARGETS})
+target_link_libraries(convert_ir ${catkin_LIBRARIES} )
+
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/mirte_gazebo.cpp

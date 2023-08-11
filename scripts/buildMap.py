@@ -96,7 +96,10 @@ def loadMap(map_name):
                 kind = tile
                 angle = 0
                 drivable = False
-
+            if(kind.startswith('R')):
+                kind = "RCJ/"+kind[1:]
+            else:
+                kind = "DT/" + kind
             tile = {
                 "coords": (i, j),
                 "kind": kind,
@@ -124,7 +127,9 @@ def loadMap(map_name):
 def _load_objects(map_data):
     # Create the objects array
     objects = []
-
+    objects = map_data.get('objects', [])
+    if(objects is None):
+        return
     # For each object
     for obj_idx, desc in enumerate(map_data.get("objects", [])):
         kind = desc["kind"]
@@ -191,10 +196,10 @@ def set_object(i, j, type, angle, static, scale):
         return
     existing_objects.append(name)
     tiles_world.append(
-        f'<xacro:duckieModel name="obj_{i_}_{j_}" type="{type}" size="0.6" x="{i}" y="{j}" yaw="{angle}" static="${{{static}}}" scale="${{{scale}}}"/>'
+        f'<xacro:duckieModel name="obj_{i_}_{j_}" type="{type}" size="{size}" x="{i}" y="{j}" yaw="{angle}" static="${{{static}}}" scale="${{{scale}}}"/>'
     )
     tiles_state.append(
-        f'<xacro:duckieState name="obj_{i_}_{j_}" type="{type}" size="0.6" x="{i}" y="{j}" yaw="{angle}" static="${{{static}}}" scale="${{{scale}}}"/>'
+        f'<xacro:duckieState name="obj_{i_}_{j_}" type="{type}" size="{size}" x="{i}" y="{j}" yaw="{angle}" static="${{{static}}}" scale="${{{scale}}}"/>'
     )
 
 def set_object_included(i, j, type, angle, static, scale):
@@ -205,19 +210,20 @@ def set_object_included(i, j, type, angle, static, scale):
     i_ = str(i).replace(".", "_")
     j_ = str(j).replace(".", "_")
     tiles_world.append(
-        f'<xacro:includedModel name="obj_{i_}_{j_}" type="{type}" size="0.6" x="{i}" y="{j}" yaw="{angle}" static="${{{static}}}" scale="${{{scale}}}"/>'
+        f'<xacro:includedModel name="obj_{i_}_{j_}" type="{type}" size="{size}" x="{i}" y="{j}" yaw="{angle}" static="${{{static}}}" scale="${{{scale}}}"/>'
     )
     tiles_state.append(
-        f'<xacro:includedState name="obj_{i_}_{j_}" type="{type}" size="0.6" x="{i}" y="{j}" yaw="{angle}" static="${{{static}}}" scale="${{{scale}}}"/>'
+        f'<xacro:includedState name="obj_{i_}_{j_}" type="{type}" size="{size}" x="{i}" y="{j}" yaw="{angle}" static="${{{static}}}" scale="${{{scale}}}"/>'
     )
 
+size = 0.5
 
 def set_tile(i, j, tile):
     tiles_world.append(
-        f"<xacro:tileWorld name=\"tile_{i}_{j}\" material=\"DT/{tile['kind']}\" size=\"0.6\" x=\"{i}\" y=\"{j}\" yaw=\"{tile['angle']*90}\"/>"
+        f"<xacro:tileWorld name=\"tile_{i}_{j}\" material=\"{tile['kind']}\" size=\"{size}\" x=\"{i}\" y=\"{j}\" yaw=\"{tile['angle']*90}\"/>"
     )
     tiles_state.append(
-        f"<xacro:tileState name=\"tile_{i}_{j}\" material=\"DT/{tile['kind']}\" size=\"0.6\" x=\"{i}\" y=\"{j}\" yaw=\"{tile['angle']*90}\"/>"
+        f"<xacro:tileState name=\"tile_{i}_{j}\" material=\"{tile['kind']}\" size=\"{size}\" x=\"{i}\" y=\"{j}\" yaw=\"{tile['angle']*90}\"/>"
     )
 
 

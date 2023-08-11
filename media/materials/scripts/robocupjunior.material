@@ -148,3 +148,18 @@ material RCJ/zigzag
         }   
     }
 }
+
+material RCJ/floor
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture rcj/empty.png
+                scale 1 1
+            }
+        }   
+    }
+}
