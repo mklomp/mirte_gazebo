@@ -3116,6 +3116,54 @@
         <kinematic>0</kinematic>
       </link>
     </model>
+    <model name="model_obj_6_0_2_3">
+      <static>True</static>
+      <origin xyz="0.5 1.15 0"/>
+      <pose>3.0 1.15 0.01 0 -0  -1.5707963267948966</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <mesh>
+              <scale>0.2 0.2 0.2</scale>
+              <uri>model://person_walking/meshes/walking.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name="visual">
+          <!-- <origin xyz="${x * size} ${y * size} 0"/> -->
+          <geometry>
+            <mesh>
+              <scale>0.1 0.1 0.1</scale>
+              <uri>model://person_walking/meshes/walking.dae</uri>
+              <!-- <pose>${x * size} ${y * size}  ${z_offset*size * model_scale * scale + 0.01} ${radians(90)} -0 0</pose> -->
+            </mesh>
+          </geometry>
+          <!-- <material>
+            <script>
+              <name>${type}/${type}</name>
+              <uri>file://$(find mirte_gazebo)/models/${type}/materials/scripts/${type}.material</uri>
+            </script>
+          </material> -->
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <!-- <pose>${x * size} ${y * size}  ${z_offset*size * model_scale * scale + 0.01} ${radians(90)} -0 0</pose> -->
+    </model>
     <model name="model_obj_0_5_1_5">
       <!-- END GENERATED -->
       <static>True</static>
@@ -10192,6 +10240,18 @@
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0.00 0.00 -9.78158 -0.00 0.0 1e-06</acceleration>
           <wrench>0.000 0.00 -9.78158 0 -0 0</wrench>
+        </link>
+      </model>
+      <!-- START GENERATED SCALES AND OFFSETS-->
+      <!-- END GENERATED -->
+      <model name="model_obj_6_0_2_3">
+        <pose>3.0 1.15  0.01 0 -0 -1.5707963267948966</pose>
+        <scale>0.1 0.1 0.1</scale>
+        <link name="link">
+          <pose>3.0 1.15 0.01 0 -0  -1.5707963267948966</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <!-- END GENERATED -->
