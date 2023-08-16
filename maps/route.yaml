@@ -57,12 +57,12 @@ tiles:
     - floor
 tile_size: 0.585
 objects:
-  # - kind: includedperson
-  #   pos:
-  #     - 6.5
-  #     - 2.8
-  #   rotate: 90
-  #   height: 0.2
+  - kind: includedperson
+    pos:
+      - 6.5
+      - 2.8
+    rotate: 90
+    height: 0.2
   - kind: cone
     pos:
       - 1

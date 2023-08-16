@@ -12,7 +12,6 @@
     <arg name="gui" value="True"/>
     <arg name="lockstep" value="False"/>
     </include>
-  <!-- <include file="$(find mirte_gazebo)/launch/spawn_duckietown.launch"/> -->
   <include file="$(find mirte_gazebo)/launch/spawn_mirte.launch">
     <arg name="camera_enable" value="$(arg camera_enable)"/>
     <arg name="intensity_enable" value="$(arg intensity_enable)"/>

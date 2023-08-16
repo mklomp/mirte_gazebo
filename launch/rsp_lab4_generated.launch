@@ -8,7 +8,7 @@
   <arg name="encoder_ticks" default="540"/>
   <arg name="realsense_enable" default="True"/>
   <include file="$(find mirte_gazebo)/launch/gazebo_duckietown_world_generated.launch">
-    <arg name="duckietown" value="$(find mirte_gazebo)/worlds/lab4.world"/>
+    <arg name="duckietown" value="$(find mirte_gazebo)/urdf/lab4.world"/>
     <arg name="gui" value="True"/>
     <arg name="lockstep" value="False"/>
     </include>
