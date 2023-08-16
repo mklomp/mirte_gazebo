@@ -7,12 +7,11 @@
   <arg name="encoder_bidirectional" default="True"/>
   <arg name="encoder_ticks" default="540"/>
   <arg name="realsense_enable" default="False"/>
-
   <include file="$(find mirte_gazebo)/launch/gazebo_duckietown_world_generated.launch">
     <arg name="duckietown" value="$(find mirte_gazebo)/urdf/lab3.world"/>
     <arg name="gui" value="True"/>
     <arg name="lockstep" value="False"/>
-    </include>
+  </include>
   <include file="$(find mirte_gazebo)/launch/spawn_mirte.launch">
     <arg name="camera_enable" value="$(arg camera_enable)"/>
     <arg name="intensity_enable" value="$(arg intensity_enable)"/>
@@ -22,7 +21,6 @@
     <arg name="x" value="1.0527"/>
     <arg name="y" value="0.509611"/>
     <arg name="z" value="0.021444"/>
-    
   </include>
   <!-- <node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(find mirte_gazebo)/mirte_gazebo.rviz" respawn="false"/> -->
   <group if="$(arg intensity_enable)">
@@ -33,5 +31,5 @@
     <node name="mapUltrasonicLeft" pkg="mirte_gazebo" type="convert_sonar" output="screen" args="left"/>
     <node name="mapUltrasonicRight" pkg="mirte_gazebo" type="convert_sonar" output="screen" args="right"/>
   </group>
-  <node name="lab3f" pkg="lab3_test" type="lab3" output="screen" />
+  <node name="lab3f" pkg="lab3_test" type="lab3" output="screen"/>
 </launch>

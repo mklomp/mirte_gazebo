@@ -9,8 +9,7 @@
   <arg name="realsense_enable" default="True"/>
   <include file="$(find mirte_gazebo)/launch/gazebo_duckietown_world.launch">
     <arg name="duckietown" value="$(find mirte_gazebo)/maps/barrels.yaml"/>
-    </include>
-    
+  </include>
   <include file="$(find mirte_gazebo)/launch/spawn_mirte.launch">
     <arg name="camera_enable" value="$(arg camera_enable)"/>
     <arg name="intensity_enable" value="$(arg intensity_enable)"/>
@@ -22,7 +21,7 @@
   </include>
   <include file="$(find mirte_gazebo)/launch/depth_proc.launch">
     <arg name="camera_name" value="mirte_r200"/>
-</include>
+  </include>
   <node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(find mirte_gazebo)/mirte_gazebo.rviz" respawn="false"/>
   <group if="$(arg sonar_enable)">
     <node name="mapUltrasonicLeft" pkg="mirte_gazebo" type="mapUltrasonic.py" output="screen" args="left"/>

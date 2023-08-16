@@ -11,7 +11,7 @@
     <arg name="duckietown" value="$(find mirte_gazebo)/urdf/lab4.world"/>
     <arg name="gui" value="True"/>
     <arg name="lockstep" value="False"/>
-    </include>
+  </include>
   <include file="$(find mirte_gazebo)/launch/spawn_mirte.launch">
     <arg name="camera_enable" value="$(arg camera_enable)"/>
     <arg name="intensity_enable" value="$(arg intensity_enable)"/>
@@ -20,9 +20,8 @@
     <arg name="realsense_enable" value="$(arg realsense_enable)"/>
     <arg name="x" value="3.01"/>
     <arg name="y" value="1.3209611"/>
-    <arg name="z" value="0.021444"/>    <arg name="yaw" value="1.521444"/>
-
-    
+    <arg name="z" value="0.021444"/>
+    <arg name="yaw" value="1.521444"/>
   </include>
   <!-- <node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(find mirte_gazebo)/mirte_gazebo.rviz" respawn="false"/> -->
   <group if="$(arg intensity_enable)">
@@ -33,5 +32,5 @@
     <node name="mapUltrasonicLeft" pkg="mirte_gazebo" type="convert_sonar" output="screen" args="left"/>
     <node name="mapUltrasonicRight" pkg="mirte_gazebo" type="convert_sonar" output="screen" args="right"/>
   </group>
-  <node name="rotate_pc" pkg="mirte_gazebo" type="rotate" output="screen" />
+  <node name="rotate_pc" pkg="mirte_gazebo" type="rotate" output="screen"/>
 </launch>

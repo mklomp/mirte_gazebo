@@ -96,8 +96,8 @@ def loadMap(map_name):
                 kind = tile
                 angle = 0
                 drivable = False
-            if(kind.startswith('R')):
-                kind = "RCJ/"+kind[1:]
+            if kind.startswith("R"):
+                kind = "RCJ/" + kind[1:]
             else:
                 kind = "DT/" + kind
             tile = {
@@ -127,8 +127,8 @@ def loadMap(map_name):
 def _load_objects(map_data):
     # Create the objects array
     objects = []
-    objects = map_data.get('objects', [])
-    if(objects is None):
+    objects = map_data.get("objects", [])
+    if objects is None:
         return
     # For each object
     for obj_idx, desc in enumerate(map_data.get("objects", [])):
@@ -156,7 +156,9 @@ def _load_objects(map_data):
         else:
             scale = desc["scale"]
         if "included" in kind:
-            set_object_included(x, z, kind.replace("included", ""), -rotate, static, scale)
+            set_object_included(
+                x, z, kind.replace("included", ""), -rotate, static, scale
+            )
         else:
             set_object(x, z, kind, -rotate, static, scale)
 
@@ -183,6 +185,7 @@ tiles_state = (
 #       <xacro:duckieState name="name_sign_blank" type="sign_blank" size="0.6" x="2" y="2"  yaw="0"/>
 existing_objects = []
 
+
 def set_object(i, j, type, angle, static, scale):
     # return
     # print(i, j, type, angle, static, scale)
@@ -191,8 +194,8 @@ def set_object(i, j, type, angle, static, scale):
     j = j - 0.5
     i_ = str(i).replace(".", "_")
     j_ = str(j).replace(".", "_")
-    name = f'obj_{i_}_{j_}'
-    if(name in existing_objects):
+    name = f"obj_{i_}_{j_}"
+    if name in existing_objects:
         return
     existing_objects.append(name)
     tiles_world.append(
@@ -201,6 +204,7 @@ def set_object(i, j, type, angle, static, scale):
     tiles_state.append(
         f'<xacro:duckieState name="obj_{i_}_{j_}" type="{type}" size="{size}" x="{i}" y="{j}" yaw="{angle}" static="${{{static}}}" scale="${{{scale}}}"/>'
     )
+
 
 def set_object_included(i, j, type, angle, static, scale):
     # print(i, j, type, angle, static, scale)
@@ -216,7 +220,9 @@ def set_object_included(i, j, type, angle, static, scale):
         f'<xacro:includedState name="obj_{i_}_{j_}" type="{type}" size="{size}" x="{i}" y="{j}" yaw="{angle}" static="${{{static}}}" scale="${{{scale}}}"/>'
     )
 
+
 size = 0.5
+
 
 def set_tile(i, j, tile):
     tiles_world.append(
