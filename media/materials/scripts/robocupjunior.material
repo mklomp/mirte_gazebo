@@ -163,3 +163,18 @@ material RCJ/floor
         }   
     }
 }
+
+material RCJ/black
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture rcj/black.png
+                scale 1 1
+            }
+        }   
+    }
+}

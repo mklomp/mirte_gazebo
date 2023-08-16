@@ -10,14 +10,7 @@
   <include file="$(find mirte_gazebo)/launch/gazebo_duckietown_world.launch">
     <arg name="duckietown" value="$(find mirte_gazebo)/maps/barrels.yaml"/>
     </include>
-    <!-- <include file="$(find gazebo_ros)/launch/empty_world.launch">
-      <arg name="verbose" value="true"/>
-      <arg name="world_name" value="/home/arendjan/eersteEdit2.world"/>
-      <arg name="gui" value="true" />
-      <!-
-      <arg name="world_name" value="$(find car_simulation)/worlds/mcity.world"/>
-      -
-    </include> -->
+    
   <include file="$(find mirte_gazebo)/launch/spawn_mirte.launch">
     <arg name="camera_enable" value="$(arg camera_enable)"/>
     <arg name="intensity_enable" value="$(arg intensity_enable)"/>
