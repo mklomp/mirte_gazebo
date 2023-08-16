@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <launch>
-  <arg name="camera_enable" default="False"/>
+  <arg name="camera_enable" default="True"/>
   <arg name="intensity_enable" default="False"/>
   <arg name="sonar_enable" default="False"/>
   <arg name="lidar_enable" default="False"/>
