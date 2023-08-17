@@ -21,7 +21,6 @@
 
 #include <ros/ros.h>
 #include <sensor_msgs/PointCloud2.h>
-#include <vision_msgs/Detection3DArray.h>
 
 class pcl_rotate {
 
@@ -128,19 +127,13 @@ public:
   }
 
   void callback(const sensor_msgs::PointCloud2 &input_cloud) {
-    vision_msgs::Detection3DArray detectionArray;
-    detectionArray.header =
-        input_cloud.header; // Copy the input header to the output header
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(
         new pcl::PointCloud<pcl::PointXYZ>);
-    pcl::fromROSMsg(input_cloud, *cloud); // Map the input cloud data to a new
-    // cloud with the PointCloud format
-    // std::cout << __LINE__ << std::endl;
+    pcl::fromROSMsg(input_cloud, *cloud); 
     pcl::PassThrough<pcl::PointXYZ> pass;
     pass.setInputCloud(cloud);
     pass.setFilterFieldName("z");
     pass.setFilterLimits(0.0, 1.8);
-    // pass.setNegative (true);
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered(
         new pcl::PointCloud<pcl::PointXYZ>);
 
@@ -153,14 +146,8 @@ public:
     transform_2.rotate(Eigen::AngleAxisf(theta, Eigen::Vector3f::UnitX()));
     transform_2.rotate(Eigen::AngleAxisf(-theta, Eigen::Vector3f::UnitY()));
 
-    // Print the transformation
-    //   printf ("\nMethod #2: using an Affine3f\n");
-    // std::cout << transform_2.matrix() << std::endl;
-
-    // Executing the transformation
     pcl::PointCloud<pcl::PointXYZ>::Ptr transformed_cloud(
         new pcl::PointCloud<pcl::PointXYZ>());
-    // You can either apply transform_1 or transform_2; they are the same
     pcl::transformPointCloud(*cloud_filtered, *transformed_cloud, transform_2);
     sensor_msgs::PointCloud2 out_cloud;
     pcl::toROSMsg(*transformed_cloud, out_cloud);
@@ -179,10 +166,6 @@ public:
     extract.setIndices(indices);
     extract.setNegative(false);
     extract.filter(*cloud);
-    // std::cout << "removed" << indices->size() << std::endl;
-
-    // std::cerr << "Point cloud data: " << cloud->size() << " points"
-    //           << std::endl;
   }
 
 private:
