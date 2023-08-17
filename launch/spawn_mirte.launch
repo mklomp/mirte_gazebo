@@ -27,7 +27,7 @@
       <remap from="/joint_states" to="/$(arg ns_1)/joint_states"/>
     </node>
     <!-- ROS control stuff -->
-    <node name="controller_spawner" pkg="controller_manager" type="spawner" output="screen" args="mobile_base_controller"/>
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" output="screen" args="mobile_base_controller joint_state_controller "/>
   </group>
   <!-- joint1_position_controller joint2_position_controller joint_state_controller  -->
 </launch>
