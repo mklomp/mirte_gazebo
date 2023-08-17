@@ -91,30 +91,6 @@ public:
 
     return clusters;
   }
-  vision_msgs::BoundingBox3D
-  toBoundingBox(pcl::PointCloud<pcl::PointXYZ> const &cloud) {
-    vision_msgs::BoundingBox3D result;
-    if (cloud.empty()) {
-      return result;
-    }
-    // Computes centroid of the cluster
-    Eigen::Vector4f centroid;
-
-    pcl::compute3DCentroid(cloud, centroid);
-
-    result.center.position.x = centroid[0];
-    result.center.position.y = centroid[1];
-    result.center.position.z = centroid[2];
-
-    pcl::PointXYZ min, max;
-    pcl::getMinMax3D(cloud, min, max);
-
-    result.size.x = max.x - min.x;
-    result.size.y = max.y - min.y;
-    result.size.z = max.z - min.z;
-
-    return result;
-  }
 
   pcl_rotate(ros::NodeHandle nh) {
     // Topic you publish to
