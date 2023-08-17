@@ -4,7 +4,7 @@ Have mirte-control and mirte-teleopkey installed
 
 apt install ros-noetic-ros-control ros-noetic-ros-controllers
 
-Requires https://github.com/SyrianSpock/realsense_gazebo_plugin to be downloaded and built
+Requires https://github.com/SyrianSpock/realsense_gazebo_plugin to be downloaded and built if you want an actual realsense. realsense-depth uses a simple depth-camera without the realsense extras.
 
 
 ## running:
