@@ -20,7 +20,8 @@
     <node name="mapUltrasonicLeft" pkg="mirte_gazebo" type="mapUltrasonic.py" output="screen" args="left"/>
     <node name="mapUltrasonicRight" pkg="mirte_gazebo" type="mapUltrasonic.py" output="screen" args="right"/>
   </group>
-  <node name="mapEncoder" pkg="mirte_gazebo" type="mapEncoder.py" output="screen" args="$(arg encoder_ticks) $(arg encoder_bidirectional)"/>
+  <node name="mapEncoderLeft" pkg="mirte_gazebo" type="convert_encoder" output="screen" args="left $(arg encoder_bidirectional) $(arg encoder_ticks)"/>
+  <node name="mapEncoderRight" pkg="mirte_gazebo" type="convert_encoder" output="screen" args="right $(arg encoder_bidirectional) $(arg encoder_ticks)"/>
   <group if="$(eval intensity_enable or camera_enable or realsense_enable)">
     <node name="video_server" pkg="web_video_server" type="web_video_server"/>
   </group>
