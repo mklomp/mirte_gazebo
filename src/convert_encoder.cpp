@@ -52,7 +52,8 @@ public:
     } else {
       auto diff = ticks - this->last_actual_ticks;
       this->last_actual_ticks = ticks;
-      mess.value = this->last_published_ticks + abs(diff); // always increase the ticks
+      mess.value =
+          this->last_published_ticks + abs(diff); // always increase the ticks
     }
     this->last_published_ticks = mess.value;
     this->pub_.publish(mess);
@@ -68,15 +69,17 @@ public:
     static int last_tick_count = 0;
     mirte_msgs::Encoder mess;
     mess.value = this->last_published_ticks - last_tick_count;
-    if(!this->bidirectional) {
-        mess.value = abs(mess.value);
+    if (!this->bidirectional) {
+      mess.value = abs(mess.value);
     }
     mess.header = this->last_header;
     pub_speed_.publish(mess);
     last_tick_count = this->last_published_ticks;
   }
 
-  int map_rad_to_ticks(double ang) { return (int)(ang / (2 * M_PI) * this->ticks_per_rot); }
+  int map_rad_to_ticks(double ang) {
+    return (int)(ang / (2 * M_PI) * this->ticks_per_rot);
+  }
 
 private:
   // Create the necessary objects for subscribing and publishing

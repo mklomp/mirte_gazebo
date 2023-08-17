@@ -1,10 +1,10 @@
+#include <algorithm>
 #include <iostream>
 
 #include <mirte_msgs/GetDistance.h>
 #include <ros/ros.h>
 #include <sensor_msgs/LaserScan.h>
 #include <sensor_msgs/Range.h>
-#include <algorithm>
 
 class map_sonar {
 
