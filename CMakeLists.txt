@@ -13,7 +13,7 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-find_package(catkin REQUIRED COMPONENTS roscpp sensor_msgs pcl_ros pcl_conversions mirte_msgs)
+find_package(catkin REQUIRED COMPONENTS roscpp sensor_msgs mirte_msgs)
 
 
 include_directories(${catkin_INCLUDE_DIRS})
