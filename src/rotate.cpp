@@ -105,7 +105,7 @@ public:
   void callback(const sensor_msgs::PointCloud2 &input_cloud) {
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(
         new pcl::PointCloud<pcl::PointXYZ>);
-    pcl::fromROSMsg(input_cloud, *cloud); 
+    pcl::fromROSMsg(input_cloud, *cloud);
     pcl::PassThrough<pcl::PointXYZ> pass;
     pass.setInputCloud(cloud);
     pass.setFilterFieldName("z");
