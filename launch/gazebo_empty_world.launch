@@ -1,6 +1,6 @@
+<?xml version="1.0"?>
 <launch>
-
   <env name="GAZEBO_RESOURCE_PATH" value="$(find mirte_gazebo)"/>
-  <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
-
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+  </include>
 </launch>

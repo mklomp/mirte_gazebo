@@ -1,0 +1,180 @@
+material RCJ/straight
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture rcj/straight.png
+                scale 1 1
+            }
+        }   
+    }
+}
+
+material RCJ/big_gap
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture rcj/big_gap.png
+                scale 1 1
+            }
+        }   
+    }
+}
+
+material RCJ/circle_corner
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture rcj/circle_corner.png
+                scale 1 1
+            }
+        }   
+    }
+}
+material RCJ/crossing
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture rcj/crossing.png
+                scale 1 1
+            }
+        }   
+    }
+}
+
+
+material RCJ/roundabout_corner
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture rcj/roundabout_corner.png
+                scale 1 1
+            }
+        }   
+    }
+}
+
+
+material RCJ/roundabout_straight
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture rcj/roundabout_straight.png
+                scale 1 1
+            }
+        }   
+    }
+}
+
+material RCJ/small_gap
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture rcj/small_gap.png
+                scale 1 1
+            }
+        }   
+    }
+}
+
+material RCJ/square_corner
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture rcj/square_corner.png
+                scale 1 1
+            }
+        }   
+    }
+}
+
+material RCJ/t_junction
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture rcj/t_junction.png
+                scale 1 1
+            }
+        }   
+    }
+}
+
+material RCJ/zigzag
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture rcj/zigzag.png
+                scale 1 1
+            }
+        }   
+    }
+}
+
+material RCJ/floor
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture rcj/empty.png
+                scale 1 1
+            }
+        }   
+    }
+}
+
+material RCJ/black
+{
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture rcj/black.png
+                scale 1 1
+            }
+        }   
+    }
+}
