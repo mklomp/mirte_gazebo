@@ -1,0 +1,31 @@
+<launch>
+  <arg name="camera_enable" default="True"/>
+  <arg name="intensity_enable" default="True"/>
+  <arg name="sonar_enable" default="True"/>
+  <arg name="lidar_enable" default="True"/>
+  <arg name="encoder_bidirectional" default="True"/>
+  <arg name="encoder_ticks" default="540"/>
+  <arg name="realsense_enable" default="True"/>
+  <include file="$(find-pkg-share mirte_gazebo)/launch/gazebo_duckietown_world.launch.xml"/>
+  <include file="$(find-pkg-share mirte_gazebo)/launch/spawn_mirte.launch.xml">
+    <arg name="camera_enable" value="$(var camera_enable)"/>
+    <arg name="intensity_enable" value="$(var intensity_enable)"/>
+    <arg name="sonar_enable" value="$(var sonar_enable)"/>
+    <arg name="lidar_enable" value="$(var lidar_enable)"/>
+    <arg name="realsense_enable" value="$(var realsense_enable)"/>
+  </include>
+  <node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(find-pkg-share mirte_gazebo)/mirte_gazebo.rviz" respawn="false"/>
+  <group if="$(var sonar_enable)">
+    <!-- <node name="mapUltrasonicLeft" pkg="mirte_gazebo" type="mapUltrasonic.py" output="screen" args="left"/>
+    <node name="mapUltrasonicRight" pkg="mirte_gazebo" type="mapUltrasonic.py" output="screen" args="right"/> -->
+  </group>
+  <!-- <node name="mapEncoderLeft" pkg="mirte_gazebo" type="convert_encoder" output="screen" args="left $(var encoder_bidirectional) $(var encoder_ticks)"/>
+  <node name="mapEncoderRight" pkg="mirte_gazebo" type="convert_encoder" output="screen" args="right $(var encoder_bidirectional) $(var encoder_ticks)"/> -->
+  <group if="$(eval intensity_enable or camera_enable or realsense_enable)">
+    <node name="video_server" pkg="web_video_server" type="web_video_server"/>
+  </group>
+  <group if="$(var intensity_enable)">
+    <!-- <node name="mapIRLeft" pkg="mirte_gazebo" type="mapIR.py" output="screen" args="left"/>
+    <node name="mapIRRight" pkg="mirte_gazebo" type="mapIR.py" output="screen" args="right"/> -->
+  </group>
+</launch>

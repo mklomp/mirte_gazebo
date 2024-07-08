@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <env name="GAZEBO_RESOURCE_PATH" value="$(find-pkg-share  mirte_gazebo)"/>
+  <include file="$(find-pkg-share  gazebo_ros)/launch/empty_world.launch.xml">
+  </include>
+</launch>

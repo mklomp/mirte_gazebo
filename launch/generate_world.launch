@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-  <!-- Generate world file in urdf folder for xacro to use to generate the actual world/generated.world file. -->
-  <arg name="output_name" default="generated"/>
-  <arg name="map" default="rcj.yaml"/>
-  <arg name="duckietown" default="$(find mirte_gazebo)/maps/$(arg map)"/>
-  <param name="/duckietown_generator" command="$(find mirte_gazebo)/scripts/buildMap.sh $(arg duckietown) $(find mirte_gazebo)/urdf/$(arg output_name).world $(find mirte_gazebo)/worlds/$(arg output_name).world"/>
-</launch>
