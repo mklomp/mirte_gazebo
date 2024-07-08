@@ -23,10 +23,11 @@
   -->
         <!-- Spawn a robot into Gazebo -->
         <!--  -x $(var x) -y $(var y) -z $(var z) -R $(var roll) -P $(var pitch) -Y $(var yaw) -->
-        <!-- <node name="spawn_urdf" pkg="ros_gz_sim" exec="create" output="screen" args="-name Mirte -file $(find-pkg-share mirte_gazebo)/urdf/mirte.urdf -x $(var x) -y $(var y) -z $(var z)">
+        <node name="spawn_urdf" pkg="ros_gz_sim" exec="create" output="screen" args="-name Mirte -file $(find-pkg-share mirte_gazebo)/urdf/mirte.urdf -x $(var x) -y $(var y) -z $(var z)">
                 
 
-        </node> -->
+        </node>
+        <node name="bridge" pkg="ros_gz_bridge" exec="parameter_bridge" args="--ros-args -p config_file:=$(find-pkg-share mirte_gazebo)/params/ros_gz_bridge.yaml"/>
         <!-- convert joint states to TF transforms for rviz, etc -->
         <!-- Notice the leading '/' in '/robot_description' -->
         <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">

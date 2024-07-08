@@ -3,7 +3,7 @@
   <arg name="camera_enable" default="False"/>
   <arg name="intensity_enable" default="False"/> <!-- was true-->
   <arg name="sonar_enable" default="False"/>
-  <arg name="lidar_enable" default="False"/>
+  <arg name="lidar_enable" default="True"/>
   <arg name="encoder_bidirectional" default="True"/>
   <arg name="encoder_ticks" default="540"/>
   <arg name="realsense_enable" default="False"/>
