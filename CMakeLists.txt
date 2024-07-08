@@ -82,7 +82,7 @@ find_package(sensor_msgs REQUIRED)
 # meshes
 # DESTINATION share/${PROJECT_NAME}/
 # )
-foreach(X IN ITEMS "launch" "urdf" "meshes" "maps" "media" "models" "rviz")
+foreach(X IN ITEMS "launch" "urdf" "meshes" "maps" "media" "models" "rviz" "config")
     message(STATUS "X=${X}")
     install(DIRECTORY
 ${X}

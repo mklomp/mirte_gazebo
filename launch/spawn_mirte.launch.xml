@@ -1,33 +1,39 @@
 <?xml version="1.0"?>
 <launch>
-  <arg name="x" default="0"/>
-  <arg name="y" default="0"/>
-  <arg name="z" default="0.1"/>
-  <arg name="roll" default="0"/>
-  <arg name="pitch" default="0"/>
-  <arg name="yaw" default="0"/>
-  <arg name="ns_1" default="mirte"/>
-  <arg name="camera_enable" default="True"/>
-  <arg name="intensity_enable" default="True"/>
-  <arg name="sonar_enable" default="True"/>
-  <arg name="lidar_enable" default="True"/>
-  <arg name="realsense_enable" default="True"/>
-  <arg name="robot_description" default="$(find-pkg-share  mirte_gazebo)/urdf/mirte.xacro"/>
-  <rosparam file="$(find-pkg-share  mirte_gazebo)/config/mirte_diff_drive.yaml" command="load"/>
-  <group ns="$(var ns_1)">
-    <!-- <rosparam command="load"
-    file="$(find-pkg-share  mirte_control)/config/my_robot_common.yaml" /> -->
-    <rosparam file="$(find-pkg-share  mirte_gazebo)/config/gazebo_ros_control_params.yaml" command="load"/>
-    <param name="robot_description" command="$(find-pkg-share  xacro)/xacro $(find-pkg-share  mirte_gazebo)/urdf/mirte.xacro sonar_enable:=$(var sonar_enable) camera_enable:=$(var camera_enable) intensity_enable:=$(var intensity_enable) lidar_enable:=$(var lidar_enable) realsense_enable:=$(var realsense_enable)"/>
-    <!-- Spawn a robot into Gazebo -->
-    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen" args="-param robot_description -urdf -model mirte -model $(var ns_1) -x $(var x) -y $(var y) -z $(var z) -R $(var roll) -P $(var pitch) -Y $(var yaw)"/>
-    <!-- convert joint states to TF transforms for rviz, etc -->
-    <!-- Notice the leading '/' in '/robot_description' -->
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
-      <remap from="/joint_states" to="/$(var ns_1)/joint_states"/>
-    </node>
-    <!-- ROS control stuff -->
-    <node name="controller_spawner" pkg="controller_manager" type="spawner" output="screen" args="mobile_base_controller joint_state_controller "/>
-  </group>
-  <!-- joint1_position_controller joint2_position_controller joint_state_controller  -->
+    <arg name="x" default="0"/>
+    <arg name="y" default="0"/>
+    <arg name="z" default="0.1"/>
+    <arg name="roll" default="0"/>
+    <arg name="pitch" default="0"/>
+    <arg name="yaw" default="0"/>
+    <arg name="ns_1" default="mirte"/>
+    <arg name="camera_enable" default="True"/>
+    <arg name="intensity_enable" default="True"/>
+    <arg name="sonar_enable" default="True"/>
+    <arg name="lidar_enable" default="True"/>
+    <arg name="realsense_enable" default="True"/>
+    <arg name="robot_description" default="$(find-pkg-share mirte_gazebo)/urdf/mirte.xacro"/>
+    <!-- <rosparam file="$(find-pkg-share mirte_gazebo)/config/mirte_diff_drive.yaml" command="load"/> -->
+    <group >
+        <push_ros_namespace namespace="$(var ns_1)"/>
+        <!-- <rosparam command="load" file="$(find-pkg-share mirte_control)/config/my_robot_common.yaml" /> -->
+        <!-- <rosparam file="$(find-pkg-share mirte_gazebo)/config/gazebo_ros_control_params.yaml" command="load"/> -->
+        <executable cmd="xacro $(find-pkg-share mirte_gazebo)/urdf/mirte.xacro -o $(find-pkg-share mirte_gazebo)/urdf/mirte.urdf sonar_enable:=$(var sonar_enable) camera_enable:=$(var camera_enable) intensity_enable:=$(var intensity_enable) lidar_enable:=$(var lidar_enable) realsense_enable:=$(var realsense_enable)"/>
+        <!--<executable cmd="ros2 param set /robot_description /tmp/test.urdf"/>  sonar_enable:=$(var sonar_enable) camera_enable:=$(var camera_enable) intensity_enable:=$(var intensity_enable) lidar_enable:=$(var lidar_enable) realsense_enable:=$(var realsense_enable)
+  -->
+        <!-- Spawn a robot into Gazebo -->
+        <!--  -x $(var x) -y $(var y) -z $(var z) -R $(var roll) -P $(var pitch) -Y $(var yaw) -->
+        <!-- <node name="spawn_urdf" pkg="ros_gz_sim" exec="create" output="screen" args="-name Mirte -file $(find-pkg-share mirte_gazebo)/urdf/mirte.urdf -x $(var x) -y $(var y) -z $(var z)">
+                
+
+        </node> -->
+        <!-- convert joint states to TF transforms for rviz, etc -->
+        <!-- Notice the leading '/' in '/robot_description' -->
+        <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+   <remap from="/joint_states" to="/$(var ns_1)/joint_states"/>
+  </node>
+  <!- - ROS control stuff - ->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" output="screen" args="mobile_base_controller joint_state_controller "/> -->
+    </group>
+    <!-- joint1_position_controller joint2_position_controller joint_state_controller -->
 </launch>
