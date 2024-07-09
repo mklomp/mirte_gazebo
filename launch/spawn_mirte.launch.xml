@@ -28,6 +28,13 @@
 
         </node>
     <node name="bridge" pkg="ros_gz_bridge" exec="parameter_bridge" args="--ros-args -p config_file:=$(find-pkg-share mirte_gazebo)/params/ros_gz_bridge.yaml"/>
+    <!-- start_gazebo_ros_image_bridge_cmd = Node(
+    package='ros_gz_image',
+    executable='image_bridge',
+    arguments=['/camera/image_raw'],
+    output='screen',
+) -->
+<node name="image_bridge" pkg="ros_gz_image" exec="image_bridge" args="/camera/image_raw" output="screen"/>
     <!-- convert joint states to TF transforms for rviz, etc -->
     <!-- Notice the leading '/' in '/robot_description' -->
     <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">

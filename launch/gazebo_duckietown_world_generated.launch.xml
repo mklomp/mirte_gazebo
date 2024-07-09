@@ -3,8 +3,8 @@
   <!-- The urdf is already generated from the yaml file as that is done by python, which is not available in the RSP singularity image.
    We still need to generate the world file by xacro, as it contains the file:///$(find-pkg-share mirte_gazebo) path, which can be different for every user.
  -->
-  <set_env name="GAZEBO_MODEL_PATH" value="$(find-pkg-share mirte_gazebo)/models"/>
-  <set_env name="GAZEBO_MEDIA_PATH" value="$(find-pkg-share mirte_gazebo)/media"/>
+  <!-- <set_env name="GAZEBO_MODEL_PATH" value="$(find-pkg-share mirte_gazebo)/models"/>
+  <set_env name="GAZEBO_MEDIA_PATH" value="$(find-pkg-share mirte_gazebo)/media"/> -->
   <!-- <arg name="gazebo_extra" default="$(eval '-lockstep' if arg('lockstep') else '')"/> -->
   <arg name="duckietown" default="$(find-pkg-prefix mirte_gazebo)/urdf/lab3.world"/>
   <executable cmd="xacro $(var duckietown) -o $(find-pkg-share mirte_gazebo)/worlds/generated.world" cwd="/home" launch-prefix="time" output="screen"/>

@@ -28,9 +28,19 @@
   <exec_depend>mirte_msgs</exec_depend>
   <exec_depend>python-yaml</exec_depend> -->
   <!-- The export tag contains other, unspecified, tags -->
+   <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>rclcpp</depend>
+  <depend>ros_gz_bridge</depend>
+  <depend>ros_gz_image</depend>
+  <depend>ros_gz_sim</depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf2</depend>
   <export>
     <!-- <build_type>ament_python</build_type> -->
     <build_type>ament_cmake</build_type>
+        <gazebo_ros gazebo_model_path="${prefix}/models"/>
+
     <!-- Other tools can request additional information be placed here -->
   </export>
 </package>
