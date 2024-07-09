@@ -7,12 +7,11 @@
   <arg name="encoder_bidirectional" default="True"/>
   <arg name="encoder_ticks" default="540"/>
   <arg name="realsense_enable" default="True"/>
-  <include file="$(find-pkg-share  mirte_gazebo)/launch/gazebo_duckietown_world_generated.launch.xml">
-    <arg name="duckietown" value="$(find-pkg-share  mirte_gazebo)/urdf/lab4.world"/>
+  <include file="$(find-pkg-share mirte_gazebo)/launch/gazebo_duckietown_world_generated.launch.xml">
+    <arg name="duckietown" value="$(find-pkg-share mirte_gazebo)/urdf/lab4.world"/>
     <arg name="gui" value="$(var gui)"/>
-    <arg name="lockstep" value="False"/>
   </include>
-  <include file="$(find-pkg-share  mirte_gazebo)/launch/spawn_mirte.launch.xml">
+  <include file="$(find-pkg-share mirte_gazebo)/launch/spawn_mirte.launch.xml">
     <arg name="camera_enable" value="$(var camera_enable)"/>
     <arg name="intensity_enable" value="$(var intensity_enable)"/>
     <arg name="sonar_enable" value="$(var sonar_enable)"/>
@@ -23,7 +22,7 @@
     <arg name="z" value="0.021444"/>
     <arg name="yaw" value="1.521444"/>
   </include>
-  <node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(find-pkg-share  mirte_gazebo)/mirte_gazebo.rviz" respawn="false"/>
+  <node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(find-pkg-share mirte_gazebo)/mirte_gazebo.rviz" respawn="false"/>
   <group if="$(var intensity_enable)">
     <node name="mapIRLeft" pkg="mirte_gazebo" type="convert_ir" output="screen" args="left"/>
     <node name="mapIRRight" pkg="mirte_gazebo" type="convert_ir" output="screen" args="right"/>
