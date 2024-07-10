@@ -35,7 +35,10 @@
     output='screen',
 ) -->
 <node name="image_bridge" pkg="ros_gz_image" exec="image_bridge" args="/camera/image_raw" output="screen"/>
+    <node name="image_bridge2" pkg="ros_gz_image" exec="image_bridge" args="/depth_camera" output="screen"/>
+
     <!-- convert joint states to TF transforms for rviz, etc -->
+
     <!-- Notice the leading '/' in '/robot_description' -->
     <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
    <remap from="/joint_states" to="/$(var ns_1)/joint_states"/>
