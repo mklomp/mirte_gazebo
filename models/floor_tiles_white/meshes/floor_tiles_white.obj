@@ -1,6 +1,6 @@
 # Blender 4.2.0
 # www.blender.org
-mtllib tile.mtl
+mtllib floor_tiles_white.mtl
 o Cube
 v 0.500000 0.010000 -0.500000
 v 0.500000 -0.010000 -0.500000
