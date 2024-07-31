@@ -10,6 +10,6 @@
   <executable cmd="xacro $(var duckietown) -o $(find-pkg-share mirte_gazebo)/worlds/generated.world" cwd="/home" launch-prefix="time" output="screen"/>
   <include file="$(find-pkg-share ros_gz_sim)/launch/gz_sim.launch.py">
   <!-- <arg name="gz_args" value="shapes.sdf"/> -->
-    <arg name="gz_args" value=" --gui-config $(find-pkg-share mirte_gazebo)/config/top_view.config $(find-pkg-share mirte_gazebo)/worlds/generated.world"/>
+    <arg name="gz_args" value="-s -r --gui-config $(find-pkg-share mirte_gazebo)/config/top_view.config $(find-pkg-share mirte_gazebo)/worlds/generated.world"/>
   </include>
 </launch>
