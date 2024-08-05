@@ -7,7 +7,7 @@
   <arg name="encoder_bidirectional" default="True"/>
   <arg name="encoder_ticks" default="540"/>
   <arg name="realsense_enable" default="False"/>
-  <arg name="gui" default="False"/>
+  <arg name="gui" default="True"/>
   <include file="$(find-pkg-share mirte_gazebo)/launch/gazebo_duckietown_world_generated.launch.xml">
     <arg name="duckietown" value="$(find-pkg-share mirte_gazebo)/urdf/lab4.world"/>
     <arg name="gui" value="$(var gui)"/>
