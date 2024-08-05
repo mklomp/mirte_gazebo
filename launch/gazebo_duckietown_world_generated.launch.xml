@@ -5,15 +5,15 @@
  -->
   <!-- <set_env name="GAZEBO_MODEL_PATH" value="$(find-pkg-share mirte_gazebo)/models"/>
   <set_env name="GAZEBO_MEDIA_PATH" value="$(find-pkg-share mirte_gazebo)/media"/> -->
-  <arg name="gui" default="true"/>
-  <let name="gazebo_extra" value="" if="$(var gui)"/>
-  <let name="gazebo_extra" value="-s" unless="$(var gui)"/>
+  <arg name="gui" default="false"/>
+  <let name="gazebo_extra" value="--gui-config $(find-pkg-share mirte_gazebo)/config/top_view.config " if="$(var gui)"/>
+  <let name="gazebo_extra" value="-s " unless="$(var gui)"/>
   
   <arg name="duckietown" default="$(find-pkg-prefix mirte_gazebo)/urdf/lab3.world"/>
   <executable cmd="xacro $(var duckietown) -o $(find-pkg-share mirte_gazebo)/worlds/generated.world" cwd="/home" launch-prefix="time" output="screen"/>
   <include file="$(find-pkg-share ros_gz_sim)/launch/gz_sim.launch.py">
   <!-- <arg name="gz_args" value="shapes.sdf"/> -->
-    <arg name="gz_args" value="-r $(var gazebo_extra) --gui-config $(find-pkg-share mirte_gazebo)/config/top_view.config $(find-pkg-share mirte_gazebo)/worlds/generated.world"/>
+    <arg name="gz_args" value="-r $(var gazebo_extra) $(find-pkg-share mirte_gazebo)/worlds/generated.world"/>
   </include>
   <node name="image_bridge" pkg="ros_gz_image" exec="image_bridge" args="/top_down_camera/image_raw" output="screen"/>
 
