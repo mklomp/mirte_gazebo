@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <launch>
   <arg name="camera_enable" default="False"/>
-  <arg name="intensity_enable" default="False"/>
+  <arg name="intensity_enable" default="True"/>
   <!-- was true-->
   <arg name="sonar_enable" default="False"/>
-  <arg name="lidar_enable" default="True"/>
+  <arg name="lidar_enable" default="False"/>
   <arg name="encoder_bidirectional" default="True"/>
   <arg name="encoder_ticks" default="540"/>
   <arg name="realsense_enable" default="False"/>
@@ -23,11 +23,12 @@
     <arg name="z" value="0.021444"/>
   </include>
   <!-- 
-  <!- <node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(find-pkg-share mirte_gazebo)/mirte_gazebo.rviz" respawn="false"/> -
+  <!- <node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(find-pkg-share mirte_gazebo)/mirte_gazebo.rviz" respawn="false"/> -->
   <group if="$(var intensity_enable)">
-    <node name="mapIRLeft" pkg="mirte_gazebo" type="convert_ir" output="screen" args="left"/>
-    <node name="mapIRRight" pkg="mirte_gazebo" type="convert_ir" output="screen" args="right"/>
+    <!-- <node name="mapIRLeft" pkg="mirte_gazebo" type="convert_ir" output="screen" args="left"/>
+    <node name="mapIRRight" pkg="mirte_gazebo" type="convert_ir" output="screen" args="right"/> -->
   </group>
+  <!--
   <group if="$(var sonar_enable)">
     <node name="mapUltrasonicLeft" pkg="mirte_gazebo" type="convert_sonar" output="screen" args="left"/>
     <node name="mapUltrasonicRight" pkg="mirte_gazebo" type="convert_sonar" output="screen" args="right"/>

@@ -33,8 +33,14 @@
     executable='image_bridge',
     arguments=['/camera/image_raw'],
     output='screen',
-) -->
-    <node name="image_bridge" pkg="ros_gz_image" exec="image_bridge" args="/camera/image_raw" output="screen"/>
+-->
+    <node name="image_bridge" pkg="ros_gz_image" exec="image_bridge" args="/camera/image_raw" output="screen" if="$(eval '$(var camera_enable) or $(var realsense_enable)')"/>
+
+
+    <group if="$(var intensity_enable)">
+      <node name="image_bridge_ir_left" pkg="ros_gz_image" exec="image_bridge" args="/camera_left/image_raw" output="screen" />
+      <node name="image_bridge_ir_right" pkg="ros_gz_image" exec="image_bridge" args="/camera_right/image_raw" output="screen"/>
+    </group>
     <!-- <node name="image_bridge2" pkg="ros_gz_image" exec="image_bridge" args="/depth_camera" output="screen"/> -->
     <!-- convert joint states to TF transforms for rviz, etc -->
     <!-- Notice the leading '/' in '/robot_description' -->
