@@ -26,9 +26,6 @@ project(mirte_gazebo)
 # add_executable(convert_sonar src/convert_ultrasonic.cpp)
 # add_dependencies(convert_sonar ${catkin_EXPORTED_TARGETS})
 # target_link_libraries(convert_sonar ${catkin_LIBRARIES} )
-# add_executable(convert_ir src/convert_ir.cpp)
-# add_dependencies(convert_ir ${catkin_EXPORTED_TARGETS})
-# target_link_libraries(convert_ir ${catkin_LIBRARIES} )
 # add_executable(convert_encoder src/convert_encoder.cpp)
 # add_dependencies(convert_encoder ${catkin_EXPORTED_TARGETS})
 # target_link_libraries(convert_encoder ${catkin_LIBRARIES} )
@@ -43,7 +40,16 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(mirte_msgs REQUIRED)
+find_package(std_srvs REQUIRED)
 
+
+add_executable(convert_ir src/convert_ir.cpp)
+# add_dependencies(convert_ir ${catkin_EXPORTED_TARGETS})
+# target_link_libraries(convert_ir ${catkin_LIBRARIES} )
+ament_target_dependencies(convert_ir rclcpp std_msgs sensor_msgs mirte_msgs std_srvs)
+install(TARGETS convert_ir
+  DESTINATION lib/${PROJECT_NAME})
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
