@@ -43,3 +43,17 @@ colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release && source
 ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=/mirte/cmd_vel
 
 ros2 run web_video_server web_video_server
+
+## Reset position
+lab3:
+ign service -s /world/default/set_pose  --reqtype ignition.msgs.Pose   --reptype ignition.msgs.Boolean  --req 'name: "Mirte", position: {x: 1, y: 0.5, z: 0.1}' --timeout 3000
+
+
+ros2 topic pub /mirte/cmd_vel geometry_msgs/msg/Twist "linear:
+  x: 0.0
+  y: 0.0
+  z: 0.0
+angular:
+  x: 0.0
+  y: 0.0
+  z: 0.0" 
