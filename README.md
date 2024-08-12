@@ -36,8 +36,13 @@ and
 ./scripts/pythonformat.sh # uses black
 ```
 
+## VMWARE issues:
+using vscode ssh: 
+```sh
+export DISPLAY=:0
+```
 
-# ROs2
+# ROS2
 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release && source ./install/setup.zsh && eeee && ros2 launch mirte_gazebo rsp_lab4_generated.launch.xml --debug
 
 ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=/mirte/cmd_vel
