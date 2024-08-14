@@ -12,7 +12,7 @@
     
   </include> -->
   <arg name="duckietown" default="$(find-pkg-share mirte_gazebo)/urdf/lab4.world"/>
-  <executable cmd="xacro $(var duckietown) -o $(find-pkg-share mirte_gazebo)/worlds/generated.world" cwd="/home" launch-prefix="time" output="screen"/>
+  <executable cmd="xacro $(var duckietown) -o $(find-pkg-share mirte_gazebo)/worlds/generated.world" cwd="/home" output="screen"/>
   <!-- <node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(find-pkg-share mirte_gazebo)/mirte_gazebo.rviz" respawn="false"/>
   <group if="$(var intensity_enable)">
     <node name="mapIRLeft" pkg="mirte_gazebo" type="convert_ir" output="screen" args="left"/>
