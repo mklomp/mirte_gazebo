@@ -56,7 +56,7 @@
   gz_type_name: "gz.msgs.PointCloudPacked"
   direction: GZ_TO_ROS
 - ros_topic_name: "gazebo/pose"
-  gz_topic_name: "/model/Mirte/pose"
+  gz_topic_name: "/model/Mirte/pose_static"
   ros_type_name: "geometry_msgs/msg/PoseStamped"
   gz_type_name: "ignition.msgs.Pose"
   direction: GZ_TO_ROS
