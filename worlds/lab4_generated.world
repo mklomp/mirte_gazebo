@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <sdf version="1.7">
   <world name="default">
     <gravity>0 0 -9.8</gravity>
@@ -121,7 +121,7 @@
         <collision name="collision_obj_0_5_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -130,7 +130,7 @@
           <geometry>
             <mesh>
               <pose>0.25 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -144,7 +144,7 @@
         <collision name="collision_obj_1_5_0_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -153,7 +153,7 @@
           <geometry>
             <mesh>
               <pose>0.75 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -167,7 +167,7 @@
         <collision name="collision_obj_0_55_1_25">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -176,7 +176,7 @@
           <geometry>
             <mesh>
               <pose>0.275 0.625 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -190,7 +190,7 @@
         <collision name="collision_obj_1_25_0_55">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -199,7 +199,7 @@
           <geometry>
             <mesh>
               <pose>0.625 0.275 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -213,7 +213,7 @@
         <collision name="collision_obj_0_7_0_7">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -222,7 +222,7 @@
           <geometry>
             <mesh>
               <pose>0.35 0.35 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -236,7 +236,7 @@
         <collision name="collision_obj_1_0_0_6000000000000001">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -245,7 +245,7 @@
           <geometry>
             <mesh>
               <pose>0.5 0.30000000000000004 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -259,7 +259,7 @@
         <collision name="collision_obj_0_6000000000000001_1_0">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -268,7 +268,7 @@
           <geometry>
             <mesh>
               <pose>0.30000000000000004 0.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -282,7 +282,7 @@
         <collision name="collision_obj_1_75_0_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -291,7 +291,7 @@
           <geometry>
             <mesh>
               <pose>0.875 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -305,7 +305,7 @@
         <collision name="collision_obj_2_0_0_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -314,7 +314,7 @@
           <geometry>
             <mesh>
               <pose>1.0 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -328,7 +328,7 @@
         <collision name="collision_obj_2_25_0_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -337,7 +337,7 @@
           <geometry>
             <mesh>
               <pose>1.125 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -351,7 +351,7 @@
         <collision name="collision_obj_2_5_0_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -360,7 +360,7 @@
           <geometry>
             <mesh>
               <pose>1.25 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -374,7 +374,7 @@
         <collision name="collision_obj_1_5_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -383,7 +383,7 @@
           <geometry>
             <mesh>
               <pose>0.75 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -397,7 +397,7 @@
         <collision name="collision_obj_1_75_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -406,7 +406,7 @@
           <geometry>
             <mesh>
               <pose>0.875 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -420,7 +420,7 @@
         <collision name="collision_obj_2_0_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -429,7 +429,7 @@
           <geometry>
             <mesh>
               <pose>1.0 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -443,7 +443,7 @@
         <collision name="collision_obj_2_25_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -452,7 +452,7 @@
           <geometry>
             <mesh>
               <pose>1.125 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -466,7 +466,7 @@
         <collision name="collision_obj_2_5_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -475,7 +475,7 @@
           <geometry>
             <mesh>
               <pose>1.25 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -489,7 +489,7 @@
         <collision name="collision_obj_2_75_0_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -498,7 +498,7 @@
           <geometry>
             <mesh>
               <pose>1.375 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -512,7 +512,7 @@
         <collision name="collision_obj_3_0_0_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -521,7 +521,7 @@
           <geometry>
             <mesh>
               <pose>1.5 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -535,7 +535,7 @@
         <collision name="collision_obj_3_25_0_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -544,7 +544,7 @@
           <geometry>
             <mesh>
               <pose>1.625 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -558,7 +558,7 @@
         <collision name="collision_obj_3_5_0_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -567,7 +567,7 @@
           <geometry>
             <mesh>
               <pose>1.75 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -581,7 +581,7 @@
         <collision name="collision_obj_2_75_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -590,7 +590,7 @@
           <geometry>
             <mesh>
               <pose>1.375 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -604,7 +604,7 @@
         <collision name="collision_obj_3_0_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -613,7 +613,7 @@
           <geometry>
             <mesh>
               <pose>1.5 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -627,7 +627,7 @@
         <collision name="collision_obj_3_25_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -636,7 +636,7 @@
           <geometry>
             <mesh>
               <pose>1.625 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -650,7 +650,7 @@
         <collision name="collision_obj_3_5_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -659,7 +659,7 @@
           <geometry>
             <mesh>
               <pose>1.75 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -673,7 +673,7 @@
         <collision name="collision_obj_3_75_0_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -682,7 +682,7 @@
           <geometry>
             <mesh>
               <pose>1.875 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -696,7 +696,7 @@
         <collision name="collision_obj_4_0_0_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -705,7 +705,7 @@
           <geometry>
             <mesh>
               <pose>2.0 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -719,7 +719,7 @@
         <collision name="collision_obj_4_25_0_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -728,7 +728,7 @@
           <geometry>
             <mesh>
               <pose>2.125 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -742,7 +742,7 @@
         <collision name="collision_obj_4_5_0_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -751,7 +751,7 @@
           <geometry>
             <mesh>
               <pose>2.25 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -765,7 +765,7 @@
         <collision name="collision_obj_3_75_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -774,7 +774,7 @@
           <geometry>
             <mesh>
               <pose>1.875 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -788,7 +788,7 @@
         <collision name="collision_obj_4_0_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -797,7 +797,7 @@
           <geometry>
             <mesh>
               <pose>2.0 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -811,7 +811,7 @@
         <collision name="collision_obj_4_25_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -820,7 +820,7 @@
           <geometry>
             <mesh>
               <pose>2.125 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -834,7 +834,7 @@
         <collision name="collision_obj_4_5_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -843,7 +843,7 @@
           <geometry>
             <mesh>
               <pose>2.25 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -857,7 +857,7 @@
         <collision name="collision_obj_4_75_0_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -866,7 +866,7 @@
           <geometry>
             <mesh>
               <pose>2.375 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -880,7 +880,7 @@
         <collision name="collision_obj_5_0_0_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -889,7 +889,7 @@
           <geometry>
             <mesh>
               <pose>2.5 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -903,7 +903,7 @@
         <collision name="collision_obj_5_25_0_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -912,7 +912,7 @@
           <geometry>
             <mesh>
               <pose>2.625 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -926,7 +926,7 @@
         <collision name="collision_obj_5_5_0_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -935,7 +935,7 @@
           <geometry>
             <mesh>
               <pose>2.75 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -949,7 +949,7 @@
         <collision name="collision_obj_4_75_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -958,7 +958,7 @@
           <geometry>
             <mesh>
               <pose>2.375 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -972,7 +972,7 @@
         <collision name="collision_obj_5_0_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -981,7 +981,7 @@
           <geometry>
             <mesh>
               <pose>2.5 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -995,7 +995,7 @@
         <collision name="collision_obj_5_25_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1004,7 +1004,7 @@
           <geometry>
             <mesh>
               <pose>2.625 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1018,7 +1018,7 @@
         <collision name="collision_obj_5_5_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1027,7 +1027,7 @@
           <geometry>
             <mesh>
               <pose>2.75 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1041,7 +1041,7 @@
         <collision name="collision_obj_6_5_1_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1050,7 +1050,7 @@
           <geometry>
             <mesh>
               <pose>3.25 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1064,7 +1064,7 @@
         <collision name="collision_obj_5_75_0_55">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1073,7 +1073,7 @@
           <geometry>
             <mesh>
               <pose>2.875 0.275 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1087,7 +1087,7 @@
         <collision name="collision_obj_6_45_1_25">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1096,7 +1096,7 @@
           <geometry>
             <mesh>
               <pose>3.225 0.625 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1110,7 +1110,7 @@
         <collision name="collision_obj_6_3_0_7">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1119,7 +1119,7 @@
           <geometry>
             <mesh>
               <pose>3.15 0.35 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1133,7 +1133,7 @@
         <collision name="collision_obj_6_4_1_0">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1142,7 +1142,7 @@
           <geometry>
             <mesh>
               <pose>3.2 0.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1156,7 +1156,7 @@
         <collision name="collision_obj_6_0_0_6000000000000001">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1165,7 +1165,7 @@
           <geometry>
             <mesh>
               <pose>3.0 0.30000000000000004 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1179,7 +1179,7 @@
         <collision name="collision_obj_0_5_1_75">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1188,7 +1188,7 @@
           <geometry>
             <mesh>
               <pose>0.25 0.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1202,7 +1202,7 @@
         <collision name="collision_obj_0_5_2_0">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1211,7 +1211,7 @@
           <geometry>
             <mesh>
               <pose>0.25 1.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1225,7 +1225,7 @@
         <collision name="collision_obj_0_5_2_25">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1234,7 +1234,7 @@
           <geometry>
             <mesh>
               <pose>0.25 1.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1248,7 +1248,7 @@
         <collision name="collision_obj_0_5_2_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1257,7 +1257,7 @@
           <geometry>
             <mesh>
               <pose>0.25 1.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1271,7 +1271,7 @@
         <collision name="collision_obj_1_5_1_75">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1280,7 +1280,7 @@
           <geometry>
             <mesh>
               <pose>0.75 0.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1294,7 +1294,7 @@
         <collision name="collision_obj_1_5_2_0">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1303,7 +1303,7 @@
           <geometry>
             <mesh>
               <pose>0.75 1.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1317,7 +1317,7 @@
         <collision name="collision_obj_1_5_2_25">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1326,7 +1326,7 @@
           <geometry>
             <mesh>
               <pose>0.75 1.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1340,7 +1340,7 @@
         <collision name="collision_obj_1_5_2_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1349,7 +1349,7 @@
           <geometry>
             <mesh>
               <pose>0.75 1.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1363,7 +1363,7 @@
         <collision name="collision_obj_5_5_1_75">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1372,7 +1372,7 @@
           <geometry>
             <mesh>
               <pose>2.75 0.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1386,7 +1386,7 @@
         <collision name="collision_obj_5_5_2_0">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1395,7 +1395,7 @@
           <geometry>
             <mesh>
               <pose>2.75 1.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1409,7 +1409,7 @@
         <collision name="collision_obj_5_5_2_25">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1418,7 +1418,7 @@
           <geometry>
             <mesh>
               <pose>2.75 1.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1432,7 +1432,7 @@
         <collision name="collision_obj_5_5_2_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1441,7 +1441,7 @@
           <geometry>
             <mesh>
               <pose>2.75 1.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1455,7 +1455,7 @@
         <collision name="collision_obj_6_5_1_75">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1464,7 +1464,7 @@
           <geometry>
             <mesh>
               <pose>3.25 0.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1478,7 +1478,7 @@
         <collision name="collision_obj_6_5_2_0">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1487,7 +1487,7 @@
           <geometry>
             <mesh>
               <pose>3.25 1.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1501,7 +1501,7 @@
         <collision name="collision_obj_6_5_2_25">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1510,7 +1510,7 @@
           <geometry>
             <mesh>
               <pose>3.25 1.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1524,7 +1524,7 @@
         <collision name="collision_obj_6_5_2_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1533,7 +1533,7 @@
           <geometry>
             <mesh>
               <pose>3.25 1.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1547,7 +1547,7 @@
         <collision name="collision_obj_0_5_2_75">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1556,7 +1556,7 @@
           <geometry>
             <mesh>
               <pose>0.25 1.375 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1570,7 +1570,7 @@
         <collision name="collision_obj_0_5_3_0">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1579,7 +1579,7 @@
           <geometry>
             <mesh>
               <pose>0.25 1.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1593,7 +1593,7 @@
         <collision name="collision_obj_0_5_3_25">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1602,7 +1602,7 @@
           <geometry>
             <mesh>
               <pose>0.25 1.625 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1616,7 +1616,7 @@
         <collision name="collision_obj_0_5_3_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1625,7 +1625,7 @@
           <geometry>
             <mesh>
               <pose>0.25 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1639,7 +1639,7 @@
         <collision name="collision_obj_1_5_2_75">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1648,7 +1648,7 @@
           <geometry>
             <mesh>
               <pose>0.75 1.375 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1662,7 +1662,7 @@
         <collision name="collision_obj_1_5_3_0">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1671,7 +1671,7 @@
           <geometry>
             <mesh>
               <pose>0.75 1.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1685,7 +1685,7 @@
         <collision name="collision_obj_1_5_3_25">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1694,7 +1694,7 @@
           <geometry>
             <mesh>
               <pose>0.75 1.625 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1708,7 +1708,7 @@
         <collision name="collision_obj_1_5_3_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1717,7 +1717,7 @@
           <geometry>
             <mesh>
               <pose>0.75 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1731,7 +1731,7 @@
         <collision name="collision_obj_5_5_2_75">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1740,7 +1740,7 @@
           <geometry>
             <mesh>
               <pose>2.75 1.375 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1754,7 +1754,7 @@
         <collision name="collision_obj_5_5_3_0">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1763,7 +1763,7 @@
           <geometry>
             <mesh>
               <pose>2.75 1.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1777,7 +1777,7 @@
         <collision name="collision_obj_5_5_3_25">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1786,7 +1786,7 @@
           <geometry>
             <mesh>
               <pose>2.75 1.625 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1800,7 +1800,7 @@
         <collision name="collision_obj_5_5_3_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1809,7 +1809,7 @@
           <geometry>
             <mesh>
               <pose>2.75 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1823,7 +1823,7 @@
         <collision name="collision_obj_6_5_2_75">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1832,7 +1832,7 @@
           <geometry>
             <mesh>
               <pose>3.25 1.375 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1846,7 +1846,7 @@
         <collision name="collision_obj_6_5_3_0">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1855,7 +1855,7 @@
           <geometry>
             <mesh>
               <pose>3.25 1.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1869,7 +1869,7 @@
         <collision name="collision_obj_6_5_3_25">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1878,7 +1878,7 @@
           <geometry>
             <mesh>
               <pose>3.25 1.625 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1892,7 +1892,7 @@
         <collision name="collision_obj_6_5_3_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1901,7 +1901,7 @@
           <geometry>
             <mesh>
               <pose>3.25 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1915,7 +1915,7 @@
         <collision name="collision_obj_0_5_3_75">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1924,7 +1924,7 @@
           <geometry>
             <mesh>
               <pose>0.25 1.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1938,7 +1938,7 @@
         <collision name="collision_obj_0_5_4_0">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1947,7 +1947,7 @@
           <geometry>
             <mesh>
               <pose>0.25 2.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1961,7 +1961,7 @@
         <collision name="collision_obj_0_5_4_25">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1970,7 +1970,7 @@
           <geometry>
             <mesh>
               <pose>0.25 2.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1984,7 +1984,7 @@
         <collision name="collision_obj_0_5_4_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -1993,7 +1993,7 @@
           <geometry>
             <mesh>
               <pose>0.25 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2007,7 +2007,7 @@
         <collision name="collision_obj_1_5_3_75">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2016,7 +2016,7 @@
           <geometry>
             <mesh>
               <pose>0.75 1.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2030,7 +2030,7 @@
         <collision name="collision_obj_1_5_4_0">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2039,7 +2039,7 @@
           <geometry>
             <mesh>
               <pose>0.75 2.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2053,7 +2053,7 @@
         <collision name="collision_obj_1_5_4_25">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2062,7 +2062,7 @@
           <geometry>
             <mesh>
               <pose>0.75 2.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2076,7 +2076,7 @@
         <collision name="collision_obj_1_5_4_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2085,7 +2085,7 @@
           <geometry>
             <mesh>
               <pose>0.75 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2099,7 +2099,7 @@
         <collision name="collision_obj_3_5_4_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2108,7 +2108,7 @@
           <geometry>
             <mesh>
               <pose>1.75 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2122,7 +2122,7 @@
         <collision name="collision_obj_4_5_3_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2131,7 +2131,7 @@
           <geometry>
             <mesh>
               <pose>2.25 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2145,7 +2145,7 @@
         <collision name="collision_obj_3_55_4_25">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2154,7 +2154,7 @@
           <geometry>
             <mesh>
               <pose>1.775 2.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2168,7 +2168,7 @@
         <collision name="collision_obj_4_25_3_55">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2177,7 +2177,7 @@
           <geometry>
             <mesh>
               <pose>2.125 1.775 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2191,7 +2191,7 @@
         <collision name="collision_obj_3_7_3_7">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2200,7 +2200,7 @@
           <geometry>
             <mesh>
               <pose>1.85 1.85 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2214,7 +2214,7 @@
         <collision name="collision_obj_4_0_3_5999999999999996">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2223,7 +2223,7 @@
           <geometry>
             <mesh>
               <pose>2.0 1.7999999999999998 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2237,7 +2237,7 @@
         <collision name="collision_obj_3_5999999999999996_4_0">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2246,7 +2246,7 @@
           <geometry>
             <mesh>
               <pose>1.7999999999999998 2.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2260,7 +2260,7 @@
         <collision name="collision_obj_4_75_3_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2269,7 +2269,7 @@
           <geometry>
             <mesh>
               <pose>2.375 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2283,7 +2283,7 @@
         <collision name="collision_obj_5_0_3_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2292,7 +2292,7 @@
           <geometry>
             <mesh>
               <pose>2.5 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2306,7 +2306,7 @@
         <collision name="collision_obj_5_25_3_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2315,7 +2315,7 @@
           <geometry>
             <mesh>
               <pose>2.625 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2329,7 +2329,7 @@
         <collision name="collision_obj_4_5_4_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2338,7 +2338,7 @@
           <geometry>
             <mesh>
               <pose>2.25 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2352,7 +2352,7 @@
         <collision name="collision_obj_4_75_4_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2361,7 +2361,7 @@
           <geometry>
             <mesh>
               <pose>2.375 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2375,7 +2375,7 @@
         <collision name="collision_obj_5_0_4_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2384,7 +2384,7 @@
           <geometry>
             <mesh>
               <pose>2.5 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2398,7 +2398,7 @@
         <collision name="collision_obj_5_25_4_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2407,7 +2407,7 @@
           <geometry>
             <mesh>
               <pose>2.625 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2421,7 +2421,7 @@
         <collision name="collision_obj_5_5_4_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2430,7 +2430,7 @@
           <geometry>
             <mesh>
               <pose>2.75 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2444,7 +2444,7 @@
         <collision name="collision_obj_6_45_3_75">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2453,7 +2453,7 @@
           <geometry>
             <mesh>
               <pose>3.225 1.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2467,7 +2467,7 @@
         <collision name="collision_obj_5_75_4_45">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2476,7 +2476,7 @@
           <geometry>
             <mesh>
               <pose>2.875 2.225 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2490,7 +2490,7 @@
         <collision name="collision_obj_6_3_4_3">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2499,7 +2499,7 @@
           <geometry>
             <mesh>
               <pose>3.15 2.15 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2513,7 +2513,7 @@
         <collision name="collision_obj_6_0_4_4">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2522,7 +2522,7 @@
           <geometry>
             <mesh>
               <pose>3.0 2.2 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2536,7 +2536,7 @@
         <collision name="collision_obj_6_4_4_0">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2545,7 +2545,7 @@
           <geometry>
             <mesh>
               <pose>3.2 2.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2559,7 +2559,7 @@
         <collision name="collision_obj_1_5_5_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2568,7 +2568,7 @@
           <geometry>
             <mesh>
               <pose>0.75 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2582,7 +2582,7 @@
         <collision name="collision_obj_1_25_5_45">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2591,7 +2591,7 @@
           <geometry>
             <mesh>
               <pose>0.625 2.725 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2605,7 +2605,7 @@
         <collision name="collision_obj_0_55_4_75">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2614,7 +2614,7 @@
           <geometry>
             <mesh>
               <pose>0.275 2.375 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2628,7 +2628,7 @@
         <collision name="collision_obj_0_7_5_3">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2637,7 +2637,7 @@
           <geometry>
             <mesh>
               <pose>0.35 2.65 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2651,7 +2651,7 @@
         <collision name="collision_obj_0_6000000000000001_5_0">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2660,7 +2660,7 @@
           <geometry>
             <mesh>
               <pose>0.30000000000000004 2.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2674,7 +2674,7 @@
         <collision name="collision_obj_1_0_5_4">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2683,7 +2683,7 @@
           <geometry>
             <mesh>
               <pose>0.5 2.7 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2697,7 +2697,7 @@
         <collision name="collision_obj_1_75_4_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2706,7 +2706,7 @@
           <geometry>
             <mesh>
               <pose>0.875 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2720,7 +2720,7 @@
         <collision name="collision_obj_2_0_4_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2729,7 +2729,7 @@
           <geometry>
             <mesh>
               <pose>1.0 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2743,7 +2743,7 @@
         <collision name="collision_obj_2_25_4_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2752,7 +2752,7 @@
           <geometry>
             <mesh>
               <pose>1.125 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2766,7 +2766,7 @@
         <collision name="collision_obj_2_5_4_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2775,7 +2775,7 @@
           <geometry>
             <mesh>
               <pose>1.25 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2789,7 +2789,7 @@
         <collision name="collision_obj_1_75_5_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2798,7 +2798,7 @@
           <geometry>
             <mesh>
               <pose>0.875 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2812,7 +2812,7 @@
         <collision name="collision_obj_2_0_5_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2821,7 +2821,7 @@
           <geometry>
             <mesh>
               <pose>1.0 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2835,7 +2835,7 @@
         <collision name="collision_obj_2_25_5_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2844,7 +2844,7 @@
           <geometry>
             <mesh>
               <pose>1.125 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2858,7 +2858,7 @@
         <collision name="collision_obj_2_5_5_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2867,7 +2867,7 @@
           <geometry>
             <mesh>
               <pose>1.25 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2881,7 +2881,7 @@
         <collision name="collision_obj_2_75_4_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2890,7 +2890,7 @@
           <geometry>
             <mesh>
               <pose>1.375 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2904,7 +2904,7 @@
         <collision name="collision_obj_3_0_4_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2913,7 +2913,7 @@
           <geometry>
             <mesh>
               <pose>1.5 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2927,7 +2927,7 @@
         <collision name="collision_obj_3_25_4_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2936,7 +2936,7 @@
           <geometry>
             <mesh>
               <pose>1.625 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2950,7 +2950,7 @@
         <collision name="collision_obj_2_75_5_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2959,7 +2959,7 @@
           <geometry>
             <mesh>
               <pose>1.375 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2973,7 +2973,7 @@
         <collision name="collision_obj_3_0_5_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2982,7 +2982,7 @@
           <geometry>
             <mesh>
               <pose>1.5 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -2996,7 +2996,7 @@
         <collision name="collision_obj_3_25_5_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -3005,7 +3005,7 @@
           <geometry>
             <mesh>
               <pose>1.625 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -3019,7 +3019,7 @@
         <collision name="collision_obj_3_5_5_5">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -3028,7 +3028,7 @@
           <geometry>
             <mesh>
               <pose>1.75 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -3042,7 +3042,7 @@
         <collision name="collision_obj_4_45_4_75">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -3051,7 +3051,7 @@
           <geometry>
             <mesh>
               <pose>2.225 2.375 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -3065,7 +3065,7 @@
         <collision name="collision_obj_3_75_5_45">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -3074,7 +3074,7 @@
           <geometry>
             <mesh>
               <pose>1.875 2.725 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -3088,7 +3088,7 @@
         <collision name="collision_obj_4_3_5_3">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -3097,7 +3097,7 @@
           <geometry>
             <mesh>
               <pose>2.15 2.65 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -3111,7 +3111,7 @@
         <collision name="collision_obj_4_0_5_4">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -3120,7 +3120,7 @@
           <geometry>
             <mesh>
               <pose>2.0 2.7 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -3134,7 +3134,7 @@
         <collision name="collision_obj_4_4_5_0">
           <geometry>
             <mesh>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -3143,7 +3143,7 @@
           <geometry>
             <mesh>
               <pose>2.2 2.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
-                <scale>0.0025 0.0025 0.0025</scale>
+              <scale>0.0025 0.0025 0.0025</scale>
               <uri>model://cone/meshes/cone.obj</uri>
             </mesh>
           </geometry>
@@ -3154,15 +3154,15 @@
       <static>true</static>
       <link name="top_down_link">
         <static>1</static>
-           <sensor name="top_down_camera_sensor" type="camera">
+        <sensor name="top_down_camera_sensor" type="camera">
           <always_on>true</always_on>
           <visualize>false</visualize>
           <update_rate>10</update_rate>
           <topic>top_down_camera/image_raw</topic>
           <ros>
-        <imageTopicName>top_down_camera/image_raw</imageTopicName>
-        <cameraInfoTopicName>top_down_camera/cam_info</cameraInfoTopicName>
-     </ros>
+            <imageTopicName>top_down_camera/image_raw</imageTopicName>
+            <cameraInfoTopicName>top_down_camera/cam_info</cameraInfoTopicName>
+          </ros>
           <gz_frame_id>top_down_camera_rgb_frame</gz_frame_id>
           <camera name="top_down_camera">
             <camera_info_topic>camera/camera_info</camera_info_topic>
@@ -3176,12 +3176,12 @@
               <far>6</far>
             </clip>
           </camera>
-           <plugin name="camera_controller_top_down" filename="libgazebo_ros_camera.so">
-          <camera_name>camera_top_down</camera_name>
-          <frame_name>base_top_down</frame_name>
-          <frameName>base_top_down</frameName>
-          <cameraName>camera_top_down</cameraName>
-        </plugin>
+          <plugin name="camera_controller_top_down" filename="libgazebo_ros_camera.so">
+            <camera_name>camera_top_down</camera_name>
+            <frame_name>base_top_down</frame_name>
+            <frameName>base_top_down</frameName>
+            <cameraName>camera_top_down</cameraName>
+          </plugin>
         </sensor>
         <static>1</static>
         <pose>1.688 1.36 4 0 1.57 0</pose>
@@ -3210,14 +3210,13 @@
     <state world_name="default">
  
     </state>
-        <gui fullscreen="0">
+    <gui fullscreen="0">
       <camera name="gzclient_camera">
         <pose>1.688 1.36 7.5 0 1.57 0</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
-
     <light name="directionallight" type="directional">
       <pose>3.14919 1.1553 2 0 -0 0</pose>
       <cast_shadows>false</cast_shadows>

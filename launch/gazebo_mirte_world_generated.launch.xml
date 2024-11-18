@@ -5,7 +5,7 @@
   <arg name="gui" default="true"/>
   <arg name="generated_world" default="$(find-pkg-share mirte_gazebo)/worlds/lab3_generated.world"/>
   <include file="$(find-pkg-share gazebo_ros)/launch/gazebo.launch.py">
-    <arg name="world" value="$(var generated_world)" />
-    <arg name="gui" value="$(var gui)" />
-  </include> 
+    <arg name="world" value="$(var generated_world)"/>
+    <arg name="gui" value="$(var gui)"/>
+  </include>
 </launch>

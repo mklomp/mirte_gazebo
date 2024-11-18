@@ -8,8 +8,6 @@
   <arg name="encoder_ticks" default="540"/>
   <arg name="realsense_enable" default="False"/>
   <arg name="gui" default="True"/>
-  
-
   <include file="$(find-pkg-share mirte_gazebo)/launch/gazebo_mirte_world_generated.launch.xml">
     <arg name="gui" value="$(var gui)"/>
     <arg name="generated_world" value="$(find-pkg-share mirte_gazebo)/worlds/lab3_generated.world"/>
@@ -24,5 +22,5 @@
     <arg name="y" value="0.509611"/>
     <arg name="z" value="0.021444"/>
     <arg name="lab" value="lab3"/>
-  </include> 
+  </include>
 </launch>

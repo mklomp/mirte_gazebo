@@ -1,10 +1,9 @@
 #include "std_msgs/msg/string.hpp"
 #include <iostream>
 // #include <mirte_msgs/msg/
-#include <mirte_msgs/srv/get_intensity.hpp>
-#include <mirte_msgs/srv/get_intensity.hpp>
 #include <mirte_msgs/msg/intensity.hpp>
 #include <mirte_msgs/msg/intensity_digital.hpp>
+#include <mirte_msgs/srv/get_intensity.hpp>
 #include <mirte_msgs/srv/get_intensity_digital.hpp>
 // #include <ros/ros.h>
 #include <rclcpp/rclcpp.hpp>
@@ -16,18 +15,21 @@ using std::placeholders::_2;
 class map_ir : public rclcpp::Node {
 
 public:
-  map_ir(std::string  node_name, std::string side) : Node(node_name) {
+  map_ir(std::string node_name, std::string side) : Node(node_name) {
 
-    pub_ = this->create_publisher<mirte_msgs::msg::Intensity>("/mirte/intensity/" + side, 10);
+    pub_ = this->create_publisher<mirte_msgs::msg::Intensity>(
+        "/mirte/intensity/" + side, 10);
     pub_dig_ = this->create_publisher<mirte_msgs::msg::IntensityDigital>(
         "/mirte/intensity/" + side + "_digital", 10);
-    sub_ = this->create_subscription<sensor_msgs::msg::Image>("/mirte/camera_ir_" + side + "/image_raw", 10,
-                        std::bind(&map_ir::callback, this, _1));
-    server_ = this->create_service<mirte_msgs::srv::GetIntensity>("/mirte/get_intensity_" + side,
-                                std::bind(  &map_ir::service_cb, this, _1, _2));
-    server_dig_ =
-        this->create_service<mirte_msgs::srv::GetIntensityDigital>("/mirte/get_intensity_" + side + "_digital",
-                           std::bind( &map_ir::service_cb_dig, this, _1, _2));
+    sub_ = this->create_subscription<sensor_msgs::msg::Image>(
+        "/mirte/camera_ir_" + side + "/image_raw", 10,
+        std::bind(&map_ir::callback, this, _1));
+    server_ = this->create_service<mirte_msgs::srv::GetIntensity>(
+        "/mirte/get_intensity_" + side,
+        std::bind(&map_ir::service_cb, this, _1, _2));
+    server_dig_ = this->create_service<mirte_msgs::srv::GetIntensityDigital>(
+        "/mirte/get_intensity_" + side + "_digital",
+        std::bind(&map_ir::service_cb_dig, this, _1, _2));
   }
 
   void callback(const sensor_msgs::msg::Image::SharedPtr img) {
@@ -50,8 +52,9 @@ public:
     res->data = this->lastIntensity;
     return true;
   }
-  bool service_cb_dig(mirte_msgs::srv::GetIntensityDigital::Request::SharedPtr /*req*/,
-                      mirte_msgs::srv::GetIntensityDigital::Response::SharedPtr res) {
+  bool service_cb_dig(
+      mirte_msgs::srv::GetIntensityDigital::Request::SharedPtr /*req*/,
+      mirte_msgs::srv::GetIntensityDigital::Response::SharedPtr res) {
     res->data = this->lastIntensityDig;
     return true;
   }
@@ -73,7 +76,7 @@ int main(int argc, char **argv) {
   std::string side = argv[1];
   std::string name = "map_ir_" + side;
   rclcpp::init(argc, argv);
-   rclcpp::spin(std::make_shared<map_ir>(name, side));
+  rclcpp::spin(std::make_shared<map_ir>(name, side));
   rclcpp::shutdown();
 
   return 0;
