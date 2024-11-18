@@ -21,7 +21,7 @@ public:
     pub_ = this->create_publisher<mirte_msgs::msg::Intensity>("/mirte/intensity/" + side, 10);
     pub_dig_ = this->create_publisher<mirte_msgs::msg::IntensityDigital>(
         "/mirte/intensity/" + side + "_digital", 10);
-    sub_ = this->create_subscription<sensor_msgs::msg::Image>("/camera_" + side + "/image_raw", 10,
+    sub_ = this->create_subscription<sensor_msgs::msg::Image>("/mirte/camera_ir_" + side + "/image_raw", 10,
                         std::bind(&map_ir::callback, this, _1));
     server_ = this->create_service<mirte_msgs::srv::GetIntensity>("/mirte/get_intensity_" + side,
                                 std::bind(  &map_ir::service_cb, this, _1, _2));
@@ -44,13 +44,13 @@ public:
     pub_dig_->publish(irIntDig);
   }
 
-  bool service_cb(mirte_msgs::srv::GetIntensity::Request::SharedPtr req,
+  bool service_cb(mirte_msgs::srv::GetIntensity::Request::SharedPtr /*req*/,
                   mirte_msgs::srv::GetIntensity::Response::SharedPtr res) {
 
     res->data = this->lastIntensity;
     return true;
   }
-  bool service_cb_dig(mirte_msgs::srv::GetIntensityDigital::Request::SharedPtr req,
+  bool service_cb_dig(mirte_msgs::srv::GetIntensityDigital::Request::SharedPtr /*req*/,
                       mirte_msgs::srv::GetIntensityDigital::Response::SharedPtr res) {
     res->data = this->lastIntensityDig;
     return true;

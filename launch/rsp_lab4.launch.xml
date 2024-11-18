@@ -1,36 +1,37 @@
 <?xml version="1.0"?>
 <launch>
-  <arg name="camera_enable" default="True"/>
+  <arg name="camera_enable" default="False"/>
   <arg name="intensity_enable" default="False"/>
   <arg name="sonar_enable" default="False"/>
   <arg name="lidar_enable" default="False"/>
   <arg name="encoder_bidirectional" default="True"/>
   <arg name="encoder_ticks" default="540"/>
   <arg name="realsense_enable" default="True"/>
-  <include file="$(find-pkg-share  mirte_gazebo)/launch/gazebo_duckietown_world.launch.xml">
-    <arg name="duckietown" value="$(find-pkg-share  mirte_gazebo)/maps/route.yaml"/>
-    <arg name="gui" value="True"/>
-    <arg name="lockstep" value="False"/>
+  <arg name="gui" default="False"/>
+  <arg name="rviz" default="True"/>
+
+  <include file="$(find-pkg-share mirte_gazebo)/launch/gazebo_mirte_world_generated.launch.xml">
+    <arg name="generated_world" value="$(find-pkg-share mirte_gazebo)/worlds/lab4_generated.world"/>
+    <arg name="gui" value="$(var gui)"/>
   </include>
-  <include file="$(find-pkg-share  mirte_gazebo)/launch/spawn_mirte.launch.xml">
+  <include file="$(find-pkg-share mirte_gazebo)/launch/spawn_mirte.launch.xml">
     <arg name="camera_enable" value="$(var camera_enable)"/>
     <arg name="intensity_enable" value="$(var intensity_enable)"/>
     <arg name="sonar_enable" value="$(var sonar_enable)"/>
     <arg name="lidar_enable" value="$(var lidar_enable)"/>
     <arg name="realsense_enable" value="$(var realsense_enable)"/>
     <arg name="x" value="3.01"/>
-    <arg name="y" value="1.3209611"/>
-    <arg name="z" value="0.021444"/>
+    <arg name="y" value="1.2"/>
+    <arg name="z" value="0.11444"/>
     <arg name="yaw" value="1.521444"/>
+    <arg name="lab" value="lab4"/>
   </include>
-  <!-- <node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(find-pkg-share  mirte_gazebo)/mirte_gazebo.rviz" respawn="false"/> -->
-  <group if="$(var intensity_enable)">
-    <node name="mapIRLeft" pkg="mirte_gazebo" type="convert_ir" output="screen" args="left"/>
-    <node name="mapIRRight" pkg="mirte_gazebo" type="convert_ir" output="screen" args="right"/>
-  </group>
-  <group if="$(var sonar_enable)">
-    <node name="mapUltrasonicLeft" pkg="mirte_gazebo" type="convert_sonar" output="screen" args="left"/>
-    <node name="mapUltrasonicRight" pkg="mirte_gazebo" type="convert_sonar" output="screen" args="right"/>
-  </group>
-  <node name="rotate_pc" pkg="mirte_gazebo" type="rotate" output="screen"/>
+  <node pkg="pcl_obstacle_detector" exec="pcl_obstacle_detector_node" name="pcl_obstacle_detector_node" output="screen" >
+    <param name="use_sim_time" value="true"/>
+    <param name="min_height" value="0.0"/>
+    <param name="max_height" value="1.0"/>
+    <remap from="/mirte/depth_camera/points" to="/mirte/camera_depth/points"/>
+  </node>
+  <node pkg="detection_3d_to_markers" exec="detection_3d_to_markers_node" output="screen"/>
+  <node pkg="rviz2" exec="rviz2" name="rviz2" args="-d $(find-pkg-share mirte_gazebo)/rviz/rsp_lab4.rviz" output="screen" if="$(var rviz)"/>
 </launch>

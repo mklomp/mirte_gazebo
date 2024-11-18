@@ -7,51 +7,34 @@
   <arg name="pitch" default="0"/>
   <arg name="yaw" default="0"/>
   <arg name="ns_1" default="mirte"/>
+  <arg name="lab" default="lab3"/>
   <arg name="camera_enable" default="True"/>
   <arg name="intensity_enable" default="True"/>
   <arg name="sonar_enable" default="True"/>
   <arg name="lidar_enable" default="True"/>
   <arg name="realsense_enable" default="True"/>
-  <arg name="robot_description" default="$(find-pkg-share mirte_gazebo)/urdf/mirte.xacro"/>
-  <!-- <rosparam file="$(find-pkg-share mirte_gazebo)/config/mirte_diff_drive.yaml" command="load"/> -->
+  <arg name="robot_xacro_path" default="$(find-pkg-share mirte_gazebo)/urdf/mirte/mirte.xacro"/>
   <group>
     <push_ros_namespace namespace="$(var ns_1)"/>
-    <!-- <rosparam command="load" file="$(find-pkg-share mirte_control)/config/my_robot_common.yaml" /> -->
-    <!-- <rosparam file="$(find-pkg-share mirte_gazebo)/config/gazebo_ros_control_params.yaml" command="load"/> -->
-    <executable cmd="xacro $(find-pkg-share mirte_gazebo)/urdf/mirte.xacro -o $(find-pkg-share mirte_gazebo)/urdf/mirte.urdf sonar_enable:=$(var sonar_enable) camera_enable:=$(var camera_enable) intensity_enable:=$(var intensity_enable) lidar_enable:=$(var lidar_enable) realsense_enable:=$(var realsense_enable)"/>
-    <!--<executable cmd="ros2 param set /robot_description /tmp/test.urdf"/>  sonar_enable:=$(var sonar_enable) camera_enable:=$(var camera_enable) intensity_enable:=$(var intensity_enable) lidar_enable:=$(var lidar_enable) realsense_enable:=$(var realsense_enable)
-  -->
-    <!-- Spawn a robot into Gazebo -->
-    <!--  -x $(var x) -y $(var y) -z $(var z) -R $(var roll) -P $(var pitch) -Y $(var yaw) -->
-    <node name="spawn_urdf" pkg="ros_gz_sim" exec="create" output="screen" args="-name Mirte -file $(find-pkg-share mirte_gazebo)/urdf/mirte.urdf -x $(var x) -y $(var y) -z $(var z) -R $(var roll) -P $(var pitch) -Y $(var yaw)">
-                
-
-        </node>
-    <node name="bridge" pkg="ros_gz_bridge" exec="parameter_bridge" args="--ros-args -p config_file:=$(find-pkg-share mirte_gazebo)/params/ros_gz_bridge.yaml"/>
-    <!-- start_gazebo_ros_image_bridge_cmd = Node(
-    package='ros_gz_image',
-    executable='image_bridge',
-    arguments=['/camera/image_raw'],
-    output='screen',
--->
-    <node name="image_bridge" pkg="ros_gz_image" exec="image_bridge" args="/camera/image_raw" output="screen" if="$(eval '$(var camera_enable) or $(var realsense_enable)')"/>
-
+ 
+    <node name="spawn_urdf" pkg="gazebo_ros" exec="spawn_entity.py" output="screen" args="-topic /mirte/robot_description -entity mirte -b -robot_namespace mirte -unpause -x $(var x) -y $(var y) -z $(var z) -R $(var roll) -P $(var pitch) -Y $(var yaw)">        
+    </node>
+    
+    <node pkg="robot_state_publisher" exec="robot_state_publisher">
+      <param name="robot_description" type="str" value="$(command 'xacro $(var robot_xacro_path) sonar_enable:=$(var sonar_enable) camera_enable:=$(var camera_enable) intensity_enable:=$(var intensity_enable) lidar_enable:=$(var lidar_enable) realsense_enable:=$(var realsense_enable)')" />
+      <param name="use_sim_time" value="true" />
+    </node>
 
     <group if="$(var intensity_enable)">
-      <node name="image_bridge_ir_left" pkg="ros_gz_image" exec="image_bridge" args="/camera_left/image_raw" output="screen" />
-      <node name="image_bridge_ir_right" pkg="ros_gz_image" exec="image_bridge" args="/camera_right/image_raw" output="screen"/>
-      <node name="mapIRLeft" pkg="mirte_gazebo" exec="convert_ir" output="screen" args="left"/>
-    <node name="mapIRRight" pkg="mirte_gazebo" exec="convert_ir" output="screen" args="right"/>
-
+      <node name="mapIRLeft" pkg="mirte_gazebo" exec="convert_ir" output="screen" args="left">
+        <param name="use_sim_time" value="true" />
+      </node>
+      <node name="mapIRRight" pkg="mirte_gazebo" exec="convert_ir" output="screen" args="right">
+        <param name="use_sim_time" value="true" />
+      </node>
     </group>
-    <!-- <node name="image_bridge2" pkg="ros_gz_image" exec="image_bridge" args="/depth_camera" output="screen"/> -->
-    <!-- convert joint states to TF transforms for rviz, etc -->
-    <!-- Notice the leading '/' in '/robot_description' -->
-    <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
-   <remap from="/joint_states" to="/$(var ns_1)/joint_states"/>
-  </node>
-  <!- - ROS control stuff - ->
-  <node name="controller_spawner" pkg="controller_manager" type="spawner" output="screen" args="mobile_base_controller joint_state_controller "/> -->
-  </group>
-  <!-- joint1_position_controller joint2_position_controller joint_state_controller -->
+
+   </group>
+
+
 </launch>

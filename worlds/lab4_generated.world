@@ -1,0 +1,3241 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="default">
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type="adiabatic"/>
+    <physics type="ode">
+      <max_step_size>0.01</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>100</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>1 1 1 1</ambient>
+      <background>0.53 0.81 0.92 1</background>
+      <shadows>0</shadows>
+      <origin_visual>false</origin_visual>
+    </scene>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name="unit_box_tile_0_0">
+      <model name="model_tile_0_0">
+        <static>1</static>
+        <pose>2.0 1.0 -0.025999999999999995 1.5707963267948966 -0  0.0</pose>
+        <link name="link_tile_0_0">
+          <collision name="collision_tile_0_0">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>4 4 4</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_0_0">
+            <geometry>
+              <mesh>
+                <pose>2.0 1.0 -0.025999999999999995 1.5707963267948966 -0  0.0</pose>
+                <scale>4 4 4</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="person_standing">
+      <link name="link">
+        <inertial>
+          <pose>2.9 0.47 0.01 0 -0  -1.09</pose>
+          <mass>80</mass>
+          <inertia>
+            <ixx>24.879999999999999</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>25.73</iyy>
+            <iyz>0</iyz>
+            <izz>2.48</izz>
+          </inertia>
+        </inertial>
+        <collision name="bottom">
+          <pose>0 -0.1 0.01 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.5 0.35 0.02</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <collision name="person">
+          <pose>0 0 0.02 0.04 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.2 0.2</scale>
+              <uri>model://person_standing/meshes/standing.dae</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <pose>0 0 0.02 0.04 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.2 0.2 0.2</scale>
+              <uri>model://person_standing/meshes/standing.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <pose>0 0 0 0 -0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>2.9 0.47 0.01 0 -0  -1.09</pose>
+      <static>True</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name="model_obj_0_5_1_5">
+      <static>True</static>
+      <pose>0.25 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_5_1_5">
+        <collision name="collision_obj_0_5_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_5_1_5">
+          <geometry>
+            <mesh>
+              <pose>0.25 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_5_0_5">
+      <static>True</static>
+      <pose>0.75 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_5_0_5">
+        <collision name="collision_obj_1_5_0_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_5_0_5">
+          <geometry>
+            <mesh>
+              <pose>0.75 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_0_55_1_25">
+      <static>True</static>
+      <pose>0.275 0.625 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_55_1_25">
+        <collision name="collision_obj_0_55_1_25">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_55_1_25">
+          <geometry>
+            <mesh>
+              <pose>0.275 0.625 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_25_0_55">
+      <static>True</static>
+      <pose>0.625 0.275 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_25_0_55">
+        <collision name="collision_obj_1_25_0_55">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_25_0_55">
+          <geometry>
+            <mesh>
+              <pose>0.625 0.275 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_0_7_0_7">
+      <static>True</static>
+      <pose>0.35 0.35 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_7_0_7">
+        <collision name="collision_obj_0_7_0_7">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_7_0_7">
+          <geometry>
+            <mesh>
+              <pose>0.35 0.35 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_0_0_6000000000000001">
+      <static>True</static>
+      <pose>0.5 0.30000000000000004 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_0_0_6000000000000001">
+        <collision name="collision_obj_1_0_0_6000000000000001">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_0_0_6000000000000001">
+          <geometry>
+            <mesh>
+              <pose>0.5 0.30000000000000004 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_0_6000000000000001_1_0">
+      <static>True</static>
+      <pose>0.30000000000000004 0.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_6000000000000001_1_0">
+        <collision name="collision_obj_0_6000000000000001_1_0">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_6000000000000001_1_0">
+          <geometry>
+            <mesh>
+              <pose>0.30000000000000004 0.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_75_0_5">
+      <static>True</static>
+      <pose>0.875 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_75_0_5">
+        <collision name="collision_obj_1_75_0_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_75_0_5">
+          <geometry>
+            <mesh>
+              <pose>0.875 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_2_0_0_5">
+      <static>True</static>
+      <pose>1.0 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_2_0_0_5">
+        <collision name="collision_obj_2_0_0_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_2_0_0_5">
+          <geometry>
+            <mesh>
+              <pose>1.0 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_2_25_0_5">
+      <static>True</static>
+      <pose>1.125 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_2_25_0_5">
+        <collision name="collision_obj_2_25_0_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_2_25_0_5">
+          <geometry>
+            <mesh>
+              <pose>1.125 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_2_5_0_5">
+      <static>True</static>
+      <pose>1.25 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_2_5_0_5">
+        <collision name="collision_obj_2_5_0_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_2_5_0_5">
+          <geometry>
+            <mesh>
+              <pose>1.25 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_5_1_5">
+      <static>True</static>
+      <pose>0.75 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_5_1_5">
+        <collision name="collision_obj_1_5_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_5_1_5">
+          <geometry>
+            <mesh>
+              <pose>0.75 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_75_1_5">
+      <static>True</static>
+      <pose>0.875 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_75_1_5">
+        <collision name="collision_obj_1_75_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_75_1_5">
+          <geometry>
+            <mesh>
+              <pose>0.875 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_2_0_1_5">
+      <static>True</static>
+      <pose>1.0 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_2_0_1_5">
+        <collision name="collision_obj_2_0_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_2_0_1_5">
+          <geometry>
+            <mesh>
+              <pose>1.0 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_2_25_1_5">
+      <static>True</static>
+      <pose>1.125 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_2_25_1_5">
+        <collision name="collision_obj_2_25_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_2_25_1_5">
+          <geometry>
+            <mesh>
+              <pose>1.125 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_2_5_1_5">
+      <static>True</static>
+      <pose>1.25 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_2_5_1_5">
+        <collision name="collision_obj_2_5_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_2_5_1_5">
+          <geometry>
+            <mesh>
+              <pose>1.25 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_2_75_0_5">
+      <static>True</static>
+      <pose>1.375 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_2_75_0_5">
+        <collision name="collision_obj_2_75_0_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_2_75_0_5">
+          <geometry>
+            <mesh>
+              <pose>1.375 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_3_0_0_5">
+      <static>True</static>
+      <pose>1.5 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_3_0_0_5">
+        <collision name="collision_obj_3_0_0_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_3_0_0_5">
+          <geometry>
+            <mesh>
+              <pose>1.5 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_3_25_0_5">
+      <static>True</static>
+      <pose>1.625 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_3_25_0_5">
+        <collision name="collision_obj_3_25_0_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_3_25_0_5">
+          <geometry>
+            <mesh>
+              <pose>1.625 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_3_5_0_5">
+      <static>True</static>
+      <pose>1.75 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_3_5_0_5">
+        <collision name="collision_obj_3_5_0_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_3_5_0_5">
+          <geometry>
+            <mesh>
+              <pose>1.75 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_2_75_1_5">
+      <static>True</static>
+      <pose>1.375 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_2_75_1_5">
+        <collision name="collision_obj_2_75_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_2_75_1_5">
+          <geometry>
+            <mesh>
+              <pose>1.375 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_3_0_1_5">
+      <static>True</static>
+      <pose>1.5 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_3_0_1_5">
+        <collision name="collision_obj_3_0_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_3_0_1_5">
+          <geometry>
+            <mesh>
+              <pose>1.5 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_3_25_1_5">
+      <static>True</static>
+      <pose>1.625 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_3_25_1_5">
+        <collision name="collision_obj_3_25_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_3_25_1_5">
+          <geometry>
+            <mesh>
+              <pose>1.625 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_3_5_1_5">
+      <static>True</static>
+      <pose>1.75 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_3_5_1_5">
+        <collision name="collision_obj_3_5_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_3_5_1_5">
+          <geometry>
+            <mesh>
+              <pose>1.75 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_3_75_0_5">
+      <static>True</static>
+      <pose>1.875 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_3_75_0_5">
+        <collision name="collision_obj_3_75_0_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_3_75_0_5">
+          <geometry>
+            <mesh>
+              <pose>1.875 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_4_0_0_5">
+      <static>True</static>
+      <pose>2.0 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_4_0_0_5">
+        <collision name="collision_obj_4_0_0_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_4_0_0_5">
+          <geometry>
+            <mesh>
+              <pose>2.0 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_4_25_0_5">
+      <static>True</static>
+      <pose>2.125 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_4_25_0_5">
+        <collision name="collision_obj_4_25_0_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_4_25_0_5">
+          <geometry>
+            <mesh>
+              <pose>2.125 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_4_5_0_5">
+      <static>True</static>
+      <pose>2.25 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_4_5_0_5">
+        <collision name="collision_obj_4_5_0_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_4_5_0_5">
+          <geometry>
+            <mesh>
+              <pose>2.25 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_3_75_1_5">
+      <static>True</static>
+      <pose>1.875 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_3_75_1_5">
+        <collision name="collision_obj_3_75_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_3_75_1_5">
+          <geometry>
+            <mesh>
+              <pose>1.875 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_4_0_1_5">
+      <static>True</static>
+      <pose>2.0 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_4_0_1_5">
+        <collision name="collision_obj_4_0_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_4_0_1_5">
+          <geometry>
+            <mesh>
+              <pose>2.0 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_4_25_1_5">
+      <static>True</static>
+      <pose>2.125 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_4_25_1_5">
+        <collision name="collision_obj_4_25_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_4_25_1_5">
+          <geometry>
+            <mesh>
+              <pose>2.125 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_4_5_1_5">
+      <static>True</static>
+      <pose>2.25 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_4_5_1_5">
+        <collision name="collision_obj_4_5_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_4_5_1_5">
+          <geometry>
+            <mesh>
+              <pose>2.25 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_4_75_0_5">
+      <static>True</static>
+      <pose>2.375 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_4_75_0_5">
+        <collision name="collision_obj_4_75_0_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_4_75_0_5">
+          <geometry>
+            <mesh>
+              <pose>2.375 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_0_0_5">
+      <static>True</static>
+      <pose>2.5 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_0_0_5">
+        <collision name="collision_obj_5_0_0_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_0_0_5">
+          <geometry>
+            <mesh>
+              <pose>2.5 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_25_0_5">
+      <static>True</static>
+      <pose>2.625 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_25_0_5">
+        <collision name="collision_obj_5_25_0_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_25_0_5">
+          <geometry>
+            <mesh>
+              <pose>2.625 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_5_0_5">
+      <static>True</static>
+      <pose>2.75 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_5_0_5">
+        <collision name="collision_obj_5_5_0_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_5_0_5">
+          <geometry>
+            <mesh>
+              <pose>2.75 0.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_4_75_1_5">
+      <static>True</static>
+      <pose>2.375 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_4_75_1_5">
+        <collision name="collision_obj_4_75_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_4_75_1_5">
+          <geometry>
+            <mesh>
+              <pose>2.375 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_0_1_5">
+      <static>True</static>
+      <pose>2.5 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_0_1_5">
+        <collision name="collision_obj_5_0_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_0_1_5">
+          <geometry>
+            <mesh>
+              <pose>2.5 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_25_1_5">
+      <static>True</static>
+      <pose>2.625 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_25_1_5">
+        <collision name="collision_obj_5_25_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_25_1_5">
+          <geometry>
+            <mesh>
+              <pose>2.625 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_5_1_5">
+      <static>True</static>
+      <pose>2.75 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_5_1_5">
+        <collision name="collision_obj_5_5_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_5_1_5">
+          <geometry>
+            <mesh>
+              <pose>2.75 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_6_5_1_5">
+      <static>True</static>
+      <pose>3.25 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_6_5_1_5">
+        <collision name="collision_obj_6_5_1_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_6_5_1_5">
+          <geometry>
+            <mesh>
+              <pose>3.25 0.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_75_0_55">
+      <static>True</static>
+      <pose>2.875 0.275 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_75_0_55">
+        <collision name="collision_obj_5_75_0_55">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_75_0_55">
+          <geometry>
+            <mesh>
+              <pose>2.875 0.275 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_6_45_1_25">
+      <static>True</static>
+      <pose>3.225 0.625 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_6_45_1_25">
+        <collision name="collision_obj_6_45_1_25">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_6_45_1_25">
+          <geometry>
+            <mesh>
+              <pose>3.225 0.625 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_6_3_0_7">
+      <static>True</static>
+      <pose>3.15 0.35 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_6_3_0_7">
+        <collision name="collision_obj_6_3_0_7">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_6_3_0_7">
+          <geometry>
+            <mesh>
+              <pose>3.15 0.35 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_6_4_1_0">
+      <static>True</static>
+      <pose>3.2 0.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_6_4_1_0">
+        <collision name="collision_obj_6_4_1_0">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_6_4_1_0">
+          <geometry>
+            <mesh>
+              <pose>3.2 0.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_6_0_0_6000000000000001">
+      <static>True</static>
+      <pose>3.0 0.30000000000000004 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_6_0_0_6000000000000001">
+        <collision name="collision_obj_6_0_0_6000000000000001">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_6_0_0_6000000000000001">
+          <geometry>
+            <mesh>
+              <pose>3.0 0.30000000000000004 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_0_5_1_75">
+      <static>True</static>
+      <pose>0.25 0.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_5_1_75">
+        <collision name="collision_obj_0_5_1_75">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_5_1_75">
+          <geometry>
+            <mesh>
+              <pose>0.25 0.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_0_5_2_0">
+      <static>True</static>
+      <pose>0.25 1.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_5_2_0">
+        <collision name="collision_obj_0_5_2_0">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_5_2_0">
+          <geometry>
+            <mesh>
+              <pose>0.25 1.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_0_5_2_25">
+      <static>True</static>
+      <pose>0.25 1.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_5_2_25">
+        <collision name="collision_obj_0_5_2_25">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_5_2_25">
+          <geometry>
+            <mesh>
+              <pose>0.25 1.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_0_5_2_5">
+      <static>True</static>
+      <pose>0.25 1.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_5_2_5">
+        <collision name="collision_obj_0_5_2_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_5_2_5">
+          <geometry>
+            <mesh>
+              <pose>0.25 1.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_5_1_75">
+      <static>True</static>
+      <pose>0.75 0.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_5_1_75">
+        <collision name="collision_obj_1_5_1_75">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_5_1_75">
+          <geometry>
+            <mesh>
+              <pose>0.75 0.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_5_2_0">
+      <static>True</static>
+      <pose>0.75 1.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_5_2_0">
+        <collision name="collision_obj_1_5_2_0">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_5_2_0">
+          <geometry>
+            <mesh>
+              <pose>0.75 1.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_5_2_25">
+      <static>True</static>
+      <pose>0.75 1.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_5_2_25">
+        <collision name="collision_obj_1_5_2_25">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_5_2_25">
+          <geometry>
+            <mesh>
+              <pose>0.75 1.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_5_2_5">
+      <static>True</static>
+      <pose>0.75 1.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_5_2_5">
+        <collision name="collision_obj_1_5_2_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_5_2_5">
+          <geometry>
+            <mesh>
+              <pose>0.75 1.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_5_1_75">
+      <static>True</static>
+      <pose>2.75 0.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_5_1_75">
+        <collision name="collision_obj_5_5_1_75">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_5_1_75">
+          <geometry>
+            <mesh>
+              <pose>2.75 0.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_5_2_0">
+      <static>True</static>
+      <pose>2.75 1.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_5_2_0">
+        <collision name="collision_obj_5_5_2_0">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_5_2_0">
+          <geometry>
+            <mesh>
+              <pose>2.75 1.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_5_2_25">
+      <static>True</static>
+      <pose>2.75 1.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_5_2_25">
+        <collision name="collision_obj_5_5_2_25">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_5_2_25">
+          <geometry>
+            <mesh>
+              <pose>2.75 1.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_5_2_5">
+      <static>True</static>
+      <pose>2.75 1.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_5_2_5">
+        <collision name="collision_obj_5_5_2_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_5_2_5">
+          <geometry>
+            <mesh>
+              <pose>2.75 1.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_6_5_1_75">
+      <static>True</static>
+      <pose>3.25 0.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_6_5_1_75">
+        <collision name="collision_obj_6_5_1_75">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_6_5_1_75">
+          <geometry>
+            <mesh>
+              <pose>3.25 0.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_6_5_2_0">
+      <static>True</static>
+      <pose>3.25 1.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_6_5_2_0">
+        <collision name="collision_obj_6_5_2_0">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_6_5_2_0">
+          <geometry>
+            <mesh>
+              <pose>3.25 1.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_6_5_2_25">
+      <static>True</static>
+      <pose>3.25 1.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_6_5_2_25">
+        <collision name="collision_obj_6_5_2_25">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_6_5_2_25">
+          <geometry>
+            <mesh>
+              <pose>3.25 1.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_6_5_2_5">
+      <static>True</static>
+      <pose>3.25 1.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_6_5_2_5">
+        <collision name="collision_obj_6_5_2_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_6_5_2_5">
+          <geometry>
+            <mesh>
+              <pose>3.25 1.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_0_5_2_75">
+      <static>True</static>
+      <pose>0.25 1.375 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_5_2_75">
+        <collision name="collision_obj_0_5_2_75">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_5_2_75">
+          <geometry>
+            <mesh>
+              <pose>0.25 1.375 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_0_5_3_0">
+      <static>True</static>
+      <pose>0.25 1.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_5_3_0">
+        <collision name="collision_obj_0_5_3_0">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_5_3_0">
+          <geometry>
+            <mesh>
+              <pose>0.25 1.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_0_5_3_25">
+      <static>True</static>
+      <pose>0.25 1.625 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_5_3_25">
+        <collision name="collision_obj_0_5_3_25">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_5_3_25">
+          <geometry>
+            <mesh>
+              <pose>0.25 1.625 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_0_5_3_5">
+      <static>True</static>
+      <pose>0.25 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_5_3_5">
+        <collision name="collision_obj_0_5_3_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_5_3_5">
+          <geometry>
+            <mesh>
+              <pose>0.25 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_5_2_75">
+      <static>True</static>
+      <pose>0.75 1.375 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_5_2_75">
+        <collision name="collision_obj_1_5_2_75">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_5_2_75">
+          <geometry>
+            <mesh>
+              <pose>0.75 1.375 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_5_3_0">
+      <static>True</static>
+      <pose>0.75 1.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_5_3_0">
+        <collision name="collision_obj_1_5_3_0">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_5_3_0">
+          <geometry>
+            <mesh>
+              <pose>0.75 1.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_5_3_25">
+      <static>True</static>
+      <pose>0.75 1.625 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_5_3_25">
+        <collision name="collision_obj_1_5_3_25">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_5_3_25">
+          <geometry>
+            <mesh>
+              <pose>0.75 1.625 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_5_3_5">
+      <static>True</static>
+      <pose>0.75 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_5_3_5">
+        <collision name="collision_obj_1_5_3_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_5_3_5">
+          <geometry>
+            <mesh>
+              <pose>0.75 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_5_2_75">
+      <static>True</static>
+      <pose>2.75 1.375 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_5_2_75">
+        <collision name="collision_obj_5_5_2_75">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_5_2_75">
+          <geometry>
+            <mesh>
+              <pose>2.75 1.375 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_5_3_0">
+      <static>True</static>
+      <pose>2.75 1.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_5_3_0">
+        <collision name="collision_obj_5_5_3_0">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_5_3_0">
+          <geometry>
+            <mesh>
+              <pose>2.75 1.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_5_3_25">
+      <static>True</static>
+      <pose>2.75 1.625 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_5_3_25">
+        <collision name="collision_obj_5_5_3_25">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_5_3_25">
+          <geometry>
+            <mesh>
+              <pose>2.75 1.625 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_5_3_5">
+      <static>True</static>
+      <pose>2.75 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_5_3_5">
+        <collision name="collision_obj_5_5_3_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_5_3_5">
+          <geometry>
+            <mesh>
+              <pose>2.75 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_6_5_2_75">
+      <static>True</static>
+      <pose>3.25 1.375 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_6_5_2_75">
+        <collision name="collision_obj_6_5_2_75">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_6_5_2_75">
+          <geometry>
+            <mesh>
+              <pose>3.25 1.375 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_6_5_3_0">
+      <static>True</static>
+      <pose>3.25 1.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_6_5_3_0">
+        <collision name="collision_obj_6_5_3_0">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_6_5_3_0">
+          <geometry>
+            <mesh>
+              <pose>3.25 1.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_6_5_3_25">
+      <static>True</static>
+      <pose>3.25 1.625 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_6_5_3_25">
+        <collision name="collision_obj_6_5_3_25">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_6_5_3_25">
+          <geometry>
+            <mesh>
+              <pose>3.25 1.625 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_6_5_3_5">
+      <static>True</static>
+      <pose>3.25 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_6_5_3_5">
+        <collision name="collision_obj_6_5_3_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_6_5_3_5">
+          <geometry>
+            <mesh>
+              <pose>3.25 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_0_5_3_75">
+      <static>True</static>
+      <pose>0.25 1.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_5_3_75">
+        <collision name="collision_obj_0_5_3_75">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_5_3_75">
+          <geometry>
+            <mesh>
+              <pose>0.25 1.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_0_5_4_0">
+      <static>True</static>
+      <pose>0.25 2.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_5_4_0">
+        <collision name="collision_obj_0_5_4_0">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_5_4_0">
+          <geometry>
+            <mesh>
+              <pose>0.25 2.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_0_5_4_25">
+      <static>True</static>
+      <pose>0.25 2.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_5_4_25">
+        <collision name="collision_obj_0_5_4_25">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_5_4_25">
+          <geometry>
+            <mesh>
+              <pose>0.25 2.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_0_5_4_5">
+      <static>True</static>
+      <pose>0.25 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_5_4_5">
+        <collision name="collision_obj_0_5_4_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_5_4_5">
+          <geometry>
+            <mesh>
+              <pose>0.25 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_5_3_75">
+      <static>True</static>
+      <pose>0.75 1.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_5_3_75">
+        <collision name="collision_obj_1_5_3_75">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_5_3_75">
+          <geometry>
+            <mesh>
+              <pose>0.75 1.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_5_4_0">
+      <static>True</static>
+      <pose>0.75 2.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_5_4_0">
+        <collision name="collision_obj_1_5_4_0">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_5_4_0">
+          <geometry>
+            <mesh>
+              <pose>0.75 2.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_5_4_25">
+      <static>True</static>
+      <pose>0.75 2.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_5_4_25">
+        <collision name="collision_obj_1_5_4_25">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_5_4_25">
+          <geometry>
+            <mesh>
+              <pose>0.75 2.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_5_4_5">
+      <static>True</static>
+      <pose>0.75 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_5_4_5">
+        <collision name="collision_obj_1_5_4_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_5_4_5">
+          <geometry>
+            <mesh>
+              <pose>0.75 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_3_5_4_5">
+      <static>True</static>
+      <pose>1.75 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_3_5_4_5">
+        <collision name="collision_obj_3_5_4_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_3_5_4_5">
+          <geometry>
+            <mesh>
+              <pose>1.75 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_4_5_3_5">
+      <static>True</static>
+      <pose>2.25 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_4_5_3_5">
+        <collision name="collision_obj_4_5_3_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_4_5_3_5">
+          <geometry>
+            <mesh>
+              <pose>2.25 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_3_55_4_25">
+      <static>True</static>
+      <pose>1.775 2.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_3_55_4_25">
+        <collision name="collision_obj_3_55_4_25">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_3_55_4_25">
+          <geometry>
+            <mesh>
+              <pose>1.775 2.125 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_4_25_3_55">
+      <static>True</static>
+      <pose>2.125 1.775 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_4_25_3_55">
+        <collision name="collision_obj_4_25_3_55">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_4_25_3_55">
+          <geometry>
+            <mesh>
+              <pose>2.125 1.775 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_3_7_3_7">
+      <static>True</static>
+      <pose>1.85 1.85 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_3_7_3_7">
+        <collision name="collision_obj_3_7_3_7">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_3_7_3_7">
+          <geometry>
+            <mesh>
+              <pose>1.85 1.85 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_4_0_3_5999999999999996">
+      <static>True</static>
+      <pose>2.0 1.7999999999999998 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_4_0_3_5999999999999996">
+        <collision name="collision_obj_4_0_3_5999999999999996">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_4_0_3_5999999999999996">
+          <geometry>
+            <mesh>
+              <pose>2.0 1.7999999999999998 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_3_5999999999999996_4_0">
+      <static>True</static>
+      <pose>1.7999999999999998 2.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_3_5999999999999996_4_0">
+        <collision name="collision_obj_3_5999999999999996_4_0">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_3_5999999999999996_4_0">
+          <geometry>
+            <mesh>
+              <pose>1.7999999999999998 2.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_4_75_3_5">
+      <static>True</static>
+      <pose>2.375 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_4_75_3_5">
+        <collision name="collision_obj_4_75_3_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_4_75_3_5">
+          <geometry>
+            <mesh>
+              <pose>2.375 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_0_3_5">
+      <static>True</static>
+      <pose>2.5 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_0_3_5">
+        <collision name="collision_obj_5_0_3_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_0_3_5">
+          <geometry>
+            <mesh>
+              <pose>2.5 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_25_3_5">
+      <static>True</static>
+      <pose>2.625 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_25_3_5">
+        <collision name="collision_obj_5_25_3_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_25_3_5">
+          <geometry>
+            <mesh>
+              <pose>2.625 1.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_4_5_4_5">
+      <static>True</static>
+      <pose>2.25 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_4_5_4_5">
+        <collision name="collision_obj_4_5_4_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_4_5_4_5">
+          <geometry>
+            <mesh>
+              <pose>2.25 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_4_75_4_5">
+      <static>True</static>
+      <pose>2.375 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_4_75_4_5">
+        <collision name="collision_obj_4_75_4_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_4_75_4_5">
+          <geometry>
+            <mesh>
+              <pose>2.375 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_0_4_5">
+      <static>True</static>
+      <pose>2.5 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_0_4_5">
+        <collision name="collision_obj_5_0_4_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_0_4_5">
+          <geometry>
+            <mesh>
+              <pose>2.5 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_25_4_5">
+      <static>True</static>
+      <pose>2.625 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_25_4_5">
+        <collision name="collision_obj_5_25_4_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_25_4_5">
+          <geometry>
+            <mesh>
+              <pose>2.625 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_5_4_5">
+      <static>True</static>
+      <pose>2.75 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_5_4_5">
+        <collision name="collision_obj_5_5_4_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_5_4_5">
+          <geometry>
+            <mesh>
+              <pose>2.75 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_6_45_3_75">
+      <static>True</static>
+      <pose>3.225 1.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_6_45_3_75">
+        <collision name="collision_obj_6_45_3_75">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_6_45_3_75">
+          <geometry>
+            <mesh>
+              <pose>3.225 1.875 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_5_75_4_45">
+      <static>True</static>
+      <pose>2.875 2.225 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_5_75_4_45">
+        <collision name="collision_obj_5_75_4_45">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_5_75_4_45">
+          <geometry>
+            <mesh>
+              <pose>2.875 2.225 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_6_3_4_3">
+      <static>True</static>
+      <pose>3.15 2.15 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_6_3_4_3">
+        <collision name="collision_obj_6_3_4_3">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_6_3_4_3">
+          <geometry>
+            <mesh>
+              <pose>3.15 2.15 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_6_0_4_4">
+      <static>True</static>
+      <pose>3.0 2.2 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_6_0_4_4">
+        <collision name="collision_obj_6_0_4_4">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_6_0_4_4">
+          <geometry>
+            <mesh>
+              <pose>3.0 2.2 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_6_4_4_0">
+      <static>True</static>
+      <pose>3.2 2.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_6_4_4_0">
+        <collision name="collision_obj_6_4_4_0">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_6_4_4_0">
+          <geometry>
+            <mesh>
+              <pose>3.2 2.0 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_5_5_5">
+      <static>True</static>
+      <pose>0.75 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_5_5_5">
+        <collision name="collision_obj_1_5_5_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_5_5_5">
+          <geometry>
+            <mesh>
+              <pose>0.75 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_25_5_45">
+      <static>True</static>
+      <pose>0.625 2.725 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_25_5_45">
+        <collision name="collision_obj_1_25_5_45">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_25_5_45">
+          <geometry>
+            <mesh>
+              <pose>0.625 2.725 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_0_55_4_75">
+      <static>True</static>
+      <pose>0.275 2.375 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_55_4_75">
+        <collision name="collision_obj_0_55_4_75">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_55_4_75">
+          <geometry>
+            <mesh>
+              <pose>0.275 2.375 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_0_7_5_3">
+      <static>True</static>
+      <pose>0.35 2.65 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_7_5_3">
+        <collision name="collision_obj_0_7_5_3">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_7_5_3">
+          <geometry>
+            <mesh>
+              <pose>0.35 2.65 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_0_6000000000000001_5_0">
+      <static>True</static>
+      <pose>0.30000000000000004 2.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_0_6000000000000001_5_0">
+        <collision name="collision_obj_0_6000000000000001_5_0">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_0_6000000000000001_5_0">
+          <geometry>
+            <mesh>
+              <pose>0.30000000000000004 2.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_0_5_4">
+      <static>True</static>
+      <pose>0.5 2.7 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_0_5_4">
+        <collision name="collision_obj_1_0_5_4">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_0_5_4">
+          <geometry>
+            <mesh>
+              <pose>0.5 2.7 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_75_4_5">
+      <static>True</static>
+      <pose>0.875 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_75_4_5">
+        <collision name="collision_obj_1_75_4_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_75_4_5">
+          <geometry>
+            <mesh>
+              <pose>0.875 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_2_0_4_5">
+      <static>True</static>
+      <pose>1.0 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_2_0_4_5">
+        <collision name="collision_obj_2_0_4_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_2_0_4_5">
+          <geometry>
+            <mesh>
+              <pose>1.0 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_2_25_4_5">
+      <static>True</static>
+      <pose>1.125 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_2_25_4_5">
+        <collision name="collision_obj_2_25_4_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_2_25_4_5">
+          <geometry>
+            <mesh>
+              <pose>1.125 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_2_5_4_5">
+      <static>True</static>
+      <pose>1.25 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_2_5_4_5">
+        <collision name="collision_obj_2_5_4_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_2_5_4_5">
+          <geometry>
+            <mesh>
+              <pose>1.25 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_1_75_5_5">
+      <static>True</static>
+      <pose>0.875 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_1_75_5_5">
+        <collision name="collision_obj_1_75_5_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_1_75_5_5">
+          <geometry>
+            <mesh>
+              <pose>0.875 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_2_0_5_5">
+      <static>True</static>
+      <pose>1.0 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_2_0_5_5">
+        <collision name="collision_obj_2_0_5_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_2_0_5_5">
+          <geometry>
+            <mesh>
+              <pose>1.0 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_2_25_5_5">
+      <static>True</static>
+      <pose>1.125 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_2_25_5_5">
+        <collision name="collision_obj_2_25_5_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_2_25_5_5">
+          <geometry>
+            <mesh>
+              <pose>1.125 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_2_5_5_5">
+      <static>True</static>
+      <pose>1.25 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_2_5_5_5">
+        <collision name="collision_obj_2_5_5_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_2_5_5_5">
+          <geometry>
+            <mesh>
+              <pose>1.25 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_2_75_4_5">
+      <static>True</static>
+      <pose>1.375 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_2_75_4_5">
+        <collision name="collision_obj_2_75_4_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_2_75_4_5">
+          <geometry>
+            <mesh>
+              <pose>1.375 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_3_0_4_5">
+      <static>True</static>
+      <pose>1.5 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_3_0_4_5">
+        <collision name="collision_obj_3_0_4_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_3_0_4_5">
+          <geometry>
+            <mesh>
+              <pose>1.5 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_3_25_4_5">
+      <static>True</static>
+      <pose>1.625 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_3_25_4_5">
+        <collision name="collision_obj_3_25_4_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_3_25_4_5">
+          <geometry>
+            <mesh>
+              <pose>1.625 2.25 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_2_75_5_5">
+      <static>True</static>
+      <pose>1.375 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_2_75_5_5">
+        <collision name="collision_obj_2_75_5_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_2_75_5_5">
+          <geometry>
+            <mesh>
+              <pose>1.375 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_3_0_5_5">
+      <static>True</static>
+      <pose>1.5 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_3_0_5_5">
+        <collision name="collision_obj_3_0_5_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_3_0_5_5">
+          <geometry>
+            <mesh>
+              <pose>1.5 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_3_25_5_5">
+      <static>True</static>
+      <pose>1.625 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_3_25_5_5">
+        <collision name="collision_obj_3_25_5_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_3_25_5_5">
+          <geometry>
+            <mesh>
+              <pose>1.625 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_3_5_5_5">
+      <static>True</static>
+      <pose>1.75 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_3_5_5_5">
+        <collision name="collision_obj_3_5_5_5">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_3_5_5_5">
+          <geometry>
+            <mesh>
+              <pose>1.75 2.75 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_4_45_4_75">
+      <static>True</static>
+      <pose>2.225 2.375 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_4_45_4_75">
+        <collision name="collision_obj_4_45_4_75">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_4_45_4_75">
+          <geometry>
+            <mesh>
+              <pose>2.225 2.375 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_3_75_5_45">
+      <static>True</static>
+      <pose>1.875 2.725 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_3_75_5_45">
+        <collision name="collision_obj_3_75_5_45">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_3_75_5_45">
+          <geometry>
+            <mesh>
+              <pose>1.875 2.725 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_4_3_5_3">
+      <static>True</static>
+      <pose>2.15 2.65 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_4_3_5_3">
+        <collision name="collision_obj_4_3_5_3">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_4_3_5_3">
+          <geometry>
+            <mesh>
+              <pose>2.15 2.65 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_4_0_5_4">
+      <static>True</static>
+      <pose>2.0 2.7 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_4_0_5_4">
+        <collision name="collision_obj_4_0_5_4">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_4_0_5_4">
+          <geometry>
+            <mesh>
+              <pose>2.0 2.7 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="model_obj_4_4_5_0">
+      <static>True</static>
+      <pose>2.2 2.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+      <link name="link_obj_4_4_5_0">
+        <collision name="collision_obj_4_4_5_0">
+          <geometry>
+            <mesh>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </collision>
+        <visual name="visual_obj_4_4_5_0">
+          <geometry>
+            <mesh>
+              <pose>2.2 2.5 0.015551519688861115 1.5707963267948966 -0  0.0</pose>
+                <scale>0.0025 0.0025 0.0025</scale>
+              <uri>model://cone/meshes/cone.obj</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="top_down_cam">
+      <static>true</static>
+      <link name="top_down_link">
+        <static>1</static>
+           <sensor name="top_down_camera_sensor" type="camera">
+          <always_on>true</always_on>
+          <visualize>false</visualize>
+          <update_rate>10</update_rate>
+          <topic>top_down_camera/image_raw</topic>
+          <ros>
+        <imageTopicName>top_down_camera/image_raw</imageTopicName>
+        <cameraInfoTopicName>top_down_camera/cam_info</cameraInfoTopicName>
+     </ros>
+          <gz_frame_id>top_down_camera_rgb_frame</gz_frame_id>
+          <camera name="top_down_camera">
+            <camera_info_topic>camera/camera_info</camera_info_topic>
+            <image>
+              <width>640</width>
+              <height>640</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.02</near>
+              <far>6</far>
+            </clip>
+          </camera>
+           <plugin name="camera_controller_top_down" filename="libgazebo_ros_camera.so">
+          <camera_name>camera_top_down</camera_name>
+          <frame_name>base_top_down</frame_name>
+          <frameName>base_top_down</frameName>
+          <cameraName>camera_top_down</cameraName>
+        </plugin>
+        </sensor>
+        <static>1</static>
+        <pose>1.688 1.36 4 0 1.57 0</pose>
+        <link name="top_down_link">
+          <static>1</static>
+          <collision name="collision_tile_7_4">
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_7_4">
+            <geometry>
+              <mesh>
+                <pose>1.688 1.36 4 0 1.57 0</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </link>
+    </model>
+    <state world_name="default">
+ 
+    </state>
+        <gui fullscreen="0">
+      <camera name="gzclient_camera">
+        <pose>1.688 1.36 7.5 0 1.57 0</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+
+    <light name="directionallight" type="directional">
+      <pose>3.14919 1.1553 2 0 -0 0</pose>
+      <cast_shadows>false</cast_shadows>
+      <intensity>1</intensity>
+      <direction>0 0 -1</direction>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>
