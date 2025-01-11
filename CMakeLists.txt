@@ -18,7 +18,7 @@ ament_target_dependencies(convert_ir rclcpp std_msgs sensor_msgs mirte_msgs std_
 install(TARGETS convert_ir
   DESTINATION lib/${PROJECT_NAME})
 
-foreach(X IN ITEMS "launch" "urdf" "meshes" "media" "models" "config" "worlds" "rviz")
+foreach(X IN ITEMS "launch" "urdf" "media" "models" "worlds")
     message(STATUS "X=${X}")
     install(DIRECTORY ${X}
       DESTINATION share/${PROJECT_NAME}/)

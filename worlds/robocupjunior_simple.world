@@ -1,0 +1,2184 @@
+<?xml version="1.0"?>
+<sdf version="1.7">
+  <world name="default">
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type="adiabatic"/>
+    <physics type="ode">
+      <max_step_size>0.01</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>100</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>1 1 1 1</ambient>
+      <background>0.53 0.81 0.92 1</background>
+      <shadows>0</shadows>
+      <origin_visual>false</origin_visual>
+    </scene>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name="unit_box_tile_0_0">
+      <model name="model_tile_0_0">
+        <static>1</static>
+        <pose>0.0 0.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_0_0">
+          <collision name="collision_tile_0_0">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_0_0">
+            <geometry>
+              <mesh>
+                <pose>0.0 0.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_1_0">
+      <model name="model_tile_1_0">
+        <static>1</static>
+        <pose>0.5 0.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_1_0">
+          <collision name="collision_tile_1_0">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_1_0">
+            <geometry>
+              <mesh>
+                <pose>0.5 0.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_2_0">
+      <model name="model_tile_2_0">
+        <static>1</static>
+        <pose>1.0 0.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_2_0">
+          <collision name="collision_tile_2_0">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_2_0">
+            <geometry>
+              <mesh>
+                <pose>1.0 0.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_3_0">
+      <model name="model_tile_3_0">
+        <static>1</static>
+        <pose>1.5 0.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_3_0">
+          <collision name="collision_tile_3_0">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_3_0">
+            <geometry>
+              <mesh>
+                <pose>1.5 0.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_4_0">
+      <model name="model_tile_4_0">
+        <static>1</static>
+        <pose>2.0 0.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_4_0">
+          <collision name="collision_tile_4_0">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_4_0">
+            <geometry>
+              <mesh>
+                <pose>2.0 0.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_5_0">
+      <model name="model_tile_5_0">
+        <static>1</static>
+        <pose>2.5 0.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_5_0">
+          <collision name="collision_tile_5_0">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_5_0">
+            <geometry>
+              <mesh>
+                <pose>2.5 0.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_6_0">
+      <model name="model_tile_6_0">
+        <static>1</static>
+        <pose>3.0 0.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_6_0">
+          <collision name="collision_tile_6_0">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_6_0">
+            <geometry>
+              <mesh>
+                <pose>3.0 0.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_7_0">
+      <model name="model_tile_7_0">
+        <static>1</static>
+        <pose>3.5 0.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_7_0">
+          <collision name="collision_tile_7_0">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_7_0">
+            <geometry>
+              <mesh>
+                <pose>3.5 0.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_0_1">
+      <model name="model_tile_0_1">
+        <static>1</static>
+        <pose>0.0 0.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_0_1">
+          <collision name="collision_tile_0_1">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_0_1">
+            <geometry>
+              <mesh>
+                <pose>0.0 0.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_1_1">
+      <model name="model_tile_1_1">
+        <static>1</static>
+        <pose>0.5 0.5 0.01 1.5707963267948966 -0  0.0</pose>
+        <link name="link_tile_1_1">
+          <collision name="collision_tile_1_1">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://circle_corner/meshes/circle_corner.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_1_1">
+            <geometry>
+              <mesh>
+                <pose>0.5 0.5 0.01 1.5707963267948966 -0  0.0</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://circle_corner/meshes/circle_corner.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_2_1">
+      <model name="model_tile_2_1">
+        <static>1</static>
+        <pose>1.0 0.5 0.01 1.5707963267948966 -0  0.0</pose>
+        <link name="link_tile_2_1">
+          <collision name="collision_tile_2_1">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_2_1">
+            <geometry>
+              <mesh>
+                <pose>1.0 0.5 0.01 1.5707963267948966 -0  0.0</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_3_1">
+      <model name="model_tile_3_1">
+        <static>1</static>
+        <pose>1.5 0.5 0.01 1.5707963267948966 -0  0.0</pose>
+        <link name="link_tile_3_1">
+          <collision name="collision_tile_3_1">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_3_1">
+            <geometry>
+              <mesh>
+                <pose>1.5 0.5 0.01 1.5707963267948966 -0  0.0</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_4_1">
+      <model name="model_tile_4_1">
+        <static>1</static>
+        <pose>2.0 0.5 0.01 1.5707963267948966 -0  0.0</pose>
+        <link name="link_tile_4_1">
+          <collision name="collision_tile_4_1">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_4_1">
+            <geometry>
+              <mesh>
+                <pose>2.0 0.5 0.01 1.5707963267948966 -0  0.0</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_5_1">
+      <model name="model_tile_5_1">
+        <static>1</static>
+        <pose>2.5 0.5 0.01 1.5707963267948966 -0  0.0</pose>
+        <link name="link_tile_5_1">
+          <collision name="collision_tile_5_1">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_5_1">
+            <geometry>
+              <mesh>
+                <pose>2.5 0.5 0.01 1.5707963267948966 -0  0.0</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_6_1">
+      <model name="model_tile_6_1">
+        <static>1</static>
+        <pose>3.0 0.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_6_1">
+          <collision name="collision_tile_6_1">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://circle_corner/meshes/circle_corner.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_6_1">
+            <geometry>
+              <mesh>
+                <pose>3.0 0.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://circle_corner/meshes/circle_corner.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_7_1">
+      <model name="model_tile_7_1">
+        <static>1</static>
+        <pose>3.5 0.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_7_1">
+          <collision name="collision_tile_7_1">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_7_1">
+            <geometry>
+              <mesh>
+                <pose>3.5 0.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_0_2">
+      <model name="model_tile_0_2">
+        <static>1</static>
+        <pose>0.0 1.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_0_2">
+          <collision name="collision_tile_0_2">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_0_2">
+            <geometry>
+              <mesh>
+                <pose>0.0 1.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_1_2">
+      <model name="model_tile_1_2">
+        <static>1</static>
+        <pose>0.5 1.0 0.01 1.5707963267948966 -0  4.71238898038469</pose>
+        <link name="link_tile_1_2">
+          <collision name="collision_tile_1_2">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_1_2">
+            <geometry>
+              <mesh>
+                <pose>0.5 1.0 0.01 1.5707963267948966 -0  4.71238898038469</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_2_2">
+      <model name="model_tile_2_2">
+        <static>1</static>
+        <pose>1.0 1.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_2_2">
+          <collision name="collision_tile_2_2">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_2_2">
+            <geometry>
+              <mesh>
+                <pose>1.0 1.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_3_2">
+      <model name="model_tile_3_2">
+        <static>1</static>
+        <pose>1.5 1.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_3_2">
+          <collision name="collision_tile_3_2">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_3_2">
+            <geometry>
+              <mesh>
+                <pose>1.5 1.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_4_2">
+      <model name="model_tile_4_2">
+        <static>1</static>
+        <pose>2.0 1.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_4_2">
+          <collision name="collision_tile_4_2">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_4_2">
+            <geometry>
+              <mesh>
+                <pose>2.0 1.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_5_2">
+      <model name="model_tile_5_2">
+        <static>1</static>
+        <pose>2.5 1.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_5_2">
+          <collision name="collision_tile_5_2">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_5_2">
+            <geometry>
+              <mesh>
+                <pose>2.5 1.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_6_2">
+      <model name="model_tile_6_2">
+        <static>1</static>
+        <pose>3.0 1.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_6_2">
+          <collision name="collision_tile_6_2">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_6_2">
+            <geometry>
+              <mesh>
+                <pose>3.0 1.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_7_2">
+      <model name="model_tile_7_2">
+        <static>1</static>
+        <pose>3.5 1.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_7_2">
+          <collision name="collision_tile_7_2">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_7_2">
+            <geometry>
+              <mesh>
+                <pose>3.5 1.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_0_3">
+      <model name="model_tile_0_3">
+        <static>1</static>
+        <pose>0.0 1.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_0_3">
+          <collision name="collision_tile_0_3">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_0_3">
+            <geometry>
+              <mesh>
+                <pose>0.0 1.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_1_3">
+      <model name="model_tile_1_3">
+        <static>1</static>
+        <pose>0.5 1.5 0.01 1.5707963267948966 -0  4.71238898038469</pose>
+        <link name="link_tile_1_3">
+          <collision name="collision_tile_1_3">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_1_3">
+            <geometry>
+              <mesh>
+                <pose>0.5 1.5 0.01 1.5707963267948966 -0  4.71238898038469</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_2_3">
+      <model name="model_tile_2_3">
+        <static>1</static>
+        <pose>1.0 1.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_2_3">
+          <collision name="collision_tile_2_3">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_2_3">
+            <geometry>
+              <mesh>
+                <pose>1.0 1.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_3_3">
+      <model name="model_tile_3_3">
+        <static>1</static>
+        <pose>1.5 1.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_3_3">
+          <collision name="collision_tile_3_3">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_3_3">
+            <geometry>
+              <mesh>
+                <pose>1.5 1.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_4_3">
+      <model name="model_tile_4_3">
+        <static>1</static>
+        <pose>2.0 1.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_4_3">
+          <collision name="collision_tile_4_3">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_4_3">
+            <geometry>
+              <mesh>
+                <pose>2.0 1.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_5_3">
+      <model name="model_tile_5_3">
+        <static>1</static>
+        <pose>2.5 1.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_5_3">
+          <collision name="collision_tile_5_3">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_5_3">
+            <geometry>
+              <mesh>
+                <pose>2.5 1.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_6_3">
+      <model name="model_tile_6_3">
+        <static>1</static>
+        <pose>3.0 1.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_6_3">
+          <collision name="collision_tile_6_3">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_6_3">
+            <geometry>
+              <mesh>
+                <pose>3.0 1.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_7_3">
+      <model name="model_tile_7_3">
+        <static>1</static>
+        <pose>3.5 1.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_7_3">
+          <collision name="collision_tile_7_3">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_7_3">
+            <geometry>
+              <mesh>
+                <pose>3.5 1.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_0_4">
+      <model name="model_tile_0_4">
+        <static>1</static>
+        <pose>0.0 2.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_0_4">
+          <collision name="collision_tile_0_4">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_0_4">
+            <geometry>
+              <mesh>
+                <pose>0.0 2.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_1_4">
+      <model name="model_tile_1_4">
+        <static>1</static>
+        <pose>0.5 2.0 0.01 1.5707963267948966 -0  4.71238898038469</pose>
+        <link name="link_tile_1_4">
+          <collision name="collision_tile_1_4">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_1_4">
+            <geometry>
+              <mesh>
+                <pose>0.5 2.0 0.01 1.5707963267948966 -0  4.71238898038469</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_2_4">
+      <model name="model_tile_2_4">
+        <static>1</static>
+        <pose>1.0 2.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_2_4">
+          <collision name="collision_tile_2_4">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_2_4">
+            <geometry>
+              <mesh>
+                <pose>1.0 2.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_3_4">
+      <model name="model_tile_3_4">
+        <static>1</static>
+        <pose>1.5 2.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_3_4">
+          <collision name="collision_tile_3_4">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_3_4">
+            <geometry>
+              <mesh>
+                <pose>1.5 2.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_4_4">
+      <model name="model_tile_4_4">
+        <static>1</static>
+        <pose>2.0 2.0 0.01 1.5707963267948966 -0  3.141592653589793</pose>
+        <link name="link_tile_4_4">
+          <collision name="collision_tile_4_4">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://circle_corner/meshes/circle_corner.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_4_4">
+            <geometry>
+              <mesh>
+                <pose>2.0 2.0 0.01 1.5707963267948966 -0  3.141592653589793</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://circle_corner/meshes/circle_corner.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_5_4">
+      <model name="model_tile_5_4">
+        <static>1</static>
+        <pose>2.5 2.0 0.01 1.5707963267948966 -0  3.141592653589793</pose>
+        <link name="link_tile_5_4">
+          <collision name="collision_tile_5_4">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_5_4">
+            <geometry>
+              <mesh>
+                <pose>2.5 2.0 0.01 1.5707963267948966 -0  3.141592653589793</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_6_4">
+      <model name="model_tile_6_4">
+        <static>1</static>
+        <pose>3.0 2.0 0.01 1.5707963267948966 -0  3.141592653589793</pose>
+        <link name="link_tile_6_4">
+          <collision name="collision_tile_6_4">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://circle_corner/meshes/circle_corner.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_6_4">
+            <geometry>
+              <mesh>
+                <pose>3.0 2.0 0.01 1.5707963267948966 -0  3.141592653589793</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://circle_corner/meshes/circle_corner.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_7_4">
+      <model name="model_tile_7_4">
+        <static>1</static>
+        <pose>3.5 2.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_7_4">
+          <collision name="collision_tile_7_4">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_7_4">
+            <geometry>
+              <mesh>
+                <pose>3.5 2.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_0_5">
+      <model name="model_tile_0_5">
+        <static>1</static>
+        <pose>0.0 2.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_0_5">
+          <collision name="collision_tile_0_5">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_0_5">
+            <geometry>
+              <mesh>
+                <pose>0.0 2.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_1_5">
+      <model name="model_tile_1_5">
+        <static>1</static>
+        <pose>0.5 2.5 0.01 1.5707963267948966 -0  4.71238898038469</pose>
+        <link name="link_tile_1_5">
+          <collision name="collision_tile_1_5">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://circle_corner/meshes/circle_corner.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_1_5">
+            <geometry>
+              <mesh>
+                <pose>0.5 2.5 0.01 1.5707963267948966 -0  4.71238898038469</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://circle_corner/meshes/circle_corner.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_2_5">
+      <model name="model_tile_2_5">
+        <static>1</static>
+        <pose>1.0 2.5 0.01 1.5707963267948966 -0  3.141592653589793</pose>
+        <link name="link_tile_2_5">
+          <collision name="collision_tile_2_5">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://black_tile/meshes/black_tile.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_2_5">
+            <geometry>
+              <mesh>
+                <pose>1.0 2.5 0.01 1.5707963267948966 -0  3.141592653589793</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://black_tile/meshes/black_tile.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_3_5">
+      <model name="model_tile_3_5">
+        <static>1</static>
+        <pose>1.5 2.5 0.01 1.5707963267948966 -0  3.141592653589793</pose>
+        <link name="link_tile_3_5">
+          <collision name="collision_tile_3_5">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_3_5">
+            <geometry>
+              <mesh>
+                <pose>1.5 2.5 0.01 1.5707963267948966 -0  3.141592653589793</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://straight_line/meshes/straight_line.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_4_5">
+      <model name="model_tile_4_5">
+        <static>1</static>
+        <pose>2.0 2.5 0.01 1.5707963267948966 -0  3.141592653589793</pose>
+        <link name="link_tile_4_5">
+          <collision name="collision_tile_4_5">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://circle_corner/meshes/circle_corner.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_4_5">
+            <geometry>
+              <mesh>
+                <pose>2.0 2.5 0.01 1.5707963267948966 -0  3.141592653589793</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://circle_corner/meshes/circle_corner.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_5_5">
+      <model name="model_tile_5_5">
+        <static>1</static>
+        <pose>2.5 2.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_5_5">
+          <collision name="collision_tile_5_5">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_5_5">
+            <geometry>
+              <mesh>
+                <pose>2.5 2.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_6_5">
+      <model name="model_tile_6_5">
+        <static>1</static>
+        <pose>3.0 2.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_6_5">
+          <collision name="collision_tile_6_5">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_6_5">
+            <geometry>
+              <mesh>
+                <pose>3.0 2.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_7_5">
+      <model name="model_tile_7_5">
+        <static>1</static>
+        <pose>3.5 2.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_7_5">
+          <collision name="collision_tile_7_5">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_7_5">
+            <geometry>
+              <mesh>
+                <pose>3.5 2.5 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_0_6">
+      <model name="model_tile_0_6">
+        <static>1</static>
+        <pose>0.0 3.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_0_6">
+          <collision name="collision_tile_0_6">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_0_6">
+            <geometry>
+              <mesh>
+                <pose>0.0 3.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_1_6">
+      <model name="model_tile_1_6">
+        <static>1</static>
+        <pose>0.5 3.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_1_6">
+          <collision name="collision_tile_1_6">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_1_6">
+            <geometry>
+              <mesh>
+                <pose>0.5 3.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_2_6">
+      <model name="model_tile_2_6">
+        <static>1</static>
+        <pose>1.0 3.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_2_6">
+          <collision name="collision_tile_2_6">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_2_6">
+            <geometry>
+              <mesh>
+                <pose>1.0 3.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_3_6">
+      <model name="model_tile_3_6">
+        <static>1</static>
+        <pose>1.5 3.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_3_6">
+          <collision name="collision_tile_3_6">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_3_6">
+            <geometry>
+              <mesh>
+                <pose>1.5 3.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_4_6">
+      <model name="model_tile_4_6">
+        <static>1</static>
+        <pose>2.0 3.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_4_6">
+          <collision name="collision_tile_4_6">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_4_6">
+            <geometry>
+              <mesh>
+                <pose>2.0 3.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_5_6">
+      <model name="model_tile_5_6">
+        <static>1</static>
+        <pose>2.5 3.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_5_6">
+          <collision name="collision_tile_5_6">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_5_6">
+            <geometry>
+              <mesh>
+                <pose>2.5 3.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_6_6">
+      <model name="model_tile_6_6">
+        <static>1</static>
+        <pose>3.0 3.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_6_6">
+          <collision name="collision_tile_6_6">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_6_6">
+            <geometry>
+              <mesh>
+                <pose>3.0 3.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="unit_box_tile_7_6">
+      <model name="model_tile_7_6">
+        <static>1</static>
+        <pose>3.5 3.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+        <link name="link_tile_7_6">
+          <collision name="collision_tile_7_6">
+            <surface>
+              <bounce>
+                <restitution_coefficient>0.0</restitution_coefficient>
+                <threshold>1000000.0</threshold>
+              </bounce>
+              <friction>
+                <ode>
+                  <mu>1</mu>
+                  <mu2>1</mu2>
+                </ode>
+              </friction>
+            </surface>
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_7_6">
+            <geometry>
+              <mesh>
+                <pose>3.5 3.0 0.01 1.5707963267948966 -0  1.5707963267948966</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </model>
+    </model>
+    <model name="top_down_cam">
+      <static>true</static>
+      <link name="top_down_link">
+        <static>1</static>
+        <sensor name="top_down_camera_sensor" type="camera">
+          <always_on>true</always_on>
+          <visualize>false</visualize>
+          <update_rate>10</update_rate>
+          <topic>top_down_camera/image_raw</topic>
+          <ros>
+            <imageTopicName>top_down_camera/image_raw</imageTopicName>
+            <cameraInfoTopicName>top_down_camera/cam_info</cameraInfoTopicName>
+          </ros>
+          <gz_frame_id>top_down_camera_rgb_frame</gz_frame_id>
+          <camera name="top_down_camera">
+            <camera_info_topic>camera/camera_info</camera_info_topic>
+            <image>
+              <width>640</width>
+              <height>640</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.02</near>
+              <far>6</far>
+            </clip>
+          </camera>
+          <plugin name="camera_controller_top_down" filename="libgazebo_ros_camera.so">
+            <camera_name>camera_top_down</camera_name>
+            <frame_name>base_top_down</frame_name>
+            <frameName>base_top_down</frameName>
+            <cameraName>camera_top_down</cameraName>
+          </plugin>
+        </sensor>
+        <static>1</static>
+        <pose>1.688 1.36 4 0 1.57 0</pose>
+        <link name="top_down_link">
+          <static>1</static>
+          <collision name="collision_tile_7_4">
+            <geometry>
+              <mesh>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </collision>
+          <visual name="visual_tile_7_4">
+            <geometry>
+              <mesh>
+                <pose>1.688 1.36 4 0 1.57 0</pose>
+                <scale>0.5 0.5 0.5</scale>
+                <uri>model://floor/meshes/floor.obj</uri>
+              </mesh>
+            </geometry>
+          </visual>
+        </link>
+      </link>
+    </model>
+    <state world_name="default">
+    </state>
+    <gui fullscreen="0">
+      <camera name="gzclient_camera">
+        <pose>1.688 1.36 5.5 0 1.57 0</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <light name="directionallight" type="directional">
+      <pose>3.14919 1.1553 2 0 -0 0</pose>
+      <cast_shadows>false</cast_shadows>
+      <intensity>1</intensity>
+      <direction>0 0 -1</direction>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>

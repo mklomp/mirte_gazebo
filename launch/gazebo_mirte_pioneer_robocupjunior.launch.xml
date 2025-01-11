@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="camera_enable" default="False"/>
+  <arg name="intensity_enable" default="True"/>
+  <arg name="sonar_enable" default="False"/>
+  <arg name="lidar_enable" default="False"/>
+  <arg name="encoder_bidirectional" default="True"/>
+  <arg name="encoder_ticks" default="540"/>
+  <arg name="realsense_enable" default="False"/>
+  <arg name="gui" default="True"/>
+  <include file="$(find-pkg-share mirte_gazebo)/launch/gazebo_mirte_world_generated.launch.xml">
+    <arg name="gui" value="$(var gui)"/>
+    <arg name="generated_world" value="$(find-pkg-share mirte_gazebo)/worlds/robocupjunior_simple.world"/>
+  </include>
+  <include file="$(find-pkg-share mirte_gazebo)/launch/spawn_mirte_pioneer.launch.xml">
+    <arg name="camera_enable" value="$(var camera_enable)"/>
+    <arg name="intensity_enable" value="$(var intensity_enable)"/>
+    <arg name="sonar_enable" value="$(var sonar_enable)"/>
+    <arg name="lidar_enable" value="$(var lidar_enable)"/>
+    <arg name="realsense_enable" value="$(var realsense_enable)"/>
+    <arg name="x" value="1.0527"/>
+    <arg name="y" value="0.509611"/>
+    <arg name="z" value="0.021444"/>
+  </include>
+</launch>
