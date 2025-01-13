@@ -83,6 +83,8 @@ def generate_launch_description():
         arguments=[
 #            "pid_wheels_controller",
             "mirte_base_controller",
+            "mirte_arm_controller",
+            "mirte_gripper_controller"
         ],
     )
 
