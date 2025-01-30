@@ -17,12 +17,12 @@ Driving around:
 ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args --remap cmd_vel:=/mirte_base_controller/cmd_vel_unstamped
 ```
 
-Gripper open:
+Gripper close:
 ```sh
 ros2 topic pub --once /mirte_gripper_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory "{joint_names: ['Gripper_joint'], points: [{positions: [0.25], time_from_start:{ sec: 1, nanosec: 0}}]}"
 ```
 
-Gripper close:
+Gripper open:
 ```sh
 ros2 topic pub --once /mirte_gripper_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory "{joint_names: ['Gripper_joint'], points: [{positions: [0.0], time_from_start:{ sec: 1, nanosec: 0}}]}"
 ```
