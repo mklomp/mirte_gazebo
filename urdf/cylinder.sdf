@@ -1,0 +1,38 @@
+<sdf version="1.6">
+  <model name="cylinder">
+    <static>false</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+             <radius>0.02</radius>
+             <length>0.15</length>
+          </cylinder>
+        </geometry>
+      </visual>
+      <collision name="collision">
+
+        <geometry>
+          <cylinder>
+             <radius>0.02</radius>
+             <length>0.15</length>
+          </cylinder>
+        </geometry>
+
+      </collision>
+
+      <physics>
+        <mass>1.0</mass>
+        <inertia>
+          <ixx>0.3</ixx>
+          <iyy>0.0</iyy>
+          <izz>0.0</izz>
+          <ixy>0.3</ixy>
+          <ixz>0.0</ixz>
+          <iyz>0.2</iyz>
+        </inertia>
+      </physics>
+
+    </link>
+  </model>
+</sdf>
