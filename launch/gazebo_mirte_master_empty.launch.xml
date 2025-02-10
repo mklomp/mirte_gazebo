@@ -9,10 +9,12 @@
 
   <arg name="gui" default="True"/>
 
+  <arg name="world" default="worlds/empty.world"/>
+
   <!-- Launch gazebo -->
   <include file="$(find-pkg-share mirte_gazebo)/launch/gazebo_mirte_world_generated.launch.xml">
     <arg name="gui" value="$(var gui)"/>
-    <arg name="generated_world" value="worlds/empty.world"/>
+    <arg name="generated_world" value="$(var world)"/>
   </include>
 
   <!-- Spawn MIRTE master -->
